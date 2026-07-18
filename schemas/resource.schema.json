@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/awesome-autonomous-biology/resource.schema.json",
+  "title": "Awesome Autonomous Biology Gold Seed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "dataset_version", "title", "generated_on", "record_count", "scope", "curation_rules", "controlled_vocabularies", "records"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "dataset_version": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "generated_on": {"type": "string", "format": "date"},
+    "record_count": {"const": 50},
+    "scope": {"$ref": "#/$defs/bilingualText"},
+    "curation_rules": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "controlled_vocabularies": {"$ref": "#/$defs/controlledVocabularies"},
+    "records": {"type": "array", "minItems": 50, "maxItems": 50, "items": {"$ref": "#/$defs/resource"}}
+  },
+  "$defs": {
+    "nonEmptyString": {"type": "string", "minLength": 1},
+    "nullableUrl": {"type": ["string", "null"], "format": "uri"},
+    "bilingualText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "zh"],
+      "properties": {"en": {"$ref": "#/$defs/nonEmptyString"}, "zh": {"$ref": "#/$defs/nonEmptyString"}}
+    },
+    "primaryCategory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label_en", "label_zh", "seed_count"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^(0[1-9]|1[0-9]|2[01])-[a-z0-9-]+$"},
+        "label_en": {"$ref": "#/$defs/nonEmptyString"},
+        "label_zh": {"$ref": "#/$defs/nonEmptyString"},
+        "seed_count": {"type": "integer", "minimum": 1}
+      }
+    },
+    "controlledVocabularies": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_categories", "resource_classes", "loop_stages", "autonomy_levels", "curation_statuses", "evidence_grades"],
+      "properties": {
+        "primary_categories": {"type": "array", "minItems": 21, "maxItems": 21, "items": {"$ref": "#/$defs/primaryCategory"}},
+        "resource_classes": {"type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true, "items": {"enum": ["core_autonomous_system", "scientific_decision_module", "enabling_infrastructure", "data_evaluation_resource", "ecosystem_education"]}},
+        "loop_stages": {"type": "array", "minItems": 9, "maxItems": 9, "uniqueItems": true, "items": {"enum": ["biological-question", "hypothesis-experiment-design", "experiment-selection", "protocol-generation", "wet-lab-execution", "measurement-qc", "analysis-interpretation", "model-update-feedback", "next-experiment-decision"]}},
+        "autonomy_levels": {"type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true, "items": {"enum": ["none", "assisted", "partial", "high", "not_applicable"]}},
+        "curation_statuses": {"type": "array", "minItems": 3, "maxItems": 3, "uniqueItems": true, "items": {"enum": ["verified", "review_pending", "archived"]}},
+        "evidence_grades": {
+          "type": "object", "additionalProperties": false, "required": ["A", "B", "C"],
+          "properties": {"A": {"$ref": "#/$defs/nonEmptyString"}, "B": {"$ref": "#/$defs/nonEmptyString"}, "C": {"$ref": "#/$defs/nonEmptyString"}}
+        }
+      }
+    },
+    "resource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "year", "primary_category", "resource_class", "resource_types", "loop_stages", "biological_domains", "wet_lab", "autonomy", "open_source", "license", "urls", "evidence", "summary_en", "summary_zh", "boundary_note_zh", "curation"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^AAB-[0-9]{3}$"},
+        "title": {"$ref": "#/$defs/nonEmptyString"},
+        "year": {"type": ["integer", "null"], "minimum": 1900, "maximum": 2100},
+        "primary_category": {"type": "string", "pattern": "^(0[1-9]|1[0-9]|2[01])-[a-z0-9-]+$"},
+        "resource_class": {"enum": ["core_autonomous_system", "scientific_decision_module", "enabling_infrastructure", "data_evaluation_resource", "ecosystem_education"]},
+        "resource_types": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/nonEmptyString"}},
+        "loop_stages": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["biological-question", "hypothesis-experiment-design", "experiment-selection", "protocol-generation", "wet-lab-execution", "measurement-qc", "analysis-interpretation", "model-update-feedback", "next-experiment-decision"]}},
+        "biological_domains": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/nonEmptyString"}},
+        "wet_lab": {"type": "boolean"},
+        "autonomy": {
+          "type": "object", "additionalProperties": false, "required": ["scientific", "operational"],
+          "properties": {"scientific": {"enum": ["none", "assisted", "partial", "high", "not_applicable"]}, "operational": {"enum": ["none", "assisted", "partial", "high", "not_applicable"]}}
+        },
+        "open_source": {"enum": ["yes", "no", "partial", "not_applicable"]},
+        "license": {"type": ["string", "null"], "minLength": 1},
+        "urls": {
+          "type": "object", "additionalProperties": false, "required": ["canonical", "paper", "code", "data", "official"],
+          "properties": {"canonical": {"type": "string", "format": "uri"}, "paper": {"$ref": "#/$defs/nullableUrl"}, "code": {"$ref": "#/$defs/nullableUrl"}, "data": {"$ref": "#/$defs/nullableUrl"}, "official": {"$ref": "#/$defs/nullableUrl"}}
+        },
+        "evidence": {
+          "type": "object", "additionalProperties": false, "required": ["grade", "peer_reviewed", "primary_sources"],
+          "properties": {"grade": {"enum": ["A", "B", "C"]}, "peer_reviewed": {"type": ["boolean", "null"]}, "primary_sources": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "format": "uri"}}}
+        },
+        "summary_en": {"$ref": "#/$defs/nonEmptyString"},
+        "summary_zh": {"$ref": "#/$defs/nonEmptyString"},
+        "boundary_note_zh": {"$ref": "#/$defs/nonEmptyString"},
+        "related_to": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^AAB-[0-9]{3}$"}},
+        "curation": {
+          "type": "object", "additionalProperties": false, "required": ["status", "last_verified", "curator", "decision_note"],
+          "properties": {"status": {"enum": ["verified", "review_pending", "archived"]}, "last_verified": {"type": ["string", "null"], "format": "date"}, "curator": {"type": ["string", "null"], "minLength": 1}, "decision_note": {"type": ["string", "null"], "minLength": 1}}
+        }
+      }
+    }
+  }
+}

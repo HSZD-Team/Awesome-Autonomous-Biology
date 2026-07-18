@@ -1,0 +1,39 @@
+version: "0.1"
+timeout_ms: 15000
+max_retries: 3
+backoff_ms: 750
+page_limit: 1
+results_per_query: 8
+sources:
+  - id: europe-pmc
+    type: json_api
+    enabled: true
+    endpoint: "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+    primary_source_quality: 1.0
+  - id: crossref
+    type: json_api
+    enabled: true
+    endpoint: "https://api.crossref.org/works"
+    primary_source_quality: 0.8
+  - id: arxiv
+    type: atom
+    enabled: true
+    endpoint: "https://export.arxiv.org/api/query"
+    primary_source_quality: 0.7
+  - id: biorxiv-medrxiv
+    type: json_api
+    enabled: true
+    endpoint: "https://api.biorxiv.org/details/biorxiv"
+    primary_source_quality: 0.7
+  - id: github
+    type: json_api
+    enabled: true
+    endpoint: "https://api.github.com/search/repositories"
+    primary_source_quality: 0.6
+  - id: official-feeds
+    type: rss
+    enabled: true
+    feeds:
+      - "https://www.embl.org/news/feed/"
+      - "https://www.nature.com/nbt.rss"
+    primary_source_quality: 0.6

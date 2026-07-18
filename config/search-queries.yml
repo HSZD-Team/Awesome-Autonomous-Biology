@@ -1,0 +1,25 @@
+version: "0.1"
+queries:
+  - {category: "01-surveys-perspectives", query: "autonomous biology"}
+  - {category: "02-end-to-end-systems", query: "self-driving laboratory biology"}
+  - {category: "02-end-to-end-systems", query: "robot scientist biology"}
+  - {category: "02-end-to-end-systems", query: "closed-loop biology"}
+  - {category: "03-scientific-agents", query: "AI scientist biology"}
+  - {category: "04-experiment-design", query: "biological experiment design active learning"}
+  - {category: "05-perturbation-virtual-cell", query: "virtual cell perturbation"}
+  - {category: "06-protein-sequence-engineering", query: "Bayesian optimization protein engineering closed loop"}
+  - {category: "07-drug-cell-screening", query: "cell-based screening automation"}
+  - {category: "08-synthetic-biology-biofoundries", query: "biofoundry DBTL"}
+  - {category: "09-protocols", query: "protocol generation laboratory"}
+  - {category: "10-lab-orchestration", query: "LabOS laboratory orchestration"}
+  - {category: "11-robot-instrument-control", query: "robotic liquid handling biology"}
+  - {category: "12-measurement-qc-analysis", query: "automated assay QC"}
+  - {category: "13-feedback-learning", query: "feedback learning experiment biology"}
+  - {category: "14-standards-provenance", query: "laboratory data provenance biology"}
+  - {category: "15-simulators-digital-twins", query: "digital twin biology"}
+  - {category: "16-benchmarks-evaluation", query: "biology agent benchmark"}
+  - {category: "17-closed-loop-datasets", query: "closed-loop experiment dataset"}
+  - {category: "18-agent-tools", query: "BioMCP biology tools"}
+  - {category: "19-open-hardware", query: "open lab hardware biology"}
+  - {category: "20-cloud-commercial", query: "cloud laboratory biology"}
+  - {category: "21-education-community", query: "autonomous biology course community"}

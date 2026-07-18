@@ -1,0 +1,10 @@
+{
+  "github_owner": "YOUR_GITHUB_OWNER",
+  "github_repo": "awesome-autonomous-biology",
+  "site_title": "Awesome Autonomous Biology",
+  "default_locale": "en",
+  "supported_locales": [
+    "en",
+    "zh"
+  ]
+}

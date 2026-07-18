@@ -1,0 +1,29 @@
+---
+import { withBase, loopStageLabels } from "../lib/paths";
+const { record, compact = false } = Astro.props;
+const classLabels = {
+  core_autonomous_system: "Core system",
+  scientific_decision_module: "Decision module",
+  enabling_infrastructure: "Infrastructure",
+  data_evaluation_resource: "Data / evaluation",
+  ecosystem_education: "Ecosystem"
+};
+---
+<article class:list={["resource-card", compact && "is-compact"]} data-resource-id={record.id}>
+  <div class="resource-card-top">
+    <span class={`class-chip class-${record.resource_class}`}>{classLabels[record.resource_class]}</span>
+    <span class={`grade grade-${record.evidence.grade}`} aria-label={`Evidence grade ${record.evidence.grade}`}>{record.evidence.grade}</span>
+  </div>
+  <h3><a href={withBase(`resources/${record.id.toLowerCase()}/`)}>{record.title}</a></h3>
+  <p>{record.summary_en}</p>
+  <p class="summary-zh" lang="zh-CN">{record.summary_zh}</p>
+  <div class="resource-meta">
+    <span>{record.year ?? "Date not asserted"}</span>
+    <span>Sci: {record.autonomy.scientific}</span>
+    <span>Ops: {record.autonomy.operational}</span>
+  </div>
+  {!compact && <div class="stage-tags">
+    {record.loop_stages.slice(0, 4).map((stage) => <span title={loopStageLabels[stage]?.en}>{loopStageLabels[stage]?.en ?? stage}</span>)}
+    {record.loop_stages.length > 4 && <span>+{record.loop_stages.length - 4}</span>}
+  </div>}
+</article>

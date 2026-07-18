@@ -1,0 +1,63 @@
+name: Resource proposal
+description: Propose a biology-specific resource for human curation
+title: "[Proposal] "
+labels: ["review-pending"]
+body:
+  - type: markdown
+    attributes:
+      value: "Proposals are unverified until a curator approves a data PR. Inclusion is not endorsement."
+  - type: input
+    id: title
+    attributes: {label: Resource title, description: Use the primary source title or official project name.}
+    validations: {required: true}
+  - type: input
+    id: primary_source
+    attributes: {label: Primary source, description: DOI or official repository/data/standard/platform URL.}
+    validations: {required: true}
+  - type: input
+    id: canonical_url
+    attributes: {label: Canonical URL}
+    validations: {required: true}
+  - type: dropdown
+    id: category
+    attributes:
+      label: Suggested primary category
+      options:
+        - 01-surveys-perspectives
+        - 02-end-to-end-systems
+        - 03-scientific-agents
+        - 04-experiment-design
+        - 05-perturbation-virtual-cell
+        - 06-protein-sequence-engineering
+        - 07-drug-cell-screening
+        - 08-synthetic-biology-biofoundries
+        - 09-protocols
+        - 10-lab-orchestration
+        - 11-robot-instrument-control
+        - 12-measurement-qc-analysis
+        - 13-feedback-learning
+        - 14-standards-provenance
+        - 15-simulators-digital-twins
+        - 16-benchmarks-evaluation
+        - 17-closed-loop-datasets
+        - 18-agent-tools
+        - 19-open-hardware
+        - 20-cloud-commercial
+        - 21-education-community
+    validations: {required: true}
+  - type: textarea
+    id: biology_scope
+    attributes: {label: Biology-specific relevance, description: Explain the direct biological use and closed-loop stage evidence.}
+    validations: {required: true}
+  - type: textarea
+    id: autonomy
+    attributes: {label: Autonomy boundary, description: Assess scientific and operational autonomy separately without equating automation with science.}
+    validations: {required: true}
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Evidence checks
+      options:
+        - {label: I searched the Atlas and issues for DOI/URL/title duplicates., required: true}
+        - {label: I understand this proposal remains review_pending until human approval., required: true}
+        - {label: I have disclosed if I am affiliated with this resource., required: true}

@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import resources from "../../data/generated/resources.json";
+import { withBase, loopStageLabels } from "../../lib/paths";
+export function getStaticPaths() { return resources.map((record) => ({ params: { id: record.id.toLowerCase() }, props: { record } })); }
+const { record } = Astro.props;
+const inverse = resources.filter((candidate) => (candidate.related_to ?? []).includes(record.id)).map((candidate) => candidate.id);
+const relatedIds = [...new Set([...(record.related_to ?? []), ...inverse])];
+const related = relatedIds.map((id) => resources.find((candidate) => candidate.id === id)).filter(Boolean);
+const namedUrls = Object.entries(record.urls).filter(([, value]) => value);
+const urlLabels = { canonical: "Canonical", paper: "Paper", code: "Code", data: "Data", official: "Official" };
+---
+<BaseLayout title={`${record.title} - Project Dossier`} description={record.summary_en}>
+  <div class="shell">
+    <header class="page-head"><div><p class="eyebrow">PROJECT DOSSIER - {record.id}</p><h1>{record.title}</h1><p class="lede">{record.summary_en}</p><p class="lede" lang="zh-CN">{record.summary_zh}</p></div><span class={`grade grade-${record.evidence.grade}`} aria-label={`Evidence grade ${record.evidence.grade}`}>{record.evidence.grade}</span></header>
+    <div class="dossier-grid">
+      <div class="dossier-main">
+        <section class="panel panel-pad"><h2>Declared loop coverage</h2><p class="section-copy">Only stages explicitly asserted in the Gold Seed are displayed.</p><ol class="dossier-stages">{record.loop_stages.map((stage) => <li><span>{record.loop_stages.indexOf(stage) + 1}</span>{loopStageLabels[stage].en}<small lang="zh-CN">{loopStageLabels[stage].zh}</small></li>)}</ol></section>
+        <section class="panel panel-pad"><h2>Autonomy boundary</h2><div class="autonomy-pair"><div><span>Scientific autonomy</span><strong>{record.autonomy.scientific}</strong><p>Participation in hypothesis, selection, interpretation, updating, or next-round decisions.</p></div><div><span>Operational autonomy</span><strong>{record.autonomy.operational}</strong><p>Automated protocol execution, device control, measurement, or laboratory orchestration.</p></div></div><div class="callout" lang="zh-CN"><strong>Seed boundary note:</strong> {record.boundary_note_zh}</div></section>
+        <section class="panel panel-pad"><h2>Primary evidence</h2><ul class="source-list">{record.evidence.primary_sources.map((source) => <li><a href={source} rel="noreferrer">{source}</a></li>)}</ul><p>Peer reviewed: <strong>{record.evidence.peer_reviewed ? "yes" : "no"}</strong> - Evidence grade: <strong>{record.evidence.grade}</strong></p></section>
+        {related.length > 0 && <section class="panel panel-pad"><h2>Related entities</h2><p class="section-copy">These links come from an explicit related_to assertion in one of the two records; they do not assert collaboration or citation.</p><div class="resource-grid">{related.map((item) => <a class="category-cell" href={withBase(`resources/${item.id.toLowerCase()}/`)}><span>{item.id}</span><small>{item.title}</small><b>&rarr;</b></a>)}</div></section>}
+      </div>
+      <aside class="dossier-side">
+        <section class="panel panel-pad"><h2>Identity</h2><dl class="definition-list"><dt>Category</dt><dd>{record.category.label_en}<br/><span lang="zh-CN" class="muted">{record.category.label_zh}</span></dd><dt>Resource class</dt><dd>{record.resource_class}</dd><dt>Types</dt><dd>{record.resource_types.join(" / ")}</dd><dt>Domains</dt><dd>{record.biological_domains.join(" / ")}</dd><dt>Year</dt><dd>{record.year ?? "Ongoing / date not asserted"}</dd><dt>Wet lab</dt><dd>{record.wet_lab ? "yes" : "no"}</dd></dl></section>
+        <section class="panel panel-pad"><h2>Openness & license</h2><p>Open source: <strong>{record.open_source}</strong></p><p>{record.license ?? "No repository license asserted in the seed."}</p><p class="muted">This is a curation note, not legal advice. Inclusion does not relicense third-party work.</p></section>
+        <section class="panel panel-pad"><h2>Links</h2><ul>{namedUrls.map(([key, value]) => <li><a href={value} rel="noreferrer">{urlLabels[key]}</a></li>)}</ul></section>
+        <section class="panel panel-pad"><h2>Curation audit</h2><dl class="definition-list"><dt>Status</dt><dd>{record.curation.status}</dd><dt>Last verified</dt><dd>{record.curation.last_verified}</dd><dt>Curator</dt><dd>{record.curation.curator}</dd><dt>Decision</dt><dd>{record.curation.decision_note}</dd></dl></section>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

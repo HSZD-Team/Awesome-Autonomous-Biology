@@ -1,0 +1,5 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/paths";
+---
+<BaseLayout title="404 - Signal lost"><div class="shell"><section class="empty-state"><p class="eyebrow">404 - SIGNAL LOST</p><h1>This coordinate is outside the Atlas.</h1><p>Return to Mission Control or search with Ctrl/Cmd + K.</p><a class="button" href={withBase()}>Mission Control</a></section></div></BaseLayout>

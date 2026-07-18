@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import project from "../../data/generated/project.json";
+import snapshot from "../../../data/candidates/latest.json";
+---
+<BaseLayout title="Daily Radar - Awesome Autonomous Biology" current="radar">
+  <div class="shell">
+    <header class="page-head"><div><p class="eyebrow">DAILY RADAR - CANDIDATE TRACK</p><h1>Discover broadly.<br />Verify before entry.</h1><p class="lede">Public GitHub issues labeled radar + review-pending are loaded in your browser. Nothing here contributes to verified Atlas statistics.</p></div><span class="unverified">UNVERIFIED / 待核验</span></header>
+    <aside class="boundary-banner"><strong>Hard boundary</strong><p>Candidate scores rank review priority only. They are not evidence grades, fact judgments, or autonomy claims.</p></aside>
+    <section class="panel panel-pad">
+      <div class="section-head"><div><h2>Live review queue</h2><p class="section-copy">No backend and no token are required. If the public API is unavailable or rate-limited, the committed build snapshot is shown.</p></div><span class="signal" data-radar-signal>Connecting</span></div>
+      <div class="status-card" data-radar-status><strong>Loading public GitHub issues...</strong></div>
+      <div class="candidate-list" data-candidate-list></div>
+      <noscript><p class="empty-state">JavaScript is required to query the public GitHub API. The fallback snapshot contains {snapshot.candidate_count} candidates.</p></noscript>
+    </section>
+    <script type="application/json" data-radar-config set:html={JSON.stringify({project, snapshot}).replace(/</g, "\\u003c")} /><script src="../../scripts/radar.ts"></script>
+  </div>
+</BaseLayout>

@@ -1,0 +1,34 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CommandPalette from "../components/CommandPalette.astro";
+import "../styles/global.css";
+const {
+  title = "Awesome Autonomous Biology",
+  description = "A biology-specific, closed-loop, evidence-graded atlas of autonomous biology.",
+  current = "home",
+  locale = "en"
+} = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+---
+<!doctype html>
+<html lang={locale === "zh" ? "zh-CN" : "en"} data-base={base}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#050b19" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <Header current={current} locale={locale} />
+    <main id="main-content"><slot /></main>
+    <Footer />
+    <CommandPalette />
+    <script src="../scripts/shell.ts"></script>
+  </body>
+</html>

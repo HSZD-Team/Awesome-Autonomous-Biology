@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import resources from "../../data/generated/resources.json";
+import vocabularies from "../../data/generated/vocabularies.json";
+import { withBase, loopStageLabels } from "../../lib/paths";
+const stages = vocabularies.loop_stages;
+const points = stages.map((stage, index) => {
+  const angle = (-90 + index * 40) * Math.PI / 180;
+  return { stage, index, x: 300 + 220 * Math.cos(angle), y: 300 + 220 * Math.sin(angle) };
+});
+const classLabels = { core_autonomous_system: "Core system", scientific_decision_module: "Decision module", enabling_infrastructure: "Infrastructure", data_evaluation_resource: "Data / evaluation", ecosystem_education: "Ecosystem" };
+const classColors = { core_autonomous_system: "#16d9d4", scientific_decision_module: "#9c6cff", enabling_infrastructure: "#a3e635", data_evaluation_resource: "#fbbf24", ecosystem_education: "#94aec2" };
+---
+<BaseLayout title="Loop Map - Awesome Autonomous Biology" current="loop">
+  <div class="shell wide">
+    <header class="page-head"><div><p class="eyebrow">DECLARED COVERAGE - NINE STAGES</p><h1>Follow the loop.<br />Inspect the hand-offs.</h1><p class="lede">Select a stage to reveal verified resources and the immediately adjacent upstream and downstream steps.</p></div><span class="signal">No inferred coverage</span></header>
+    <div class="legend" aria-label="Resource class legend">{Object.entries(classLabels).map(([key, label]) => <span><i style={`background:${classColors[key]}`}></i>{label}</span>)}</div>
+    <div class="loop-board">
+      <section class="loop-orbit panel" aria-label="Interactive nine-stage loop">
+        <svg viewBox="0 0 600 600" role="group" aria-label="Nine-stage closed loop">
+          <defs><linearGradient id="orbitGradient"><stop stop-color="#16d9d4"/><stop offset=".52" stop-color="#9c6cff"/><stop offset="1" stop-color="#a3e635"/></linearGradient></defs>
+          <circle class="orbit-track" cx="300" cy="300" r="220"/><circle class="orbit-flow" cx="300" cy="300" r="220"/>
+          <circle cx="300" cy="300" r="92" fill="rgba(22,217,212,.035)" stroke="rgba(22,217,212,.16)"/><text x="300" y="290" text-anchor="middle" fill="#e6f4ff" font-size="18" font-weight="800">BIOLOGICAL</text><text x="300" y="315" text-anchor="middle" fill="#16d9d4" font-size="18" font-weight="800">DISCOVERY LOOP</text>
+          {points.map(({stage, index, x, y}) => <g class:list={["stage-node", index === 0 && "is-active"]} transform={`translate(${x} ${y})`} tabindex="0" role="button" aria-label={`${index + 1}. ${loopStageLabels[stage].en}`} data-loop-stage={stage}><circle r="31"/><text class="stage-number" y="5">{index + 1}</text><title>{loopStageLabels[stage].en}</title></g>)}
+        </svg>
+      </section>
+      <section class="stage-detail panel" aria-live="polite">
+        <p class="eyebrow">SELECTED STAGE <span data-stage-index>01</span></p><h2 data-stage-title>{loopStageLabels[stages[0]].en}</h2><p class="section-copy"><span data-upstream>{loopStageLabels[stages.at(-1)].en}</span> &rarr; <strong>selected</strong> &rarr; <span data-downstream>{loopStageLabels[stages[1]].en}</span></p><p><strong data-stage-count>{resources.filter((record) => record.loop_stages.includes(stages[0])).length}</strong> verified resources explicitly declare this stage.</p>
+        <div class="stage-detail-list" data-stage-resources>
+          {resources.map((record) => <article class="stage-resource" data-stages={record.loop_stages.join(" ")} data-resource-class={record.resource_class} hidden={!record.loop_stages.includes(stages[0])}><span class={`class-chip class-${record.resource_class}`}>{classLabels[record.resource_class]}</span><h3><a href={withBase(`resources/${record.id.toLowerCase()}/`)}>{record.title}</a></h3><p class="muted">{record.summary_en}</p></article>)}
+        </div>
+      </section>
+    </div>
+    <script type="application/json" data-loop-labels set:html={JSON.stringify(stages.map((stage) => ({ stage, ...loopStageLabels[stage] }))).replace(/</g, "\\u003c")} /><script src="../../scripts/loop-map.ts"></script>
+  </div>
+</BaseLayout>

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this curated atlas, please cite the repository and the original resources you rely on."
+title: "Awesome Autonomous Biology"
+type: dataset
+version: "0.1.0"
+date-released: "2026-07-18"
+license: CC-BY-4.0
+abstract: "A biology-specific, closed-loop, evidence-graded atlas of autonomous biology resources."
+keywords:
+  - autonomous biology
+  - self-driving laboratories
+  - closed-loop experimentation
+  - scientific agents
+  - biofoundries
+authors:
+  - name: "Awesome Autonomous Biology contributors"

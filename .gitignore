@@ -1,0 +1,15 @@
+node_modules/
+.pnpm-store/
+dist/
+.astro/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+data/candidates/raw/
+reports/link-check.json
+
+# Retained local input/reference artifacts (not part of the publishable project)
+/CODEX_PROMPT.md
+/awesome-autonomous-biology-readme/

@@ -1,0 +1,29 @@
+---
+import { withBase } from "../lib/paths";
+const { current = "home", locale = "en" } = Astro.props;
+const items = [
+  ["home", "Mission", ""], ["atlas", "Atlas", "atlas/"], ["loop", "Loop Map", "loop-map/"],
+  ["radar", "Radar", "radar/"], ["timeline", "Timeline", "timeline/"], ["ecosystem", "Ecosystem", "ecosystem/"],
+  ["digest", "Digest", "digest/"], ["about", "Method", "about/"], ["contribute", "Contribute", "contribute/"]
+];
+---
+<header class="site-header">
+  <a class="brand" href={withBase()} aria-label="Awesome Autonomous Biology home">
+    <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span><strong>AAB</strong><small>MISSION CONTROL</small></span>
+  </a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+  <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+    {items.map(([key, label, path]) => (
+      <a href={withBase(path)} aria-current={current === key ? "page" : undefined}>{label}</a>
+    ))}
+  </nav>
+  <div class="header-actions">
+    <a class="locale-link" href={locale === "zh" ? withBase() : withBase("zh/")} lang={locale === "zh" ? "en" : "zh-CN"}>
+      {locale === "zh" ? "EN" : "中文"}
+    </a>
+    <button class="palette-trigger" type="button" data-open-palette aria-label="Open command palette">
+      <span>Search</span><kbd>Ctrl K</kbd>
+    </button>
+  </div>
+</header>

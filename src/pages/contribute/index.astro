@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Contribute - Awesome Autonomous Biology" current="contribute">
+  <div class="shell">
+    <header class="page-head"><div><p class="eyebrow">CONTRIBUTE - CURATION PR</p><h1>Bring sources.<br />State the boundary.</h1><p class="lede">High-quality contributions make claims smaller, provenance clearer, and the atlas easier to audit.</p></div><span class="signal">Primary source required</span></header>
+    <div class="prose">
+      <h2>Before opening a PR</h2><ol class="steps"><li>Check the Atlas and candidate issues for DOI, canonical URL, and normalized-title duplicates.</li><li>Confirm direct biology relevance and choose exactly one of the 21 primary categories.</li><li>Link at least one primary paper, official repository, dataset, standard, or platform page.</li><li>Mark only loop stages explicitly supported by sources.</li><li>Score scientific and operational autonomy independently.</li><li>Record ambiguous or conflicting license text without guessing.</li><li>Add non-empty English and Chinese summaries plus a boundary note.</li><li>Include curation status and audit metadata; new automated discoveries stay review_pending.</li></ol>
+      <h2>Run the gate locally</h2><pre><code>pnpm install
+pnpm generate
+pnpm validate
+pnpm test
+pnpm build</code></pre>
+      <h2>Human review is the promotion mechanism</h2><p>Discovery scripts and optional future agents may rank and summarize candidates, but only a maintainer-approved PR may add or change verified data. See <a href="../../CURATION.md">CURATION.md</a> and <a href="../../CONTRIBUTING.md">CONTRIBUTING.md</a> in the repository for the complete checklist.</p>
+    </div>
+  </div>
+</BaseLayout>

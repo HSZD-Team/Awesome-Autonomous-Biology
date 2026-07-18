@@ -1,0 +1,30 @@
+name: Weekly curation digest
+on:
+  schedule:
+    - cron: "23 4 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: {version: 11}
+      - uses: actions/setup-node@v4
+        with: {node-version: 22, cache: pnpm}
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - name: Summarize the last seven days
+        run: node scripts/generate-weekly-digest.mjs --write-draft
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: weekly-digest-draft
+          path: data/digests/*.md
+          if-no-files-found: warn

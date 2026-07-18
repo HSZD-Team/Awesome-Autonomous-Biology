@@ -1,0 +1,33 @@
+{
+  "name": "awesome-autonomous-biology",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "description": "A biology-specific, closed-loop, evidence-graded atlas of autonomous biology.",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "generate": "node scripts/build-index.mjs",
+    "validate": "node scripts/validate-data.mjs",
+    "check:generated": "node scripts/build-index.mjs --check",
+    "test": "node --test tests/*.test.mjs",
+    "build": "astro build",
+    "check": "pnpm run validate && pnpm run check:generated && pnpm run test && pnpm run build",
+    "dev": "astro dev",
+    "preview": "astro preview",
+    "discover": "node scripts/discover.mjs",
+    "discover:offline": "node scripts/discover.mjs --offline",
+    "radar:issues": "node scripts/create-radar-issues.mjs",
+    "digest": "node scripts/generate-weekly-digest.mjs",
+    "links": "node scripts/check-links.mjs"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "astro": "^5.12.0",
+    "fast-xml-parser": "^5.2.5",
+    "js-yaml": "^4.1.0"
+  }
+}

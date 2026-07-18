@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const digestModules = import.meta.glob("../../../data/digests/*.md", { query: "?raw", import: "default", eager: true });
+const digests = Object.entries(digestModules).map(([path, content]) => ({ name: path.split("/").at(-1)?.replace(".md", ""), content: String(content) })).sort((a, b) => b.name.localeCompare(a.name));
+---
+<BaseLayout title="Weekly Digest - Awesome Autonomous Biology" current="digest">
+  <div class="shell">
+    <header class="page-head"><div><p class="eyebrow">WEEKLY REVIEW - HUMAN GATE</p><h1>A review queue,<br />not an auto-publisher.</h1><p class="lede">Committed weekly digests separate new candidates, newly verified records, updated records, and broken links.</p></div><span class="signal">Manual approval required</span></header>
+    {digests.length ? <div class="candidate-list">{digests.map((digest) => <article class="panel panel-pad"><p class="eyebrow">{digest.name}</p><h2>Weekly digest</h2><pre class="digest-raw">{digest.content}</pre></article>)}</div> : <section class="empty-state"><strong>No real weekly digest has been committed yet.</strong><p>This is an intentional v0.1 empty state - not sample news presented as a real report. The Monday workflow can generate a draft with these explicit sections:</p><ul><li>New candidates</li><li>Newly verified</li><li>Updated records</li><li>Broken or suspect links</li></ul></section>}
+    <section class="prose"><h2>Review outcomes</h2><p>Each draft distinguishes pending acceptance, pending rejection, missing primary sources, suspected duplicates, and link anomalies. It never merges a PR or edits verified YAML.</p></section>
+  </div>
+</BaseLayout>

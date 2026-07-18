@@ -1,0 +1,2993 @@
+[
+  {
+    "id": "AAB-001",
+    "title": "Perspectives for self-driving labs in synthetic biology",
+    "year": 2023,
+    "primary_category": "01-surveys-perspectives",
+    "resource_class": "ecosystem_education",
+    "resource_types": [
+      "perspective",
+      "roadmap"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "synthetic biology",
+      "biofoundries"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "not_applicable",
+    "license": null,
+    "urls": {
+      "canonical": "https://www.sciencedirect.com/science/article/pii/S0958166922002154",
+      "paper": "https://doi.org/10.1016/j.copbio.2022.102881",
+      "code": null,
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1016/j.copbio.2022.102881"
+      ]
+    },
+    "summary_en": "A biology-specific perspective on how self-driving laboratories could reshape synthetic-biology design–build–test–learn cycles.",
+    "summary_zh": "从合成生物学视角讨论自驱动实验室如何重塑 Design–Build–Test–Learn 闭环。",
+    "boundary_note_zh": "属于领域入口与路线图，不是可执行系统。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Included as a foundational biology-specific perspective."
+    },
+    "category": {
+      "id": "01-surveys-perspectives",
+      "label_en": "Surveys & Perspectives",
+      "label_zh": "综述、观点与路线图",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-002",
+    "title": "Autonomous ‘self-driving’ laboratories: a review of technology and policy implications",
+    "year": 2025,
+    "primary_category": "01-surveys-perspectives",
+    "resource_class": "ecosystem_education",
+    "resource_types": [
+      "review",
+      "policy analysis"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "cross-domain",
+      "laboratory automation"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "not_applicable",
+    "license": null,
+    "urls": {
+      "canonical": "https://pubmed.ncbi.nlm.nih.gov/40852582/",
+      "paper": "https://doi.org/10.1098/rsos.250646",
+      "code": null,
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1098/rsos.250646",
+        "https://pubmed.ncbi.nlm.nih.gov/40852582/"
+      ]
+    },
+    "summary_en": "A recent review that separates self-driving-lab technologies from their governance, policy, and societal implications.",
+    "summary_zh": "系统梳理自驱动实验室技术，并将工程能力与治理、政策和社会影响区分开来。",
+    "boundary_note_zh": "跨学科综述；用于统一术语与风险框架，不作为生物学闭环案例计数。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Included for terminology, technology stack, and governance context."
+    },
+    "category": {
+      "id": "01-surveys-perspectives",
+      "label_en": "Surveys & Perspectives",
+      "label_zh": "综述、观点与路线图",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-003",
+    "title": "Robot Scientist Adam / The Automation of Science",
+    "year": 2009,
+    "primary_category": "02-end-to-end-systems",
+    "resource_class": "core_autonomous_system",
+    "resource_types": [
+      "robot scientist",
+      "closed-loop system",
+      "paper"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "functional genomics",
+      "yeast metabolism"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "high",
+      "operational": "high"
+    },
+    "open_source": "no",
+    "license": null,
+    "urls": {
+      "canonical": "https://www.science.org/doi/10.1126/science.1165620",
+      "paper": "https://doi.org/10.1126/science.1165620",
+      "code": null,
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1126/science.1165620",
+        "https://pubmed.ncbi.nlm.nih.gov/19342587/"
+      ]
+    },
+    "summary_en": "A landmark robot scientist that generated and tested functional-genomics hypotheses in yeast.",
+    "summary_zh": "机器人科学家早期里程碑，可在酵母功能基因组学中提出并检验假设。",
+    "boundary_note_zh": "论文证据强，但未确认可复用的公开完整系统代码。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Included as a canonical end-to-end precedent."
+    },
+    "category": {
+      "id": "02-end-to-end-systems",
+      "label_en": "End-to-End Autonomous Biology Systems",
+      "label_zh": "端到端自主生物学系统",
+      "seed_count": 4
+    }
+  },
+  {
+    "id": "AAB-004",
+    "title": "BacterAI",
+    "year": 2023,
+    "primary_category": "02-end-to-end-systems",
+    "resource_class": "core_autonomous_system",
+    "resource_types": [
+      "autonomous platform",
+      "active learning",
+      "robotic experimentation"
+    ],
+    "loop_stages": [
+      "biological-question",
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "microbiology",
+      "microbial metabolism"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "high",
+      "operational": "high"
+    },
+    "open_source": "partial",
+    "license": "Repository says MIT and also non-commercial use; verify reuse terms with authors.",
+    "urls": {
+      "canonical": "https://www.nature.com/articles/s41564-023-01376-0",
+      "paper": "https://doi.org/10.1038/s41564-023-01376-0",
+      "code": "https://github.com/jensenlab/BacterAI",
+      "data": "https://github.com/jensenlab/BacterAI/tree/master/published_data",
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1038/s41564-023-01376-0",
+        "https://github.com/jensenlab/BacterAI"
+      ]
+    },
+    "summary_en": "An automated platform that turns microbial-metabolism questions into robot-executed experiments and iteratively learns interpretable rules.",
+    "summary_zh": "将微生物代谢问题转化为机器人实验，并通过迭代学习得到可解释规则的自动化平台。",
+    "boundary_note_zh": "高度闭环；仓库中的 MIT 与“仅非商业使用”表述存在冲突，复用前需核实。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Primary paper, code, and published data are available."
+    },
+    "category": {
+      "id": "02-end-to-end-systems",
+      "label_en": "End-to-End Autonomous Biology Systems",
+      "label_zh": "端到端自主生物学系统",
+      "seed_count": 4
+    }
+  },
+  {
+    "id": "AAB-005",
+    "title": "Generalized AI-powered autonomous enzyme engineering platform",
+    "year": 2025,
+    "primary_category": "02-end-to-end-systems",
+    "resource_class": "core_autonomous_system",
+    "resource_types": [
+      "autonomous platform",
+      "enzyme engineering",
+      "robotic workflow"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "enzyme engineering",
+      "protein engineering",
+      "synthetic biology"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "high",
+      "operational": "high"
+    },
+    "open_source": "yes",
+    "license": "BSD-3-Clause for the linked worklist/primer repository",
+    "urls": {
+      "canonical": "https://www.nature.com/articles/s41467-025-61209-y",
+      "paper": "https://doi.org/10.1038/s41467-025-61209-y",
+      "code": "https://github.com/Zhao-Group/Primer_Design_and_Worklists",
+      "data": "https://zenodo.org/records/15243671",
+      "official": "https://ibiofoundry.illinois.edu/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1038/s41467-025-61209-y",
+        "https://github.com/Zhao-Group/Primer_Design_and_Worklists",
+        "https://zenodo.org/records/15243671"
+      ]
+    },
+    "summary_en": "A generalized autonomous enzyme-engineering workflow linking AI-guided design, worklist generation, robotic execution, assays, and iterative learning.",
+    "summary_zh": "连接 AI 设计、工作列表生成、机器人执行、检测与迭代学习的通用自主酶工程流程。",
+    "boundary_note_zh": "代码仓库覆盖关键工作列表与引物设计组件，不应默认等同于完整平台的全部源代码。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Peer-reviewed platform with official code component and Zenodo data."
+    },
+    "category": {
+      "id": "02-end-to-end-systems",
+      "label_en": "End-to-End Autonomous Biology Systems",
+      "label_zh": "端到端自主生物学系统",
+      "seed_count": 4
+    }
+  },
+  {
+    "id": "AAB-006",
+    "title": "LUMI-lab",
+    "year": 2026,
+    "primary_category": "02-end-to-end-systems",
+    "resource_class": "core_autonomous_system",
+    "resource_types": [
+      "foundation-model laboratory",
+      "autonomous platform",
+      "robotic experimentation"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "lipid nanoparticles",
+      "mRNA delivery",
+      "formulation"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "high",
+      "operational": "high"
+    },
+    "open_source": "yes",
+    "license": "GPL-3.0",
+    "urls": {
+      "canonical": "https://www.cell.com/cell/abstract/S0092-8674%2826%2900099-1",
+      "paper": "https://doi.org/10.1016/j.cell.2026.01.012",
+      "code": "https://github.com/bowenli-lab/LUMI-lab",
+      "data": "https://github.com/bowenli-lab/LUMI-lab/tree/main/mapping_table",
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1016/j.cell.2026.01.012",
+        "https://github.com/bowenli-lab/LUMI-lab",
+        "https://www.biorxiv.org/content/10.1101/2025.02.14.638383v1"
+      ]
+    },
+    "summary_en": "A foundation-model-driven autonomous laboratory for iterative discovery of ionizable lipids for mRNA delivery.",
+    "summary_zh": "面向 mRNA 递送用可离子化脂质迭代发现的基础模型驱动自主实验室。",
+    "boundary_note_zh": "仓库公开模型、编排、Opentrons 协议和硬件文件；数据实体另以 AAB-040 建模。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Peer-reviewed system with a GPL-3.0 implementation repository."
+    },
+    "category": {
+      "id": "02-end-to-end-systems",
+      "label_en": "End-to-End Autonomous Biology Systems",
+      "label_zh": "端到端自主生物学系统",
+      "seed_count": 4
+    }
+  },
+  {
+    "id": "AAB-007",
+    "title": "BioDiscoveryAgent",
+    "year": 2024,
+    "primary_category": "03-scientific-agents",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "LLM agent",
+      "experiment design",
+      "tool-using agent"
+    ],
+    "loop_stages": [
+      "biological-question",
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "single-cell biology",
+      "drug discovery",
+      "perturbation studies"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "partial",
+      "operational": "none"
+    },
+    "open_source": "yes",
+    "license": "MIT",
+    "urls": {
+      "canonical": "https://arxiv.org/abs/2405.17631",
+      "paper": "https://arxiv.org/abs/2405.17631",
+      "code": "https://github.com/snap-stanford/BioDiscoveryAgent",
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": false,
+      "primary_sources": [
+        "https://arxiv.org/abs/2405.17631",
+        "https://github.com/snap-stanford/BioDiscoveryAgent"
+      ]
+    },
+    "summary_en": "A tool-using LLM agent for proposing, executing computational analyses, and refining biological discovery workflows.",
+    "summary_zh": "可调用工具来提出、执行计算分析并迭代生物学发现流程的 LLM Agent。",
+    "boundary_note_zh": "主要闭合计算与推理环节，不直接控制湿实验。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Strong biology-agent fit with open code; paper is a preprint."
+    },
+    "category": {
+      "id": "03-scientific-agents",
+      "label_en": "Scientific Agents for Biology",
+      "label_zh": "生物学科学智能体",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-008",
+    "title": "Robin",
+    "year": 2026,
+    "primary_category": "03-scientific-agents",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "multi-agent system",
+      "scientific discovery agent"
+    ],
+    "loop_stages": [
+      "biological-question",
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "drug discovery",
+      "disease biology",
+      "computational biology"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "partial",
+      "operational": "none"
+    },
+    "open_source": "yes",
+    "license": "Apache-2.0",
+    "urls": {
+      "canonical": "https://www.nature.com/articles/s41586-026-10652-y",
+      "paper": "https://doi.org/10.1038/s41586-026-10652-y",
+      "code": "https://github.com/Future-House/robin",
+      "data": null,
+      "official": "https://www.futurehouse.org/research/demonstrating-end-to-end-scientific-discovery-with-robin-a-multi-agent-system"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1038/s41586-026-10652-y",
+        "https://github.com/Future-House/robin"
+      ]
+    },
+    "summary_en": "A multi-agent system that automates literature research, hypothesis generation, and computational analysis across a scientific-discovery campaign.",
+    "summary_zh": "在完整发现任务中自动完成文献研究、假设生成与计算分析的多智能体系统。",
+    "boundary_note_zh": "其端到端发现仍包含外部/人工湿实验，不能标为机器人实验室的操作闭环。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Peer-reviewed, open implementation; wet-lab boundary is stated explicitly."
+    },
+    "category": {
+      "id": "03-scientific-agents",
+      "label_en": "Scientific Agents for Biology",
+      "label_zh": "生物学科学智能体",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-009",
+    "title": "Biomni",
+    "year": 2025,
+    "primary_category": "03-scientific-agents",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "general biomedical agent",
+      "tool-using agent",
+      "agent environment"
+    ],
+    "loop_stages": [
+      "biological-question",
+      "hypothesis-experiment-design",
+      "analysis-interpretation",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "biomedicine",
+      "bioinformatics",
+      "genomics"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "assisted",
+      "operational": "none"
+    },
+    "open_source": "yes",
+    "license": "Apache-2.0 for the framework; integrated tools may use other licenses",
+    "urls": {
+      "canonical": "https://biomni.stanford.edu/",
+      "paper": "https://www.biorxiv.org/content/10.1101/2025.05.30.656746v1",
+      "code": "https://github.com/snap-stanford/biomni",
+      "data": null,
+      "official": "https://biomni.stanford.edu/"
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": false,
+      "primary_sources": [
+        "https://www.biorxiv.org/content/10.1101/2025.05.30.656746v1",
+        "https://github.com/snap-stanford/biomni",
+        "https://biomni.stanford.edu/"
+      ]
+    },
+    "summary_en": "A general-purpose biomedical agent environment that plans analyses and calls a broad collection of biological tools and databases.",
+    "summary_zh": "可规划分析并调用大量生物工具与数据库的通用生物医学 Agent 环境。",
+    "boundary_note_zh": "会执行模型生成的代码，部署时必须隔离；框架开源不代表集成组件均可自由复用。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Included as a major biology-specific agent/tool environment with security caveat."
+    },
+    "category": {
+      "id": "03-scientific-agents",
+      "label_en": "Scientific Agents for Biology",
+      "label_zh": "生物学科学智能体",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-010",
+    "title": "LaMBO",
+    "year": 2022,
+    "primary_category": "04-experiment-design",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "Bayesian optimization",
+      "sequence design",
+      "multi-objective optimization"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "protein design",
+      "sequence optimization"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "partial",
+      "operational": "none"
+    },
+    "open_source": "yes",
+    "license": "See repository",
+    "urls": {
+      "canonical": "https://arxiv.org/abs/2203.12742",
+      "paper": "https://arxiv.org/abs/2203.12742",
+      "code": "https://github.com/samuelstanton/lambo",
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": false,
+      "primary_sources": [
+        "https://arxiv.org/abs/2203.12742",
+        "https://github.com/samuelstanton/lambo"
+      ]
+    },
+    "summary_en": "A latent-space Bayesian-optimization method for multi-objective biological sequence design.",
+    "summary_zh": "用于多目标生物序列设计的潜空间贝叶斯优化方法。",
+    "boundary_note_zh": "属于实验/候选选择算法，不包含湿实验执行。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Representative active-learning design method with official code."
+    },
+    "category": {
+      "id": "04-experiment-design",
+      "label_en": "Biological Experiment Design",
+      "label_zh": "生物实验设计",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-011",
+    "title": "BRADSHAW",
+    "year": 2019,
+    "primary_category": "04-experiment-design",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "Bayesian optimization",
+      "small-data design",
+      "drug design"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "drug discovery",
+      "molecular design"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "partial",
+      "operational": "none"
+    },
+    "open_source": "no",
+    "license": null,
+    "urls": {
+      "canonical": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7292824/",
+      "paper": "https://doi.org/10.1007/s10822-019-00234-8",
+      "code": null,
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1007/s10822-019-00234-8",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7292824/"
+      ]
+    },
+    "summary_en": "A closed-loop Bayesian optimization framework for designing informative experiments under small-data constraints.",
+    "summary_zh": "面向小数据条件下信息增益实验选择的闭环贝叶斯优化框架。",
+    "boundary_note_zh": "方法论文可核验，但未找到官方公开实现。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Included for closed-loop small-data experiment design evidence."
+    },
+    "category": {
+      "id": "04-experiment-design",
+      "label_en": "Biological Experiment Design",
+      "label_zh": "生物实验设计",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-012",
+    "title": "GEARS",
+    "year": 2023,
+    "primary_category": "05-perturbation-virtual-cell",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "perturbation model",
+      "graph neural network",
+      "virtual-cell component"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "single-cell genomics",
+      "CRISPR perturbation"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "partial",
+      "operational": "none"
+    },
+    "open_source": "yes",
+    "license": "See repository",
+    "urls": {
+      "canonical": "https://www.nature.com/articles/s41587-023-01905-6",
+      "paper": "https://doi.org/10.1038/s41587-023-01905-6",
+      "code": "https://github.com/snap-stanford/GEARS",
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1038/s41587-023-01905-6",
+        "https://github.com/snap-stanford/GEARS"
+      ]
+    },
+    "summary_en": "A graph-based model for predicting transcriptional responses to unseen genetic perturbations.",
+    "summary_zh": "用于预测未见遗传扰动转录响应的图模型。",
+    "boundary_note_zh": "是虚拟扰动预测组件，不是完整虚拟细胞或自动实验室。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Representative perturbation-prediction module with peer-reviewed evidence and code."
+    },
+    "category": {
+      "id": "05-perturbation-virtual-cell",
+      "label_en": "Perturbation & Virtual Cell",
+      "label_zh": "扰动建模与虚拟细胞",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-013",
+    "title": "Compositional Perturbation Autoencoder (CPA)",
+    "year": 2023,
+    "primary_category": "05-perturbation-virtual-cell",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "perturbation model",
+      "representation learning",
+      "virtual-cell component"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "single-cell biology",
+      "drug perturbation"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "partial",
+      "operational": "none"
+    },
+    "open_source": "yes",
+    "license": "BSD-3-Clause",
+    "urls": {
+      "canonical": "https://link.springer.com/article/10.15252/msb.202211517",
+      "paper": "https://doi.org/10.15252/msb.202211517",
+      "code": "https://github.com/theislab/CPA",
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.15252/msb.202211517",
+        "https://github.com/theislab/CPA"
+      ]
+    },
+    "summary_en": "A compositional model for predicting single-cell responses to unseen combinations of perturbations, doses, and covariates.",
+    "summary_zh": "预测细胞对未见扰动组合、剂量与协变量响应的组合式单细胞模型。",
+    "boundary_note_zh": "属于预测与候选选择模块，不含实验协议或执行层。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Peer-reviewed perturbation model with an official implementation."
+    },
+    "category": {
+      "id": "05-perturbation-virtual-cell",
+      "label_en": "Perturbation & Virtual Cell",
+      "label_zh": "扰动建模与虚拟细胞",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-014",
+    "title": "EVOLVEpro",
+    "year": 2025,
+    "primary_category": "06-protein-sequence-engineering",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "protein engineering",
+      "active learning",
+      "directed evolution"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "protein engineering",
+      "directed evolution"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "partial",
+      "operational": "assisted"
+    },
+    "open_source": "yes",
+    "license": "See repository",
+    "urls": {
+      "canonical": "https://www.science.org/doi/10.1126/science.adr6006",
+      "paper": "https://doi.org/10.1126/science.adr6006",
+      "code": "https://github.com/mat10d/EvolvePro",
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1126/science.adr6006",
+        "https://github.com/mat10d/EvolvePro"
+      ]
+    },
+    "summary_en": "A protein-engineering framework that combines sequence models with iterative experimental feedback to prioritize variants.",
+    "summary_zh": "结合序列模型与多轮实验反馈来优选变体的蛋白工程框架。",
+    "boundary_note_zh": "包含真实实验迭代，但执行层并非必然全自动。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Recent peer-reviewed iterative protein-engineering workflow with code."
+    },
+    "category": {
+      "id": "06-protein-sequence-engineering",
+      "label_en": "Protein & Sequence Engineering",
+      "label_zh": "蛋白与序列工程",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-015",
+    "title": "Low-N protein engineering",
+    "year": 2021,
+    "primary_category": "06-protein-sequence-engineering",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "protein engineering",
+      "small-data machine learning",
+      "variant selection"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "protein engineering"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "partial",
+      "operational": "assisted"
+    },
+    "open_source": "yes",
+    "license": "See repository",
+    "urls": {
+      "canonical": "https://pubmed.ncbi.nlm.nih.gov/33828272/",
+      "paper": "https://doi.org/10.1038/s41592-021-01100-y",
+      "code": "https://github.com/churchlab/low-N-protein-engineering",
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1038/s41592-021-01100-y",
+        "https://github.com/churchlab/low-N-protein-engineering"
+      ]
+    },
+    "summary_en": "A practical small-data machine-learning workflow for prioritizing protein variants with limited measurements.",
+    "summary_zh": "在测量数据有限时优选蛋白变体的实用小数据机器学习流程。",
+    "boundary_note_zh": "支持设计—测试迭代，但不是自主实验执行平台。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Foundational small-data protein-engineering workflow with code."
+    },
+    "category": {
+      "id": "06-protein-sequence-engineering",
+      "label_en": "Protein & Sequence Engineering",
+      "label_zh": "蛋白与序列工程",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-016",
+    "title": "Machine-learning-assisted directed protein evolution (MLDE)",
+    "year": 2019,
+    "primary_category": "06-protein-sequence-engineering",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "protein engineering",
+      "directed evolution",
+      "variant selection"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "protein engineering",
+      "directed evolution"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "partial",
+      "operational": "assisted"
+    },
+    "open_source": "yes",
+    "license": "See repository",
+    "urls": {
+      "canonical": "https://www.pnas.org/doi/10.1073/pnas.1901979116",
+      "paper": "https://doi.org/10.1073/pnas.1901979116",
+      "code": "https://github.com/fhalab/MLDE",
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1073/pnas.1901979116",
+        "https://github.com/fhalab/MLDE"
+      ]
+    },
+    "summary_en": "A machine-learning-guided strategy for selecting compact, informative variant libraries for directed evolution.",
+    "summary_zh": "以机器学习指导构建紧凑且高信息量变体库的定向进化策略。",
+    "boundary_note_zh": "聚焦候选选择，实验自动化程度取决于外部平台。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Canonical ML-guided protein-evolution method with code."
+    },
+    "category": {
+      "id": "06-protein-sequence-engineering",
+      "label_en": "Protein & Sequence Engineering",
+      "label_zh": "蛋白与序列工程",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-017",
+    "title": "Robot Scientist Eve",
+    "year": 2015,
+    "primary_category": "07-drug-cell-screening",
+    "resource_class": "core_autonomous_system",
+    "resource_types": [
+      "robot scientist",
+      "drug screening",
+      "closed-loop system"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "drug discovery",
+      "phenotypic screening"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "high",
+      "operational": "high"
+    },
+    "open_source": "no",
+    "license": null,
+    "urls": {
+      "canonical": "https://royalsocietypublishing.org/rsif/article/12/104/20141289/35592/Cheaper-faster-drug-development-validated-by-the",
+      "paper": "https://doi.org/10.1098/rsif.2014.1289",
+      "code": null,
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1098/rsif.2014.1289",
+        "https://pubmed.ncbi.nlm.nih.gov/25652463/"
+      ]
+    },
+    "summary_en": "A robot scientist that automated phenotypic screening and identified candidate compounds for neglected-disease drug discovery.",
+    "summary_zh": "自动开展表型筛选并为被忽视疾病发现候选化合物的机器人科学家。",
+    "boundary_note_zh": "端到端案例证据强，但未确认完整系统公开源码。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Canonical autonomous drug-screening system."
+    },
+    "category": {
+      "id": "07-drug-cell-screening",
+      "label_en": "Drug Discovery & Cell-Based Screening",
+      "label_zh": "药物发现与细胞筛选",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-018",
+    "title": "Quadratic Phenotypic Optimization Platform (QPOP)",
+    "year": 2018,
+    "primary_category": "07-drug-cell-screening",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "drug combination optimization",
+      "phenotypic screening",
+      "closed-loop optimization"
+    ],
+    "loop_stages": [
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "drug combinations",
+      "precision medicine",
+      "cell-based screening"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "partial",
+      "operational": "assisted"
+    },
+    "open_source": "no",
+    "license": null,
+    "urls": {
+      "canonical": "https://www.science.org/doi/10.1126/scitranslmed.aan0941",
+      "paper": "https://doi.org/10.1126/scitranslmed.aan0941",
+      "code": null,
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1126/scitranslmed.aan0941",
+        "https://pubmed.ncbi.nlm.nih.gov/30089632/"
+      ]
+    },
+    "summary_en": "A phenotype-driven platform for efficiently searching and optimizing multidrug combinations.",
+    "summary_zh": "以表型数据驱动高效搜索和优化多药组合的平台。",
+    "boundary_note_zh": "闭环优化可核验，但公开实现与通用自动化执行能力有限。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Representative closed-loop drug-combination optimization evidence."
+    },
+    "category": {
+      "id": "07-drug-cell-screening",
+      "label_en": "Drug Discovery & Cell-Based Screening",
+      "label_zh": "药物发现与细胞筛选",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-019",
+    "title": "NSF iBioFoundry (iBioFAB)",
+    "year": null,
+    "primary_category": "08-synthetic-biology-biofoundries",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "biofoundry",
+      "automation platform",
+      "research infrastructure"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "synthetic biology",
+      "enzyme engineering",
+      "bioengineering"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "none",
+      "operational": "high"
+    },
+    "open_source": "partial",
+    "license": null,
+    "urls": {
+      "canonical": "https://ibiofoundry.illinois.edu/",
+      "paper": null,
+      "code": null,
+      "data": null,
+      "official": "https://ibiofoundry.illinois.edu/"
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": null,
+      "primary_sources": [
+        "https://ibiofoundry.illinois.edu/",
+        "https://biofoundry.web.illinois.edu/"
+      ]
+    },
+    "summary_en": "A highly automated synthetic-biology biofoundry that provides infrastructure for design–build–test–learn workflows.",
+    "summary_zh": "为合成生物学 Design–Build–Test–Learn 提供高自动化基础设施的生物铸造厂。",
+    "boundary_note_zh": "平台本身提供执行基础设施，不等于具备独立科学决策自治。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Official biofoundry platform with direct relevance to closed-loop biology."
+    },
+    "category": {
+      "id": "08-synthetic-biology-biofoundries",
+      "label_en": "Synthetic Biology & Biofoundries",
+      "label_zh": "合成生物学与生物铸造厂",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-020",
+    "title": "eVOLVER",
+    "year": 2018,
+    "primary_category": "08-synthetic-biology-biofoundries",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "continuous culture",
+      "feedback control",
+      "bioreactor platform"
+    ],
+    "loop_stages": [
+      "wet-lab-execution",
+      "measurement-qc",
+      "model-update-feedback"
+    ],
+    "biological_domains": [
+      "microbiology",
+      "synthetic biology",
+      "experimental evolution"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "none",
+      "operational": "high"
+    },
+    "open_source": "partial",
+    "license": "See project and vendor documentation",
+    "urls": {
+      "canonical": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6035058/",
+      "paper": "https://doi.org/10.1038/nbt.4151",
+      "code": "https://github.com/khalil-lab/evolver",
+      "data": null,
+      "official": "https://www.fynchbio.com/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1038/nbt.4151",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6035058/",
+        "https://github.com/khalil-lab/evolver"
+      ]
+    },
+    "summary_en": "A scalable continuous-culture platform supporting programmable, feedback-controlled microbial experiments.",
+    "summary_zh": "支持可编程反馈控制微生物实验的可扩展连续培养平台。",
+    "boundary_note_zh": "可自动调控实验条件，但科学问题与下一轮策略通常由外部算法或研究者提供。",
+    "curation": {
+      "status": "review_pending",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Peer-reviewed enabling platform for feedback-controlled biology."
+    },
+    "category": {
+      "id": "08-synthetic-biology-biofoundries",
+      "label_en": "Synthetic Biology & Biofoundries",
+      "label_zh": "合成生物学与生物铸造厂",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-021",
+    "title": "Autoprotocol",
+    "year": null,
+    "primary_category": "09-protocols",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "protocol language",
+      "machine-readable protocol",
+      "software library"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "wet-lab-execution"
+    ],
+    "biological_domains": [
+      "laboratory automation",
+      "synthetic biology"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "partial"
+    },
+    "open_source": "yes",
+    "license": "See repository",
+    "urls": {
+      "canonical": "https://autoprotocol.org/",
+      "paper": null,
+      "code": "https://github.com/autoprotocol/autoprotocol-python",
+      "data": null,
+      "official": "https://autoprotocol.org/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": null,
+      "primary_sources": [
+        "https://autoprotocol.org/",
+        "https://github.com/autoprotocol/autoprotocol-python"
+      ]
+    },
+    "summary_en": "A machine-readable protocol specification and software ecosystem for describing executable laboratory procedures.",
+    "summary_zh": "用于描述可执行实验步骤的机器可读协议规范与软件生态。",
+    "boundary_note_zh": "协议表示层，不自行生成科学假设或保证设备可执行性。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Foundational protocol representation resource with official code."
+    },
+    "category": {
+      "id": "09-protocols",
+      "label_en": "Protocol Generation & Representation",
+      "label_zh": "实验协议生成与表示",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-022",
+    "title": "LabOP",
+    "year": 2023,
+    "primary_category": "09-protocols",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "protocol ontology",
+      "workflow representation",
+      "interoperability standard"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc"
+    ],
+    "biological_domains": [
+      "synthetic biology",
+      "laboratory automation"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "partial"
+    },
+    "open_source": "yes",
+    "license": "MIT",
+    "urls": {
+      "canonical": "https://bioprotocols.github.io/",
+      "paper": "https://doi.org/10.1145/3604568",
+      "code": "https://github.com/Bioprotocols/labop",
+      "data": null,
+      "official": "https://bioprotocols.github.io/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1145/3604568",
+        "https://github.com/Bioprotocols/labop"
+      ]
+    },
+    "summary_en": "An ontology-based language for representing, exchanging, and compiling laboratory protocols across execution environments.",
+    "summary_zh": "用于跨执行环境表示、交换和编译实验协议的本体语言。",
+    "boundary_note_zh": "解决协议语义与互操作，不等于自动协议生成 Agent。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Peer-reviewed protocol representation standard with open implementation."
+    },
+    "category": {
+      "id": "09-protocols",
+      "label_en": "Protocol Generation & Representation",
+      "label_zh": "实验协议生成与表示",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-023",
+    "title": "Aquarium",
+    "year": 2021,
+    "primary_category": "10-lab-orchestration",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "LabOS",
+      "workflow management",
+      "provenance system"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc"
+    ],
+    "biological_domains": [
+      "synthetic biology",
+      "laboratory operations"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "none",
+      "operational": "partial"
+    },
+    "open_source": "yes",
+    "license": "See repository",
+    "urls": {
+      "canonical": "https://academic.oup.com/synbio/article/6/1/ysab006/6124325",
+      "paper": "https://doi.org/10.1093/synbio/ysab006",
+      "code": "https://github.com/aquariumbio/aquarium",
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1093/synbio/ysab006",
+        "https://github.com/aquariumbio/aquarium"
+      ]
+    },
+    "summary_en": "A laboratory operating system for planning, executing, tracking, and reproducing complex biological workflows.",
+    "summary_zh": "用于规划、执行、追踪和复现实验室复杂生物工作流的 LabOS。",
+    "boundary_note_zh": "提供编排与溯源，不负责自主选择科学问题。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Established open LabOS with peer-reviewed description."
+    },
+    "category": {
+      "id": "10-lab-orchestration",
+      "label_en": "Laboratory Orchestration & LabOS",
+      "label_zh": "实验室编排与 LabOS",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-024",
+    "title": "HELAO",
+    "year": null,
+    "primary_category": "10-lab-orchestration",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "laboratory orchestration",
+      "hardware abstraction",
+      "experiment server"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc"
+    ],
+    "biological_domains": [
+      "automated laboratories",
+      "cross-domain experimentation"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "none",
+      "operational": "high"
+    },
+    "open_source": "yes",
+    "license": "See repository",
+    "urls": {
+      "canonical": "https://github.com/helgestein/helao-pub",
+      "paper": null,
+      "code": "https://github.com/helgestein/helao-pub",
+      "data": null,
+      "official": "https://fuzhanrahmanian.com/project/helao/"
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": null,
+      "primary_sources": [
+        "https://github.com/helgestein/helao-pub",
+        "https://fuzhanrahmanian.com/project/helao/"
+      ]
+    },
+    "summary_en": "A modular orchestration framework for coordinating instrument servers and automated laboratory experiments.",
+    "summary_zh": "用于协调仪器服务与自动化实验的模块化实验室编排框架。",
+    "boundary_note_zh": "最初并非生物学专用；仅在连接生物实验设备与工作流时纳入本库。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Included as cross-domain orchestration infrastructure with direct lab relevance."
+    },
+    "category": {
+      "id": "10-lab-orchestration",
+      "label_en": "Laboratory Orchestration & LabOS",
+      "label_zh": "实验室编排与 LabOS",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-025",
+    "title": "MADSci",
+    "year": 2026,
+    "primary_category": "10-lab-orchestration",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "laboratory orchestration",
+      "device management",
+      "workflow scheduler"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc"
+    ],
+    "biological_domains": [
+      "automated laboratories",
+      "biofoundries"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "none",
+      "operational": "high"
+    },
+    "open_source": "yes",
+    "license": "See repository",
+    "urls": {
+      "canonical": "https://joss.theoj.org/papers/10.21105/joss.09416",
+      "paper": "https://doi.org/10.21105/joss.09416",
+      "code": "https://github.com/AD-SDL/MADSci",
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.21105/joss.09416",
+        "https://github.com/AD-SDL/MADSci"
+      ]
+    },
+    "summary_en": "A modular framework for scheduling workflows and coordinating devices, resources, and data in autonomous laboratories.",
+    "summary_zh": "在自主实验室中调度工作流并协调设备、资源和数据的模块化框架。",
+    "boundary_note_zh": "属于实验室软件中枢，科学决策能力需由外部模块提供。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Open orchestration stack with a software paper."
+    },
+    "category": {
+      "id": "10-lab-orchestration",
+      "label_en": "Laboratory Orchestration & LabOS",
+      "label_zh": "实验室编排与 LabOS",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-026",
+    "title": "PyLabRobot",
+    "year": 2023,
+    "primary_category": "11-robot-instrument-control",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "device control",
+      "liquid handling",
+      "hardware abstraction"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "wet-lab-execution"
+    ],
+    "biological_domains": [
+      "laboratory automation",
+      "liquid handling"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "none",
+      "operational": "partial"
+    },
+    "open_source": "yes",
+    "license": "See repository",
+    "urls": {
+      "canonical": "https://docs.pylabrobot.org/",
+      "paper": "https://doi.org/10.1016/j.device.2023.100111",
+      "code": "https://github.com/PyLabRobot/pylabrobot",
+      "data": null,
+      "official": "https://docs.pylabrobot.org/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1016/j.device.2023.100111",
+        "https://github.com/PyLabRobot/pylabrobot"
+      ]
+    },
+    "summary_en": "A hardware-agnostic Python framework for controlling liquid handlers and other laboratory devices.",
+    "summary_zh": "面向移液工作站及其他实验设备的硬件无关 Python 控制框架。",
+    "boundary_note_zh": "执行层工具，不包含实验选择或模型更新逻辑。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Well-documented open device-control layer with a peer-reviewed paper."
+    },
+    "category": {
+      "id": "11-robot-instrument-control",
+      "label_en": "Robotic & Instrument Control",
+      "label_zh": "机器人与仪器控制",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-027",
+    "title": "SiLA 2",
+    "year": null,
+    "primary_category": "11-robot-instrument-control",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "device interoperability standard",
+      "laboratory API",
+      "software library"
+    ],
+    "loop_stages": [
+      "wet-lab-execution",
+      "measurement-qc"
+    ],
+    "biological_domains": [
+      "laboratory automation",
+      "instrument integration"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "partial"
+    },
+    "open_source": "yes",
+    "license": "MIT for sila_base",
+    "urls": {
+      "canonical": "https://sila-standard.com/",
+      "paper": null,
+      "code": "https://gitlab.com/SiLA2/sila_base",
+      "data": null,
+      "official": "https://sila2.gitlab.io/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": null,
+      "primary_sources": [
+        "https://sila-standard.com/",
+        "https://gitlab.com/SiLA2/sila_base",
+        "https://sila2.gitlab.io/"
+      ]
+    },
+    "summary_en": "A standard and software base for interoperable communication with laboratory instruments.",
+    "summary_zh": "用于实验仪器互操作通信的标准与软件基础。",
+    "boundary_note_zh": "标准化设备接口，不提供自治策略。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Core interoperability standard for laboratory execution layers."
+    },
+    "category": {
+      "id": "11-robot-instrument-control",
+      "label_en": "Robotic & Instrument Control",
+      "label_zh": "机器人与仪器控制",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-028",
+    "title": "CellProfiler",
+    "year": 2018,
+    "primary_category": "12-measurement-qc-analysis",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "image analysis",
+      "measurement pipeline",
+      "quality control"
+    ],
+    "loop_stages": [
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "cell biology",
+      "microscopy",
+      "phenotypic screening"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "none",
+      "operational": "partial"
+    },
+    "open_source": "yes",
+    "license": "BSD-3-Clause",
+    "urls": {
+      "canonical": "https://cellprofiler.org/",
+      "paper": "https://doi.org/10.1371/journal.pbio.2005970",
+      "code": "https://github.com/CellProfiler/CellProfiler",
+      "data": null,
+      "official": "https://cellprofiler.org/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1371/journal.pbio.2005970",
+        "https://github.com/CellProfiler/CellProfiler"
+      ]
+    },
+    "summary_en": "A widely used open platform for reproducible, high-throughput quantitative analysis of biological images.",
+    "summary_zh": "广泛使用的开源生物图像高通量定量分析平台，强调可复现流程。",
+    "boundary_note_zh": "提供测量与分析反馈信号，本身不负责闭环实验决策。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Canonical measurement and analysis component for cell-based loops."
+    },
+    "category": {
+      "id": "12-measurement-qc-analysis",
+      "label_en": "Measurement, QC & Data Analysis",
+      "label_zh": "测量、质控与数据分析",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-029",
+    "title": "DeepCell Kiosk",
+    "year": 2020,
+    "primary_category": "12-measurement-qc-analysis",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "deep learning",
+      "microscopy analysis",
+      "cloud deployment"
+    ],
+    "loop_stages": [
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "cell biology",
+      "microscopy",
+      "single-cell imaging"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "none",
+      "operational": "high"
+    },
+    "open_source": "partial",
+    "license": "See DeepCell repositories",
+    "urls": {
+      "canonical": "https://www.nature.com/articles/s41592-020-01023-0",
+      "paper": "https://doi.org/10.1038/s41592-020-01023-0",
+      "code": "https://github.com/vanvalenlab/deepcell-kiosk",
+      "data": null,
+      "official": "https://deepcell.org/"
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1038/s41592-020-01023-0",
+        "https://deepcell.org/"
+      ]
+    },
+    "summary_en": "A deployable deep-learning system that makes cell-image analysis accessible as an operational measurement service.",
+    "summary_zh": "将细胞图像深度学习分析部署为可操作测量服务的系统。",
+    "boundary_note_zh": "论文与生态可核验；应在发布前再次检查 Kiosk 专用仓库的当前可用性。",
+    "curation": {
+      "status": "review_pending",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Included for operationalized measurement; repository availability needs periodic checks."
+    },
+    "category": {
+      "id": "12-measurement-qc-analysis",
+      "label_en": "Measurement, QC & Data Analysis",
+      "label_zh": "测量、质控与数据分析",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-030",
+    "title": "Automated Recommendation Tool (ART)",
+    "year": 2020,
+    "primary_category": "13-feedback-learning",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "Bayesian ensemble",
+      "design recommendation",
+      "synthetic biology"
+    ],
+    "loop_stages": [
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "synthetic biology",
+      "metabolic engineering"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "partial",
+      "operational": "assisted"
+    },
+    "open_source": "no",
+    "license": "Source code is licensed separately; repository states it is not included",
+    "urls": {
+      "canonical": "https://www.nature.com/articles/s41467-020-18008-4",
+      "paper": "https://doi.org/10.1038/s41467-020-18008-4",
+      "code": "https://github.com/JBEI/ART",
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1038/s41467-020-18008-4",
+        "https://github.com/JBEI/ART"
+      ]
+    },
+    "summary_en": "A Bayesian ensemble framework that learns from biological experiments and recommends new designs under uncertainty.",
+    "summary_zh": "从生物实验中学习并在不确定性下推荐新设计的贝叶斯集成框架。",
+    "boundary_note_zh": "官方仓库不含完整源代码；学术或商业使用需遵循单独授权。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Strong feedback-learning evidence; openness limitation is explicit."
+    },
+    "category": {
+      "id": "13-feedback-learning",
+      "label_en": "Feedback Learning & Model Updating",
+      "label_zh": "反馈学习与模型更新",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-031",
+    "title": "Active Learning-assisted Directed Evolution (ALDE)",
+    "year": 2025,
+    "primary_category": "13-feedback-learning",
+    "resource_class": "scientific_decision_module",
+    "resource_types": [
+      "active learning",
+      "directed evolution",
+      "iterative model updating"
+    ],
+    "loop_stages": [
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "protein engineering",
+      "directed evolution"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "partial",
+      "operational": "assisted"
+    },
+    "open_source": "yes",
+    "license": "See repository",
+    "urls": {
+      "canonical": "https://www.nature.com/articles/s41467-025-55987-8",
+      "paper": "https://doi.org/10.1038/s41467-025-55987-8",
+      "code": "https://github.com/jsunn-y/ALDE",
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1038/s41467-025-55987-8",
+        "https://github.com/jsunn-y/ALDE"
+      ]
+    },
+    "summary_en": "An iterative active-learning workflow that updates sequence–fitness models across rounds of directed-evolution experiments.",
+    "summary_zh": "在多轮定向进化实验中持续更新序列—适应度模型的主动学习流程。",
+    "boundary_note_zh": "真实多轮反馈明确；具体实验执行自动化程度取决于部署环境。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Clear iterative feedback-learning evidence with code."
+    },
+    "category": {
+      "id": "13-feedback-learning",
+      "label_en": "Feedback Learning & Model Updating",
+      "label_zh": "反馈学习与模型更新",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-032",
+    "title": "ISA-Tab and ISA tools",
+    "year": null,
+    "primary_category": "14-standards-provenance",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "metadata standard",
+      "provenance",
+      "software ecosystem"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "multi-omics",
+      "life-science experiments"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "yes",
+    "license": "See individual ISA-tools repositories",
+    "urls": {
+      "canonical": "https://isa-tools.org/",
+      "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8444265/",
+      "code": "https://github.com/ISA-tools",
+      "data": null,
+      "official": "https://isa-tools.org/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://isa-tools.org/",
+        "https://github.com/ISA-tools",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8444265/"
+      ]
+    },
+    "summary_en": "A standards and tooling ecosystem for structuring investigation, study, assay, and provenance metadata in life science.",
+    "summary_zh": "用于组织生命科学 Investigation、Study、Assay 与溯源元数据的标准和工具生态。",
+    "boundary_note_zh": "保障数据可追踪与可交换，不产生自治能力。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Major life-science metadata and provenance standard."
+    },
+    "category": {
+      "id": "14-standards-provenance",
+      "label_en": "Data Standards & Provenance",
+      "label_zh": "数据标准与溯源",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-033",
+    "title": "Allotrope Framework and Allotrope Data Format",
+    "year": null,
+    "primary_category": "14-standards-provenance",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "laboratory data standard",
+      "ontology",
+      "data format"
+    ],
+    "loop_stages": [
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "analytical laboratories",
+      "instrument data"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "partial",
+    "license": "Public specifications; implementation and membership terms vary",
+    "urls": {
+      "canonical": "https://www.allotrope.org/allotrope-framework",
+      "paper": null,
+      "code": null,
+      "data": null,
+      "official": "https://docs.allotrope.org/Allotrope%20Data%20Format.html"
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": null,
+      "primary_sources": [
+        "https://www.allotrope.org/allotrope-framework",
+        "https://docs.allotrope.org/",
+        "https://docs.allotrope.org/Allotrope%20Data%20Format.html"
+      ]
+    },
+    "summary_en": "A framework and data format for standardizing analytical laboratory data, metadata, and semantics.",
+    "summary_zh": "标准化分析实验室数据、元数据与语义的框架和数据格式。",
+    "boundary_note_zh": "公开规范不等于所有实现均开源或无许可限制。",
+    "curation": {
+      "status": "review_pending",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Important laboratory-data standard with explicit openness caveat."
+    },
+    "category": {
+      "id": "14-standards-provenance",
+      "label_en": "Data Standards & Provenance",
+      "label_zh": "数据标准与溯源",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-034",
+    "title": "Vivarium",
+    "year": 2022,
+    "primary_category": "15-simulators-digital-twins",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "multiscale simulator",
+      "model composition",
+      "virtual laboratory component"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "systems biology",
+      "multiscale modeling",
+      "cell simulation"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "yes",
+    "license": "Apache-2.0",
+    "urls": {
+      "canonical": "https://academic.oup.com/bioinformatics/article/38/7/1972/6522109",
+      "paper": "https://doi.org/10.1093/bioinformatics/btac049",
+      "code": "https://github.com/vivarium-collective/vivarium-core",
+      "data": null,
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1093/bioinformatics/btac049",
+        "https://github.com/vivarium-collective/vivarium-core"
+      ]
+    },
+    "summary_en": "A framework for composing heterogeneous biological models into multiscale simulations.",
+    "summary_zh": "将异构生物模型组合为多尺度仿真的框架。",
+    "boundary_note_zh": "是数字孪生/虚拟实验室的组件基础，不等于经验证的完整数字孪生。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Peer-reviewed open multiscale simulation framework."
+    },
+    "category": {
+      "id": "15-simulators-digital-twins",
+      "label_en": "Simulators & Digital Twins",
+      "label_zh": "模拟器与数字孪生",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-035",
+    "title": "BioSimulators",
+    "year": 2022,
+    "primary_category": "15-simulators-digital-twins",
+    "resource_class": "data_evaluation_resource",
+    "resource_types": [
+      "simulation registry",
+      "standardized execution",
+      "reproducibility infrastructure"
+    ],
+    "loop_stages": [
+      "hypothesis-experiment-design",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "systems biology",
+      "computational modeling"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "yes",
+    "license": "See individual BioSimulators repositories",
+    "urls": {
+      "canonical": "https://biosimulators.org/",
+      "paper": "https://doi.org/10.1093/nar/gkac331",
+      "code": "https://github.com/biosimulators",
+      "data": null,
+      "official": "https://biosimulators.org/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1093/nar/gkac331",
+        "https://biosimulators.org/",
+        "https://github.com/biosimulators"
+      ]
+    },
+    "summary_en": "A registry and standardized execution ecosystem for reproducible simulation of biological models.",
+    "summary_zh": "支持生物模型可复现仿真的注册表与标准化执行生态。",
+    "boundary_note_zh": "提供仿真互操作和复现基础，不直接学习实验策略。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Key simulation interoperability and reproducibility resource."
+    },
+    "category": {
+      "id": "15-simulators-digital-twins",
+      "label_en": "Simulators & Digital Twins",
+      "label_zh": "模拟器与数字孪生",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-036",
+    "title": "LABBench2",
+    "year": 2026,
+    "primary_category": "16-benchmarks-evaluation",
+    "resource_class": "data_evaluation_resource",
+    "resource_types": [
+      "benchmark",
+      "biology agent evaluation",
+      "dataset"
+    ],
+    "loop_stages": [
+      "biological-question",
+      "hypothesis-experiment-design",
+      "protocol-generation",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "biology research",
+      "laboratory reasoning"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "yes",
+    "license": "See repository and dataset card",
+    "urls": {
+      "canonical": "https://arxiv.org/abs/2604.09554",
+      "paper": "https://arxiv.org/abs/2604.09554",
+      "code": "https://github.com/EdisonScientific/labbench2",
+      "data": "https://huggingface.co/datasets/EdisonScientific/labbench2",
+      "official": null
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": false,
+      "primary_sources": [
+        "https://arxiv.org/abs/2604.09554",
+        "https://github.com/EdisonScientific/labbench2",
+        "https://huggingface.co/datasets/EdisonScientific/labbench2"
+      ]
+    },
+    "summary_en": "A benchmark suite for evaluating AI systems on nearly 1,900 biology-research tasks across reasoning and laboratory-relevant skills.",
+    "summary_zh": "在近 1,900 个生物研究任务上评测 AI 推理与实验相关技能的基准套件。",
+    "boundary_note_zh": "评测认知与任务能力，不等价于真实湿实验成功率；当前论文为预印本。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Current biology-agent benchmark with official code and dataset."
+    },
+    "category": {
+      "id": "16-benchmarks-evaluation",
+      "label_en": "Benchmarks & Evaluation",
+      "label_zh": "基准与评测",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-037",
+    "title": "Virtual Cell Challenge",
+    "year": 2025,
+    "primary_category": "16-benchmarks-evaluation",
+    "resource_class": "data_evaluation_resource",
+    "resource_types": [
+      "challenge",
+      "benchmark",
+      "perturbation dataset"
+    ],
+    "loop_stages": [
+      "experiment-selection",
+      "analysis-interpretation",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "single-cell biology",
+      "perturbation prediction",
+      "virtual cell"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "partial",
+    "license": "See challenge dataset terms",
+    "urls": {
+      "canonical": "https://virtualcellchallenge.org/",
+      "paper": "https://www.cell.com/cell/fulltext/S0092-8674%2825%2900675-0",
+      "code": null,
+      "data": "https://virtualcellchallenge.org/datasets",
+      "official": "https://virtualcellchallenge.org/"
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://virtualcellchallenge.org/",
+        "https://virtualcellchallenge.org/datasets",
+        "https://www.cell.com/cell/fulltext/S0092-8674%2825%2900675-0"
+      ]
+    },
+    "summary_en": "A community challenge and dataset ecosystem for evaluating models that predict cellular responses to perturbations.",
+    "summary_zh": "用于评测细胞扰动响应预测模型的社区挑战与数据生态。",
+    "boundary_note_zh": "是虚拟细胞预测基准，不直接证明模型可驱动闭环实验。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Major current benchmark for perturbation-response models."
+    },
+    "category": {
+      "id": "16-benchmarks-evaluation",
+      "label_en": "Benchmarks & Evaluation",
+      "label_zh": "基准与评测",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-038",
+    "title": "ProteinGym",
+    "year": 2023,
+    "primary_category": "16-benchmarks-evaluation",
+    "resource_class": "data_evaluation_resource",
+    "resource_types": [
+      "benchmark",
+      "protein fitness dataset",
+      "evaluation suite"
+    ],
+    "loop_stages": [
+      "experiment-selection",
+      "analysis-interpretation",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "protein engineering",
+      "variant effect prediction"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "yes",
+    "license": "See repository and individual datasets",
+    "urls": {
+      "canonical": "https://proteingym.org/",
+      "paper": "https://pubmed.ncbi.nlm.nih.gov/38106144/",
+      "code": "https://github.com/OATML-Markslab/ProteinGym",
+      "data": "https://proteingym.org/",
+      "official": "https://proteingym.org/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/38106144/",
+        "https://github.com/OATML-Markslab/ProteinGym",
+        "https://proteingym.org/"
+      ]
+    },
+    "summary_en": "A large evaluation suite for protein-sequence models using experimentally measured fitness landscapes.",
+    "summary_zh": "利用实验测得适应度景观评测蛋白序列模型的大型基准套件。",
+    "boundary_note_zh": "数据与代码的复用许可需按各子数据集逐项核对。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Core benchmark for protein design and variant-effect models."
+    },
+    "category": {
+      "id": "16-benchmarks-evaluation",
+      "label_en": "Benchmarks & Evaluation",
+      "label_zh": "基准与评测",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-039",
+    "title": "BacterAI autonomous-experiment dataset",
+    "year": 2023,
+    "primary_category": "17-closed-loop-datasets",
+    "resource_class": "data_evaluation_resource",
+    "resource_types": [
+      "closed-loop dataset",
+      "active-learning trajectory",
+      "microbial growth data"
+    ],
+    "loop_stages": [
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "microbiology",
+      "microbial metabolism"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "partial",
+    "license": "Follows the BacterAI repository statement; verify reuse terms",
+    "urls": {
+      "canonical": "https://github.com/jensenlab/BacterAI/tree/master/published_data",
+      "paper": "https://doi.org/10.1038/s41564-023-01376-0",
+      "code": null,
+      "data": "https://github.com/jensenlab/BacterAI/tree/master/published_data",
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1038/s41564-023-01376-0",
+        "https://github.com/jensenlab/BacterAI/tree/master/published_data"
+      ]
+    },
+    "summary_en": "Published data from BacterAI’s iterative microbial-metabolism experiments, suitable for studying active-learning trajectories.",
+    "summary_zh": "BacterAI 多轮微生物代谢实验的公开数据，可用于研究主动学习轨迹。",
+    "boundary_note_zh": "这是数据资产而非独立系统；许可证边界与 AAB-004 相同。",
+    "related_to": [
+      "AAB-004"
+    ],
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Modeled separately so system–dataset relationships can be visualized."
+    },
+    "category": {
+      "id": "17-closed-loop-datasets",
+      "label_en": "Datasets from Closed-Loop Experiments",
+      "label_zh": "闭环实验数据集",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-040",
+    "title": "LUMI-lab iterative LNP design data",
+    "year": 2026,
+    "primary_category": "17-closed-loop-datasets",
+    "resource_class": "data_evaluation_resource",
+    "resource_types": [
+      "closed-loop dataset",
+      "design–test trajectory",
+      "lipid nanoparticle data"
+    ],
+    "loop_stages": [
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "biological_domains": [
+      "lipid nanoparticles",
+      "mRNA delivery",
+      "formulation"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "yes",
+    "license": "GPL-3.0 repository; verify data-specific reuse conditions",
+    "urls": {
+      "canonical": "https://github.com/bowenli-lab/LUMI-lab/tree/main/mapping_table",
+      "paper": "https://doi.org/10.1016/j.cell.2026.01.012",
+      "code": null,
+      "data": "https://github.com/bowenli-lab/LUMI-lab/tree/main/mapping_table",
+      "official": null
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1016/j.cell.2026.01.012",
+        "https://github.com/bowenli-lab/LUMI-lab/tree/main/mapping_table"
+      ]
+    },
+    "summary_en": "Data and mapping tables from iterative ionizable-lipid design and testing in LUMI-lab.",
+    "summary_zh": "LUMI-lab 可离子化脂质迭代设计与测试产生的数据和映射表。",
+    "boundary_note_zh": "作为独立数据资产收录；用于基准前应核对字段语义、批次与数据专属许可。",
+    "related_to": [
+      "AAB-006"
+    ],
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Modeled separately from the system for dataset discovery and graph views."
+    },
+    "category": {
+      "id": "17-closed-loop-datasets",
+      "label_en": "Datasets from Closed-Loop Experiments",
+      "label_zh": "闭环实验数据集",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-041",
+    "title": "ToolUniverse",
+    "year": 2025,
+    "primary_category": "18-agent-tools",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "scientific tool ecosystem",
+      "agent tools",
+      "API adapters"
+    ],
+    "loop_stages": [
+      "biological-question",
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "biomedicine",
+      "drug discovery",
+      "bioinformatics"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "assisted",
+      "operational": "none"
+    },
+    "open_source": "yes",
+    "license": "See repository; connected resources have independent terms",
+    "urls": {
+      "canonical": "https://zitniklab.hms.harvard.edu/ToolUniverse/",
+      "paper": "https://arxiv.org/abs/2509.23426",
+      "code": "https://github.com/mims-harvard/ToolUniverse",
+      "data": null,
+      "official": "https://zitniklab.hms.harvard.edu/ToolUniverse/"
+    },
+    "evidence": {
+      "grade": "B",
+      "peer_reviewed": false,
+      "primary_sources": [
+        "https://arxiv.org/abs/2509.23426",
+        "https://github.com/mims-harvard/ToolUniverse",
+        "https://zitniklab.hms.harvard.edu/ToolUniverse/"
+      ]
+    },
+    "summary_en": "A large scientific tool ecosystem that exposes more than a thousand research resources for agentic workflows.",
+    "summary_zh": "为 Agent 工作流提供一千余种科研资源接口的大型科学工具生态。",
+    "boundary_note_zh": "工具聚合层本身不保证工具输出可靠、许可统一或实验闭环完成。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Included as a major scientific tool layer with direct biomedical coverage."
+    },
+    "category": {
+      "id": "18-agent-tools",
+      "label_en": "Agent Skills, MCP & Tool Adapters",
+      "label_zh": "Agent 技能、MCP 与工具适配器",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-042",
+    "title": "BioMCP",
+    "year": null,
+    "primary_category": "18-agent-tools",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "MCP server",
+      "biomedical search",
+      "tool adapter"
+    ],
+    "loop_stages": [
+      "biological-question",
+      "hypothesis-experiment-design",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "biomedicine",
+      "genomics",
+      "clinical research"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "assisted"
+    },
+    "open_source": "yes",
+    "license": "MIT",
+    "urls": {
+      "canonical": "https://biomcp.org/",
+      "paper": null,
+      "code": "https://github.com/genomoncology/biomcp",
+      "data": null,
+      "official": "https://biomcp.org/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": null,
+      "primary_sources": [
+        "https://biomcp.org/",
+        "https://github.com/genomoncology/biomcp"
+      ]
+    },
+    "summary_en": "An MCP and command-line interface that gives agents structured access to trusted biomedical sources.",
+    "summary_zh": "让 Agent 以结构化方式访问可信生物医学来源的 MCP 与命令行接口。",
+    "boundary_note_zh": "数据访问适配器，不对检索结果作科学有效性背书。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Direct fit for the biology-specific MCP/tool-adapter category."
+    },
+    "category": {
+      "id": "18-agent-tools",
+      "label_en": "Agent Skills, MCP & Tool Adapters",
+      "label_zh": "Agent 技能、MCP 与工具适配器",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-043",
+    "title": "Chi.Bio",
+    "year": 2020,
+    "primary_category": "19-open-hardware",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "open hardware",
+      "bioreactor",
+      "continuous culture"
+    ],
+    "loop_stages": [
+      "wet-lab-execution",
+      "measurement-qc",
+      "model-update-feedback"
+    ],
+    "biological_domains": [
+      "microbiology",
+      "synthetic biology",
+      "experimental evolution"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "none",
+      "operational": "high"
+    },
+    "open_source": "yes",
+    "license": "See hardware and software repositories",
+    "urls": {
+      "canonical": "https://chi.bio/",
+      "paper": "https://doi.org/10.1371/journal.pbio.3000794",
+      "code": "https://github.com/HarrisonSteel/ChiBio",
+      "data": null,
+      "official": "https://chi.bio/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://doi.org/10.1371/journal.pbio.3000794",
+        "https://github.com/HarrisonSteel/ChiBio",
+        "https://chi.bio/"
+      ]
+    },
+    "summary_en": "An open-source, networked bioreactor platform for automated continuous-culture experiments.",
+    "summary_zh": "用于自动化连续培养实验的开源联网生物反应器平台。",
+    "boundary_note_zh": "实现实验控制与反馈执行，不提供自主科学决策。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Strong open-hardware example for closed-loop microbial experiments."
+    },
+    "category": {
+      "id": "19-open-hardware",
+      "label_en": "Open Hardware",
+      "label_zh": "开放硬件",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-044",
+    "title": "OpenFlexure Microscope",
+    "year": 2020,
+    "primary_category": "19-open-hardware",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "open hardware",
+      "microscopy",
+      "motorized imaging"
+    ],
+    "loop_stages": [
+      "wet-lab-execution",
+      "measurement-qc"
+    ],
+    "biological_domains": [
+      "microscopy",
+      "cell biology",
+      "diagnostics"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "none",
+      "operational": "partial"
+    },
+    "open_source": "yes",
+    "license": "See project hardware and software licenses",
+    "urls": {
+      "canonical": "https://openflexure.org/",
+      "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7249832/",
+      "code": "https://github.com/rwb27/openflexure_microscope",
+      "data": null,
+      "official": "https://openflexure.org/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": true,
+      "primary_sources": [
+        "https://openflexure.org/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7249832/",
+        "https://github.com/rwb27/openflexure_microscope"
+      ]
+    },
+    "summary_en": "An open, motorized microscope platform that can serve as an imaging and measurement endpoint in automated biology workflows.",
+    "summary_zh": "可作为自动化生物流程成像与测量终端的开放式电动显微镜平台。",
+    "boundary_note_zh": "开放测量硬件，不包含样本处理或自主实验策略。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Mature open microscopy hardware with peer-reviewed documentation."
+    },
+    "category": {
+      "id": "19-open-hardware",
+      "label_en": "Open Hardware",
+      "label_zh": "开放硬件",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-045",
+    "title": "Opentrons OT-2",
+    "year": null,
+    "primary_category": "19-open-hardware",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "liquid-handling robot",
+      "open hardware",
+      "device software"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "wet-lab-execution"
+    ],
+    "biological_domains": [
+      "laboratory automation",
+      "molecular biology",
+      "cell biology"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "none",
+      "operational": "high"
+    },
+    "open_source": "partial",
+    "license": "Official hardware files and Apache-2.0 software; verify component-specific terms",
+    "urls": {
+      "canonical": "https://github.com/Opentrons/ot2",
+      "paper": null,
+      "code": "https://github.com/Opentrons/opentrons",
+      "data": null,
+      "official": "https://opentrons.com/"
+    },
+    "evidence": {
+      "grade": "A",
+      "peer_reviewed": null,
+      "primary_sources": [
+        "https://github.com/Opentrons/ot2",
+        "https://github.com/Opentrons/opentrons",
+        "https://opentrons.com/"
+      ]
+    },
+    "summary_en": "A programmable liquid-handling robot with official hardware files and an open software stack used across biological automation.",
+    "summary_zh": "广泛用于生物自动化的可编程移液机器人，公开官方硬件文件和软件栈。",
+    "boundary_note_zh": "“开放”程度按硬件和软件组件不同；机器人执行不等于科学自治。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Widely used execution hardware with official repositories."
+    },
+    "category": {
+      "id": "19-open-hardware",
+      "label_en": "Open Hardware",
+      "label_zh": "开放硬件",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-046",
+    "title": "Emerald Cloud Lab",
+    "year": null,
+    "primary_category": "20-cloud-commercial",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "cloud laboratory",
+      "remote experimentation",
+      "commercial platform"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "biotechnology",
+      "chemistry",
+      "life-science experimentation"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "assisted",
+      "operational": "high"
+    },
+    "open_source": "no",
+    "license": "Commercial service",
+    "urls": {
+      "canonical": "https://www.emeraldcloudlab.com/",
+      "paper": null,
+      "code": null,
+      "data": null,
+      "official": "https://www.emeraldcloudlab.com/how-it-works/run/"
+    },
+    "evidence": {
+      "grade": "C",
+      "peer_reviewed": null,
+      "primary_sources": [
+        "https://www.emeraldcloudlab.com/",
+        "https://www.emeraldcloudlab.com/how-it-works/run/"
+      ]
+    },
+    "summary_en": "A commercial remote laboratory where users specify and run experiments through a cloud software interface.",
+    "summary_zh": "用户可通过云端软件定义并运行实验的商业远程实验室。",
+    "boundary_note_zh": "操作自动化高，但科学决策通常由用户或外部算法提供；闭源商业服务。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Official service evidence; marked commercial and non-open."
+    },
+    "category": {
+      "id": "20-cloud-commercial",
+      "label_en": "Cloud Labs & Commercial Platforms",
+      "label_zh": "云实验室与商业平台",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-047",
+    "title": "Culture Biosciences",
+    "year": null,
+    "primary_category": "20-cloud-commercial",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "cloud bioreactor",
+      "remote fermentation",
+      "commercial platform"
+    ],
+    "loop_stages": [
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "bioprocessing",
+      "fermentation",
+      "cell culture"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "none",
+      "operational": "high"
+    },
+    "open_source": "no",
+    "license": "Commercial service",
+    "urls": {
+      "canonical": "https://www.culturebiosciences.com/",
+      "paper": null,
+      "code": null,
+      "data": null,
+      "official": "https://www.culturebiosciences.com/"
+    },
+    "evidence": {
+      "grade": "C",
+      "peer_reviewed": null,
+      "primary_sources": [
+        "https://www.culturebiosciences.com/"
+      ]
+    },
+    "summary_en": "A commercial cloud-connected bioreactor platform for remote bioprocess development and data collection.",
+    "summary_zh": "用于远程生物工艺开发与数据采集的商业云连接生物反应器平台。",
+    "boundary_note_zh": "并非通用自主实验室，主要覆盖培养/发酵执行和监测。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Official commercial platform with a clearly bounded bioprocess scope."
+    },
+    "category": {
+      "id": "20-cloud-commercial",
+      "label_en": "Cloud Labs & Commercial Platforms",
+      "label_zh": "云实验室与商业平台",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-048",
+    "title": "Arctoris Ulysses",
+    "year": null,
+    "primary_category": "20-cloud-commercial",
+    "resource_class": "enabling_infrastructure",
+    "resource_types": [
+      "robotic laboratory",
+      "drug discovery service",
+      "commercial platform"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "drug discovery",
+      "cell biology",
+      "molecular biology"
+    ],
+    "wet_lab": true,
+    "autonomy": {
+      "scientific": "assisted",
+      "operational": "high"
+    },
+    "open_source": "no",
+    "license": "Commercial service",
+    "urls": {
+      "canonical": "https://www.arctoris.com/",
+      "paper": null,
+      "code": null,
+      "data": null,
+      "official": "https://www.arctoris.com/about-us/"
+    },
+    "evidence": {
+      "grade": "C",
+      "peer_reviewed": null,
+      "primary_sources": [
+        "https://www.arctoris.com/",
+        "https://www.arctoris.com/about-us/"
+      ]
+    },
+    "summary_en": "A commercial robotic drug-discovery laboratory platform centered on its Ulysses automation stack.",
+    "summary_zh": "以 Ulysses 自动化栈为核心的商业机器人药物发现实验室平台。",
+    "boundary_note_zh": "操作能力来自官方商业描述；独立可复现证据与开源实现有限。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Included as a representative commercial robotic biology platform."
+    },
+    "category": {
+      "id": "20-cloud-commercial",
+      "label_en": "Cloud Labs & Commercial Platforms",
+      "label_zh": "云实验室与商业平台",
+      "seed_count": 3
+    }
+  },
+  {
+    "id": "AAB-049",
+    "title": "Global Biofoundries Alliance",
+    "year": null,
+    "primary_category": "21-education-community",
+    "resource_class": "ecosystem_education",
+    "resource_types": [
+      "alliance",
+      "biofoundry network",
+      "community"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "biological_domains": [
+      "synthetic biology",
+      "biofoundries"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "not_applicable",
+    "license": null,
+    "urls": {
+      "canonical": "https://www.biofoundries.org/",
+      "paper": null,
+      "code": null,
+      "data": null,
+      "official": "https://www.biofoundries.org/about"
+    },
+    "evidence": {
+      "grade": "C",
+      "peer_reviewed": null,
+      "primary_sources": [
+        "https://www.biofoundries.org/",
+        "https://www.biofoundries.org/about"
+      ]
+    },
+    "summary_en": "An international alliance connecting biofoundries and promoting shared capabilities, standards, and collaboration.",
+    "summary_zh": "连接全球生物铸造厂并推动能力共享、标准与合作的国际联盟。",
+    "boundary_note_zh": "社区与基础设施网络，不作为自主系统计数。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Key community hub for biofoundry discovery and contributions."
+    },
+    "category": {
+      "id": "21-education-community",
+      "label_en": "Tutorials, Courses & Communities",
+      "label_zh": "教程、课程与社区",
+      "seed_count": 2
+    }
+  },
+  {
+    "id": "AAB-050",
+    "title": "Lab Automation Forums",
+    "year": null,
+    "primary_category": "21-education-community",
+    "resource_class": "ecosystem_education",
+    "resource_types": [
+      "community forum",
+      "tutorials",
+      "peer support"
+    ],
+    "loop_stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc"
+    ],
+    "biological_domains": [
+      "laboratory automation",
+      "life-science workflows"
+    ],
+    "wet_lab": false,
+    "autonomy": {
+      "scientific": "not_applicable",
+      "operational": "not_applicable"
+    },
+    "open_source": "not_applicable",
+    "license": null,
+    "urls": {
+      "canonical": "https://labautomation.io/",
+      "paper": null,
+      "code": null,
+      "data": null,
+      "official": "https://labautomation.io/t/welcome-to-lab-automation-forums/7"
+    },
+    "evidence": {
+      "grade": "C",
+      "peer_reviewed": null,
+      "primary_sources": [
+        "https://labautomation.io/",
+        "https://labautomation.io/t/welcome-to-lab-automation-forums/7"
+      ]
+    },
+    "summary_en": "A practitioner community for laboratory automation, integration, troubleshooting, and shared implementation knowledge.",
+    "summary_zh": "面向实验室自动化、系统集成、故障排查与实践知识共享的从业者社区。",
+    "boundary_note_zh": "社区内容质量不一；具体技术结论仍需回到一手来源核验。",
+    "curation": {
+      "status": "verified",
+      "last_verified": "2026-07-18",
+      "curator": "initial-research-pass",
+      "decision_note": "Useful community entry point with explicit evidence limitations."
+    },
+    "category": {
+      "id": "21-education-community",
+      "label_en": "Tutorials, Courses & Communities",
+      "label_zh": "教程、课程与社区",
+      "seed_count": 2
+    }
+  }
+]

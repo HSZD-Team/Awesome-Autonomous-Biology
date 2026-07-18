@@ -1,0 +1,18 @@
+---
+import { withBase } from "../lib/paths";
+import project from "../data/generated/project.json";
+const repositoryHref = project.github_owner === "YOUR_GITHUB_OWNER" ? "https://github.com/" : `https://github.com/${project.github_owner}/${project.github_repo}`;
+---
+<footer class="site-footer">
+  <div>
+    <strong>Awesome Autonomous Biology</strong>
+    <p>Biology-specific - closed-loop - evidence-graded</p>
+  </div>
+  <p class="boundary-mini">Automation != scientific autonomy<br />Inclusion != endorsement</p>
+  <nav aria-label="Footer">
+    <a href={withBase("about/")}>Method</a>
+    <a href={withBase("contribute/")}>Contribute</a>
+    <a href={withBase("data/resources.json")}>JSON</a>
+    <a href={repositoryHref}>GitHub</a>
+  </nav>
+</footer>

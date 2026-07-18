@@ -1,0 +1,39 @@
+{
+  "record_count": 50,
+  "verified_count": 47,
+  "review_pending_count": 3,
+  "category_count": 21,
+  "resource_class_count": 5,
+  "latest_verified": "2026-07-18",
+  "category_counts": {
+    "01-surveys-perspectives": 2,
+    "02-end-to-end-systems": 4,
+    "03-scientific-agents": 3,
+    "04-experiment-design": 2,
+    "05-perturbation-virtual-cell": 2,
+    "06-protein-sequence-engineering": 3,
+    "07-drug-cell-screening": 2,
+    "08-synthetic-biology-biofoundries": 1,
+    "09-protocols": 2,
+    "10-lab-orchestration": 3,
+    "11-robot-instrument-control": 2,
+    "12-measurement-qc-analysis": 1,
+    "13-feedback-learning": 2,
+    "14-standards-provenance": 1,
+    "15-simulators-digital-twins": 2,
+    "16-benchmarks-evaluation": 3,
+    "17-closed-loop-datasets": 2,
+    "18-agent-tools": 2,
+    "19-open-hardware": 3,
+    "20-cloud-commercial": 3,
+    "21-education-community": 2
+  },
+  "resource_class_counts": {
+    "core_autonomous_system": 5,
+    "data_evaluation_resource": 6,
+    "ecosystem_education": 4,
+    "enabling_infrastructure": 19,
+    "scientific_decision_module": 13
+  },
+  "ongoing_count": 12
+}

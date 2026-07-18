@@ -8,7 +8,9 @@ test("all five workflows parse and use explicit minimal permissions", async () =
   const files = (await readdir(directory)).filter((file) => file.endsWith(".yml"));
   assert.deepEqual(files.sort(), ["ci.yml", "digest-weekly.yml", "discovery-daily.yml", "link-check.yml", "pages.yml"]);
   for (const file of files) {
-    const workflow = yaml.load(await readFile(new URL(file, directory), "utf8"));
+    const workflowSource = await readFile(new URL(file, directory), "utf8");
+    const workflow = yaml.load(workflowSource);
+    assert.doesNotMatch(workflowSource, /pnpm\/action-setup@v4\s*\n\s+with:\s*\{version:/, `${file}: pnpm version must come only from packageManager`);
     assert.ok(workflow.jobs); assert.ok(workflow.permissions); assert.equal(JSON.stringify(workflow).includes("pull-requests: write"), false); assert.equal(JSON.stringify(workflow).includes("contents: write"), false);
   }
   const daily = yaml.load(await readFile(new URL("discovery-daily.yml", directory), "utf8"));

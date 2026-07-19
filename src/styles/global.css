@@ -200,6 +200,10 @@ th { color: var(--muted); font-size: .65rem; letter-spacing: .06em; text-transfo
 .status-card strong, .empty-state strong { color: var(--text); }
 .empty-state.compact { margin: .5rem; padding: .8rem; }
 .unverified { display: inline-flex; padding: .2rem .55rem; border: 1px solid rgba(251,191,36,.44); border-radius: 999px; color: var(--amber); background: rgba(251,191,36,.07); font-size: .68rem; font-weight: 900; letter-spacing: .06em; }
+.status-verified { display: inline-flex; padding: .2rem .55rem; border: 1px solid rgba(163,230,53,.34); border-radius: 999px; color: var(--acid); background: rgba(163,230,53,.06); font-size: .65rem; font-weight: 850; letter-spacing: .05em; }
+.resource-card-badges { display: flex; align-items: center; gap: .4rem; }
+.resource-card.is-review-pending { border-color: rgba(251,191,36,.28); background: linear-gradient(145deg, rgba(43,34,18,.72), rgba(12,18,28,.9)); }
+.graph-node.is-review-pending circle { stroke: var(--amber); stroke-dasharray: 3 2; }
 .candidate-list { display: grid; gap: .8rem; }
 .candidate { padding: 1rem; border: 1px solid rgba(251,191,36,.22); border-radius: 12px; background: rgba(251,191,36,.025); }
 .candidate h3 { margin-top: .65rem; }

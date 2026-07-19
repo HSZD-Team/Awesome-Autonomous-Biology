@@ -1,18 +1,29 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import project from "../../data/generated/project.json";
+import resources from "../../data/generated/all-resources.json";
+import reviewFlags from "../../data/generated/review-flags.json";
 import snapshot from "../../../data/candidates/latest.json";
+import { withBase } from "../../lib/paths";
+const pending = resources.filter((record) => record.curation.status === "review_pending");
+const flagById = Object.fromEntries(reviewFlags.flags.map((flag) => [flag.id, flag]));
 ---
-<BaseLayout title="Daily Radar - Awesome Autonomous Biology" current="radar">
+<BaseLayout title="Daily Radar & Curation Queue - Awesome Autonomous Biology" current="radar">
   <div class="shell">
-    <header class="page-head"><div><p class="eyebrow">DAILY RADAR - CANDIDATE TRACK</p><h1>Discover broadly.<br />Verify before entry.</h1><p class="lede">Public GitHub issues labeled radar + review-pending are loaded in your browser. Nothing here contributes to verified Atlas statistics.</p></div><span class="unverified">UNVERIFIED / 待核验</span></header>
-    <aside class="boundary-banner"><strong>Hard boundary</strong><p>Candidate scores rank review priority only. They are not evidence grades, fact judgments, or autonomy claims.</p></aside>
+    <header class="page-head"><div><p class="eyebrow">RADAR + V0.2 CURATION QUEUE</p><h1>Discover broadly.<br />Verify before entry.</h1><p class="lede">The committed v0.2 candidates and live discovery issues are shown together, without promoting either into the verified Atlas.</p></div><span class="unverified">REVIEW_PENDING / 待核验</span></header>
+    <aside class="boundary-banner"><strong>Hard boundary</strong><p>Candidate scores rank review priority only. They are not evidence grades, factual confidence, endorsements, or autonomy claims.</p></aside>
     <section class="panel panel-pad">
-      <div class="section-head"><div><h2>Live review queue</h2><p class="section-copy">No backend and no token are required. If the public API is unavailable or rate-limited, the committed build snapshot is shown.</p></div><span class="signal" data-radar-signal>Connecting</span></div>
+      <div class="section-head"><div><h2>Gold Seed v0.2 curation queue</h2><p class="section-copy">{pending.length} research records require human review of identity, links, license, scope, boundary, or autonomy annotations.</p></div><span class="unverified">{pending.length} PENDING</span></div>
+      <div class="candidate-list">
+        {pending.map((record) => <details class="candidate"><summary><strong>{record.id} · {record.title}</strong> <span class="unverified">REVIEW_PENDING</span></summary><p>{record.summary_en}</p><p lang="zh-CN">{record.summary_zh}</p><p><strong>Review reason:</strong> {flagById[record.id]?.observation ?? record.curation.decision_note}</p><div class="button-row"><a href={withBase(`resources/${record.id.toLowerCase()}/`)}>Open dossier</a><a href={record.urls.canonical} rel="noreferrer">Primary identity link</a></div></details>)}
+      </div>
+    </section>
+    <section class="panel panel-pad">
+      <div class="section-head"><div><h2>Live discovery issue queue</h2><p class="section-copy">No backend or token is required. If the public API is unavailable or rate-limited, the committed discovery snapshot is shown.</p></div><span class="signal" data-radar-signal>Connecting</span></div>
       <div class="status-card" data-radar-status><strong>Loading public GitHub issues...</strong></div>
       <div class="candidate-list" data-candidate-list></div>
-      <noscript><p class="empty-state">JavaScript is required to query the public GitHub API. The fallback snapshot contains {snapshot.candidate_count} candidates.</p></noscript>
+      <noscript><p class="empty-state">JavaScript is required to query the public GitHub API. The fallback snapshot contains {snapshot.candidate_count} discovery candidates.</p></noscript>
     </section>
-    <script type="application/json" data-radar-config set:html={JSON.stringify({project, snapshot}).replace(/</g, "\\u003c")} /><script src="../../scripts/radar.ts"></script>
+    <script type="application/json" data-radar-config set:html={JSON.stringify({project, snapshot}).replace(/</g, "\u003c")} /><script src="../../scripts/radar.ts"></script>
   </div>
 </BaseLayout>

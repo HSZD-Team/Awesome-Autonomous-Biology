@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import resources from "../../data/generated/resources.json";
+import resources from "../../data/generated/all-resources.json";
 import vocabularies from "../../data/generated/vocabularies.json";
 import { withBase, loopStageLabels } from "../../lib/paths";
 const stages = vocabularies.loop_stages;
@@ -13,8 +13,8 @@ const classColors = { core_autonomous_system: "#16d9d4", scientific_decision_mod
 ---
 <BaseLayout title="Loop Map - Awesome Autonomous Biology" current="loop">
   <div class="shell wide">
-    <header class="page-head"><div><p class="eyebrow">DECLARED COVERAGE - NINE STAGES</p><h1>Follow the loop.<br />Inspect the hand-offs.</h1><p class="lede">Select a stage to reveal verified resources and the immediately adjacent upstream and downstream steps.</p></div><span class="signal">No inferred coverage</span></header>
-    <div class="legend" aria-label="Resource class legend">{Object.entries(classLabels).map(([key, label]) => <span><i style={`background:${classColors[key]}`}></i>{label}</span>)}</div>
+    <header class="page-head"><div><p class="eyebrow">DECLARED COVERAGE - NINE STAGES - ALL RESEARCH RECORDS</p><h1>Follow the loop.<br />Inspect the hand-offs.</h1><p class="lede">Select a stage to reveal all v0.2 records with explicit coverage. Review-pending candidates remain visibly marked.</p></div><span class="signal">No inferred coverage</span></header>
+    <div class="legend" aria-label="Resource class legend">{Object.entries(classLabels).map(([key, label]) => <span><i style={`background:${classColors[key]}`}></i>{label}</span>)}<span><i style="background:#fbbf24"></i>Review pending</span></div>
     <div class="loop-board">
       <section class="loop-orbit panel" aria-label="Interactive nine-stage loop">
         <svg viewBox="0 0 600 600" role="group" aria-label="Nine-stage closed loop">
@@ -25,12 +25,12 @@ const classColors = { core_autonomous_system: "#16d9d4", scientific_decision_mod
         </svg>
       </section>
       <section class="stage-detail panel" aria-live="polite">
-        <p class="eyebrow">SELECTED STAGE <span data-stage-index>01</span></p><h2 data-stage-title>{loopStageLabels[stages[0]].en}</h2><p class="section-copy"><span data-upstream>{loopStageLabels[stages.at(-1)].en}</span> &rarr; <strong>selected</strong> &rarr; <span data-downstream>{loopStageLabels[stages[1]].en}</span></p><p><strong data-stage-count>{resources.filter((record) => record.loop_stages.includes(stages[0])).length}</strong> verified resources explicitly declare this stage.</p>
+        <p class="eyebrow">SELECTED STAGE <span data-stage-index>01</span></p><h2 data-stage-title>{loopStageLabels[stages[0]].en}</h2><p class="section-copy"><span data-upstream>{loopStageLabels[stages.at(-1)].en}</span> &rarr; <strong>selected</strong> &rarr; <span data-downstream>{loopStageLabels[stages[1]].en}</span></p><p><strong data-stage-count>{resources.filter((record) => record.loop_stages.includes(stages[0])).length}</strong> research records explicitly declare this stage.</p>
         <div class="stage-detail-list" data-stage-resources>
-          {resources.map((record) => <article class="stage-resource" data-stages={record.loop_stages.join(" ")} data-resource-class={record.resource_class} hidden={!record.loop_stages.includes(stages[0])}><span class={`class-chip class-${record.resource_class}`}>{classLabels[record.resource_class]}</span><h3><a href={withBase(`resources/${record.id.toLowerCase()}/`)}>{record.title}</a></h3><p class="muted">{record.summary_en}</p></article>)}
+          {resources.map((record) => <article class:list={["stage-resource", record.curation.status === "review_pending" && "is-review-pending"]} data-stages={record.loop_stages.join(" ")} data-resource-class={record.resource_class} hidden={!record.loop_stages.includes(stages[0])}><div class="resource-card-badges"><span class={`class-chip class-${record.resource_class}`}>{classLabels[record.resource_class]}</span>{record.curation.status === "review_pending" && <span class="unverified">REVIEW_PENDING</span>}</div><h3><a href={withBase(`resources/${record.id.toLowerCase()}/`)}>{record.title}</a></h3><p class="muted">{record.summary_en}</p></article>)}
         </div>
       </section>
     </div>
-    <script type="application/json" data-loop-labels set:html={JSON.stringify(stages.map((stage) => ({ stage, ...loopStageLabels[stage] }))).replace(/</g, "\\u003c")} /><script src="../../scripts/loop-map.ts"></script>
+    <script type="application/json" data-loop-labels set:html={JSON.stringify(stages.map((stage) => ({ stage, ...loopStageLabels[stage] }))).replace(/</g, "\u003c")} /><script src="../../scripts/loop-map.ts"></script>
   </div>
 </BaseLayout>

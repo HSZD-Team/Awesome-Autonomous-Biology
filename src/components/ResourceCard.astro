@@ -8,11 +8,15 @@ const classLabels = {
   data_evaluation_resource: "Data / evaluation",
   ecosystem_education: "Ecosystem"
 };
+const pending = record.curation.status === "review_pending";
 ---
-<article class:list={["resource-card", compact && "is-compact"]} data-resource-id={record.id}>
+<article class:list={["resource-card", compact && "is-compact", pending && "is-review-pending"]} data-resource-id={record.id}>
   <div class="resource-card-top">
     <span class={`class-chip class-${record.resource_class}`}>{classLabels[record.resource_class]}</span>
-    <span class={`grade grade-${record.evidence.grade}`} aria-label={`Evidence grade ${record.evidence.grade}`}>{record.evidence.grade}</span>
+    <div class="resource-card-badges">
+      <span class={pending ? "unverified" : "status-verified"}>{pending ? "REVIEW_PENDING" : record.curation.status.toUpperCase()}</span>
+      <span class={`grade grade-${record.evidence.grade}`} aria-label={`Evidence grade ${record.evidence.grade}`}>{record.evidence.grade}</span>
+    </div>
   </div>
   <h3><a href={withBase(`resources/${record.id.toLowerCase()}/`)}>{record.title}</a></h3>
   <p>{record.summary_en}</p>

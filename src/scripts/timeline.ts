@@ -23,4 +23,4 @@ function render(groupKey = "primary_category") {
   }));
 }
 selector?.addEventListener("change", () => render(selector.value));
-render();
+render(selector?.value || "status");

@@ -4,127 +4,127 @@
       "id": "01-surveys-perspectives",
       "label_en": "Surveys & Perspectives",
       "label_zh": "综述、观点与路线图",
-      "seed_count": 2
+      "seed_count": 4
     },
     {
       "id": "02-end-to-end-systems",
       "label_en": "End-to-End Autonomous Biology Systems",
       "label_zh": "端到端自主生物学系统",
-      "seed_count": 4
+      "seed_count": 7
     },
     {
       "id": "03-scientific-agents",
       "label_en": "Scientific Agents for Biology",
       "label_zh": "生物学科学智能体",
-      "seed_count": 3
+      "seed_count": 6
     },
     {
       "id": "04-experiment-design",
       "label_en": "Biological Experiment Design",
       "label_zh": "生物实验设计",
-      "seed_count": 2
+      "seed_count": 4
     },
     {
       "id": "05-perturbation-virtual-cell",
       "label_en": "Perturbation & Virtual Cell",
       "label_zh": "扰动建模与虚拟细胞",
-      "seed_count": 2
+      "seed_count": 5
     },
     {
       "id": "06-protein-sequence-engineering",
       "label_en": "Protein & Sequence Engineering",
       "label_zh": "蛋白与序列工程",
-      "seed_count": 3
+      "seed_count": 6
     },
     {
       "id": "07-drug-cell-screening",
       "label_en": "Drug Discovery & Cell-Based Screening",
       "label_zh": "药物发现与细胞筛选",
-      "seed_count": 2
+      "seed_count": 4
     },
     {
       "id": "08-synthetic-biology-biofoundries",
       "label_en": "Synthetic Biology & Biofoundries",
       "label_zh": "合成生物学与生物铸造厂",
-      "seed_count": 2
+      "seed_count": 5
     },
     {
       "id": "09-protocols",
       "label_en": "Protocol Generation & Representation",
       "label_zh": "实验协议生成与表示",
-      "seed_count": 2
+      "seed_count": 4
     },
     {
       "id": "10-lab-orchestration",
       "label_en": "Laboratory Orchestration & LabOS",
       "label_zh": "实验室编排与 LabOS",
-      "seed_count": 3
+      "seed_count": 5
     },
     {
       "id": "11-robot-instrument-control",
       "label_en": "Robotic & Instrument Control",
       "label_zh": "机器人与仪器控制",
-      "seed_count": 2
+      "seed_count": 4
     },
     {
       "id": "12-measurement-qc-analysis",
       "label_en": "Measurement, QC & Data Analysis",
       "label_zh": "测量、质控与数据分析",
-      "seed_count": 2
+      "seed_count": 4
     },
     {
       "id": "13-feedback-learning",
       "label_en": "Feedback Learning & Model Updating",
       "label_zh": "反馈学习与模型更新",
-      "seed_count": 2
+      "seed_count": 4
     },
     {
       "id": "14-standards-provenance",
       "label_en": "Data Standards & Provenance",
       "label_zh": "数据标准与溯源",
-      "seed_count": 2
+      "seed_count": 4
     },
     {
       "id": "15-simulators-digital-twins",
       "label_en": "Simulators & Digital Twins",
       "label_zh": "模拟器与数字孪生",
-      "seed_count": 2
+      "seed_count": 4
     },
     {
       "id": "16-benchmarks-evaluation",
       "label_en": "Benchmarks & Evaluation",
       "label_zh": "基准与评测",
-      "seed_count": 3
+      "seed_count": 6
     },
     {
       "id": "17-closed-loop-datasets",
       "label_en": "Datasets from Closed-Loop Experiments",
       "label_zh": "闭环实验数据集",
-      "seed_count": 2
+      "seed_count": 4
     },
     {
       "id": "18-agent-tools",
       "label_en": "Agent Skills, MCP & Tool Adapters",
       "label_zh": "Agent 技能、MCP 与工具适配器",
-      "seed_count": 2
+      "seed_count": 5
     },
     {
       "id": "19-open-hardware",
       "label_en": "Open Hardware",
       "label_zh": "开放硬件",
-      "seed_count": 3
+      "seed_count": 5
     },
     {
       "id": "20-cloud-commercial",
       "label_en": "Cloud Labs & Commercial Platforms",
       "label_zh": "云实验室与商业平台",
-      "seed_count": 3
+      "seed_count": 6
     },
     {
       "id": "21-education-community",
       "label_en": "Tutorials, Courses & Communities",
       "label_zh": "教程、课程与社区",
-      "seed_count": 2
+      "seed_count": 4
     }
   ],
   "resource_classes": [

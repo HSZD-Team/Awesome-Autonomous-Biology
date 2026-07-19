@@ -11,27 +11,25 @@ const zh = locale === "zh";
 const featured = resources.filter((record) => record.resource_class === "core_autonomous_system").slice(0, 6);
 const latest = [...resources].sort((a, b) => (b.curation.last_verified ?? "").localeCompare(a.curation.last_verified ?? "") || b.id.localeCompare(a.id)).slice(0, 3);
 const datasetLede = zh
-  ? `探索 ${stats.record_count} 条策展种子；其中 ${stats.verified_count} 条当前通过核验，${stats.review_pending_count} 条因链接审计待复核。`
-  : `Explore ${stats.record_count} curated seed resources: ${stats.verified_count} currently verified and ${stats.review_pending_count} pending link review.`;
-const atlasAllLabel = zh ? `浏览 ${stats.verified_count} 条已核验记录` : `Explore ${stats.verified_count} verified records`;
+  ? `探索 Gold Seed v${stats.dataset_version} 的 ${stats.record_count} 条研究记录：${stats.verified_count} 条已核验，${stats.review_pending_count} 条等待人工复核。`
+  : `Explore ${stats.record_count} research records in Gold Seed v${stats.dataset_version}: ${stats.verified_count} verified and ${stats.review_pending_count} awaiting human review.`;
+const atlasAllLabel = zh ? `浏览全部 ${stats.record_count} 条研究记录` : `Explore all ${stats.record_count} research records`;
 const copy = zh ? {
   eyebrow: "自主生物学 · 任务控制台", title1: "绘制生物发现", title2: "闭环中的自治边界。",
-  lede: "由实时数据统计生成的策展状态摘要。",
-  atlas: "打开 Atlas", method: "查看策展方法", verified: "已核验记录", categories: "一级目录", classes: "资源类别", checked: "最近核验",
+  atlas: "打开已核验 Atlas", method: "查看策展方法", verified: "已核验记录", categories: "一级目录", classes: "资源类别", checked: "最近核验",
   boundary: "自治边界", boundaryText: "自动化不等于科学自治；收录不等于背书。每条资源分别展示科学自治与操作自治。",
   loopEyebrow: "闭环导航", loopTitle: "九阶段干湿循环", loopCopy: "这是信息组织模型，不要求任何资源覆盖全部阶段。每个节点只展示数据中明确声明的覆盖。",
-  categoryEyebrow: "覆盖矩阵", categoryTitle: "21 个一级目录", categoryCopy: "目录回答“它是什么”，标签回答“它在闭环中做什么”。",
-  featuredEyebrow: "重点系统", featuredTitle: "闭环核心系统", featuredCopy: "由 seed 中 resource_class=core_autonomous_system 的正式记录生成。",
-  latestEyebrow: "审计脉冲", latestTitle: "最近核验", radar: "前往待核验 Daily Radar", all: "浏览已核验记录"
+  categoryEyebrow: "覆盖矩阵", categoryTitle: "21 个一级目录", categoryCopy: "这里显示全部研究记录数；点击后以包含 review_pending 的 Atlas 视图打开。",
+  featuredEyebrow: "重点系统", featuredTitle: "已核验闭环核心系统", featuredCopy: "由 seed 中 resource_class=core_autonomous_system 的 verified 记录生成。",
+  latestEyebrow: "审计脉冲", latestTitle: "最近核验", radar: "查看 v0.2 待人工复核队列"
 } : {
   eyebrow: "AUTONOMOUS BIOLOGY - MISSION CONTROL", title1: "Map the autonomy", title2: "inside biological discovery.",
-  lede: "A curation-state summary generated from the current dataset.",
-  atlas: "Open the Atlas", method: "Read the method", verified: "Verified records", categories: "Primary categories", classes: "Resource classes", checked: "Latest verification",
+  atlas: "Open verified Atlas", method: "Read the method", verified: "Verified records", categories: "Primary categories", classes: "Resource classes", checked: "Latest verification",
   boundary: "Autonomy boundary", boundaryText: "Automation is not scientific autonomy; inclusion is not endorsement. Every resource reports scientific and operational autonomy separately.",
   loopEyebrow: "LOOP NAVIGATION", loopTitle: "The nine-stage dry-wet cycle", loopCopy: "This is an information model, not a requirement that any resource cover every stage. Nodes show only declared coverage.",
-  categoryEyebrow: "COVERAGE MATRIX", categoryTitle: "21 primary categories", categoryCopy: "Categories answer what a resource is; tags answer what it does in the loop.",
-  featuredEyebrow: "FEATURED SYSTEMS", featuredTitle: "Closed-loop core systems", featuredCopy: "Generated from formal records whose resource class is core_autonomous_system.",
-  latestEyebrow: "AUDIT PULSE", latestTitle: "Latest verified", radar: "Open the unverified Daily Radar", all: "Explore verified records"
+  categoryEyebrow: "COVERAGE MATRIX", categoryTitle: "21 primary categories", categoryCopy: "Counts include all research records; links open the Atlas with review-pending records included.",
+  featuredEyebrow: "FEATURED SYSTEMS", featuredTitle: "Verified closed-loop core systems", featuredCopy: "Generated from verified records whose resource class is core_autonomous_system.",
+  latestEyebrow: "AUDIT PULSE", latestTitle: "Latest verified", radar: "Review the v0.2 human-curation queue"
 };
 ---
 <BaseLayout locale={locale} current="home" title={zh ? "Awesome Autonomous Biology｜自主生物学资源图谱" : "Awesome Autonomous Biology - Mission Control"}>
@@ -43,12 +41,12 @@ const copy = zh ? {
         <p class="lede">{datasetLede}</p>
         <div class="button-row"><a class="button" href={withBase("atlas/")}>{copy.atlas}</a><a class="button secondary" href={withBase("about/")}>{copy.method}</a></div>
       </div>
-      <div class="hero-console panel" aria-label={`${stats.record_count} curated seed records, ${stats.verified_count} verified, across ${stats.category_count} categories`}>
-        <span class="console-orbit-dot" aria-hidden="true"></span><div class="console-core"><div><span>GOLD SEED V0.1</span><strong>{stats.record_count}</strong><span>CURATED ENTITIES</span></div></div><span class="signal">{stats.review_pending_count ? "Review overlay active" : "Dataset nominal"}</span>
+      <div class="hero-console panel" aria-label={`${stats.record_count} research records, ${stats.verified_count} verified, across ${stats.category_count} categories`}>
+        <span class="console-orbit-dot" aria-hidden="true"></span><div class="console-core"><div><span>GOLD SEED V{stats.dataset_version}</span><strong>{stats.record_count}</strong><span>RESEARCH RECORDS</span></div></div><span class="signal">{stats.review_pending_count ? "Review queue active" : "Dataset nominal"}</span>
       </div>
     </section>
     <div class="glass-grid home-metrics" aria-label="Dataset statistics">
-      <div class="metric"><strong>{stats.verified_count}</strong><span>{copy.verified}</span></div><div class="metric"><strong>{stats.category_count}</strong><span>{copy.categories}</span></div><div class="metric"><strong>{stats.resource_class_count}</strong><span>{copy.classes}</span></div><div class="metric"><strong class="date-metric">{stats.latest_verified}</strong><span>{copy.checked}</span></div>
+      <div class="metric"><strong>{stats.verified_count}</strong><span>{copy.verified}</span></div><div class="metric"><strong>{stats.category_count}</strong><span>{copy.categories}</span></div><div class="metric"><strong>{stats.resource_class_count}</strong><span>{copy.classes}</span></div><div class="metric"><strong class="date-metric">{stats.latest_verified ?? "unknown"}</strong><span>{copy.checked}</span></div>
     </div>
     <aside class="boundary-banner" aria-label={copy.boundary}><strong>{copy.boundary}</strong><p>{copy.boundaryText}</p></aside>
     <section class="home-section">
@@ -56,8 +54,8 @@ const copy = zh ? {
       <ol class="mission-loop panel panel-pad">{vocabularies.loop_stages.map((stage, index) => <li><b>{String(index + 1).padStart(2, "0")}</b><span>{loopStageLabels[stage][zh ? "zh" : "en"]}</span></li>)}</ol>
     </section>
     <section class="home-section">
-      <div class="section-head"><div><p class="eyebrow">{copy.categoryEyebrow}</p><h2>{copy.categoryTitle}</h2><p class="section-copy">{copy.categoryCopy}</p></div><a href={withBase("atlas/")}>{atlasAllLabel} &rarr;</a></div>
-      <div class="category-matrix">{categories.map((category, index) => <a class="category-cell" href={withBase(`atlas/?category=${category.id}`)}><span>{String(index + 1).padStart(2, "0")}</span><small>{zh ? category.label_zh : category.label_en}</small><b>{category.actual_count}</b></a>)}</div>
+      <div class="section-head"><div><p class="eyebrow">{copy.categoryEyebrow}</p><h2>{copy.categoryTitle}</h2><p class="section-copy">{copy.categoryCopy}</p></div><a href={withBase("atlas/?status=all")}>{atlasAllLabel} &rarr;</a></div>
+      <div class="category-matrix">{categories.map((category, index) => <a class="category-cell" href={withBase(`atlas/?status=all&category=${category.id}`)}><span>{String(index + 1).padStart(2, "0")}</span><small>{zh ? category.label_zh : category.label_en}</small><b>{category.actual_count}</b></a>)}</div>
     </section>
     <section class="home-section">
       <div class="section-head"><div><p class="eyebrow">{copy.featuredEyebrow}</p><h2>{copy.featuredTitle}</h2><p class="section-copy">{copy.featuredCopy}</p></div></div>
@@ -65,7 +63,7 @@ const copy = zh ? {
     </section>
     <section class="home-section latest-grid">
       <div><p class="eyebrow">{copy.latestEyebrow}</p><h2>{copy.latestTitle}</h2><div class="resource-grid latest-cards">{latest.map((record) => <ResourceCard record={record} compact />)}</div></div>
-      <a class="radar-entry panel panel-pad" href={withBase("radar/")}><span class="unverified">UNVERIFIED / 待核验</span><h2>Daily Radar</h2><p>{copy.radar}</p><strong>&rarr;</strong></a>
+      <a class="radar-entry panel panel-pad" href={withBase("radar/")}><span class="unverified">REVIEW_PENDING / 待复核</span><h2>Daily Radar + Curation Queue</h2><p>{copy.radar}</p><strong>&rarr;</strong></a>
     </section>
   </div>
 </BaseLayout>

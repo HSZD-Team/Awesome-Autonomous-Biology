@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import graph from "../../data/generated/graph.json";
+import categories from "../../data/generated/categories.json";
+import stats from "../../data/generated/stats.json";
+import { withBase } from "../../lib/paths";
+
+const categoryById = Object.fromEntries(categories.map((category) => [category.id, category.label_en]));
+const explicitCount = graph.edges.filter((edge) => !edge.inferred).length;
+const inferredCount = graph.edges.filter((edge) => edge.inferred).length;
+---
+
+<BaseLayout title="Methods - Awesome Autonomous Biology" current="methods">
+  <div class="shell prose">
+    <header class="page-head">
+      <div>
+        <p class="eyebrow">CURATION / TRANSFORMATION / GRAPH METHODS</p>
+        <h1>Explain the map.<br />Preserve uncertainty.</h1>
+        <p class="lede">The website is generated from one canonical data source. Graph organization helps navigation; it never creates scientific facts, collaborations, citations, or capabilities.</p>
+      </div>
+    </header>
+
+    <h2>Canonical data flow</h2>
+    <p><code>data/gold-seed-v0.2.yml</code> is validated first, then generates the README regions, Atlas records, search index, graph nodes and edges, Observatory statistics, Radar surfaces, and dossiers. The original v0.1 audit pair remains byte-identical and untouched.</p>
+    <ol class="steps">
+      <li>Validate schema, vocabulary, IDs, primary sources, curation fields, relations, and duplicates.</li>
+      <li>Normalize the canonical records without inventing missing URLs, dates, organizations, stars, citations, or popularity.</li>
+      <li>Generate static JSON for the website and public data API.</li>
+      <li>Build every route with the configured GitHub Pages base path.</li>
+    </ol>
+
+    <h2>Generated graph node schema</h2>
+    <p>Each of the {stats.record_count} nodes includes its canonical ID and title, slug, category, visual cluster, resource class and types, summary, real links when present, tags derived from declared types and biological domains, verification status, evidence grade, declared loop stages, curation date, public year, dossier path, and three deterministic layout positions.</p>
+    <p>Node size uses graph degree only. It does not represent GitHub stars, citations, quality, endorsement, or popularity.</p>
+
+    <h2>Edge generation</h2>
+    <p><strong>{explicitCount} explicit edges</strong> come only from canonical <code>related_to</code> assertions. <strong>{inferredCount} contextual edges</strong> are deterministic organizational similarities, visibly lighter and marked <code>shared_context</code>.</p>
+    <ul>
+      <li>Similarity uses shared primary category, declared loop stages, biological domains, and resource class.</li>
+      <li>The minimum score is <strong>3.8</strong>.</li>
+      <li>Each node receives at most <strong>three inferred edges</strong>.</li>
+      <li>Explicit edges are never removed by the inferred-edge cap.</li>
+      <li>Shared context is not collaboration, citation, dependency, tool use, or scientific validation.</li>
+    </ul>
+
+    <h2>Layout modes</h2>
+    <ul>
+      <li><strong>Ecosystem:</strong> categories are arranged through the five visual clusters with a protected central reading zone.</li>
+      <li><strong>Closed Loop:</strong> one node is placed by its first declared loop stage for layout only; the dossier and Atlas retain every declared stage.</li>
+      <li><strong>Timeline:</strong> nodes use asserted public years. Missing years remain Undated and are never estimated.</li>
+    </ul>
+
+    <h2>Five visual clusters and 21 categories</h2>
+    <div class="methods-clusters">
+      {graph.clusters.map((cluster) => (
+        <section class="methods-cluster" style={"--cluster-color:" + cluster.color}>
+          <h3>{cluster.label}</h3>
+          <p>{cluster.categories.map((id) => categoryById[id]).join(" ? ")}</p>
+        </section>
+      ))}
+    </div>
+
+    <h2>Observatory statistics</h2>
+    <p>The Observatory reports total records, categories, verification status, evidence, link presence, loop-stage coverage, public-year distribution, resource classes, five-cluster shares, and curation audit dates. Platform records use a declared resource-type match for platform, laboratory, LabOS, or biofoundry.</p>
+    <p>The canonical schema has no repository ingestion timestamp. Therefore 7-day and 30-day addition counts show an explicit unavailable state; <code>curation.last_verified</code> is shown separately and is never relabeled as an addition date.</p>
+
+    <h2>Accessible alternatives</h2>
+    <p>The Canvas graph supports keyboard node traversal, searchable results, reduced motion, pause, reset, zoom, drag, and an HTML detail sheet. The complete accessible catalogue remains available in the <a href={withBase("atlas/?status=all")}>Atlas</a>.</p>
+
+    <h2>Verification boundary</h2>
+    <p>Verified records and review-pending candidates remain visibly distinct. Candidate ranking or graph similarity is not factual confidence. Promotion still requires human review through the repository curation contract.</p>
+  </div>
+</BaseLayout>

@@ -1,0 +1,41 @@
+---
+import project from "../data/generated/project.json";
+import { withBase } from "../lib/paths";
+
+const { current = "home", locale = "en" } = Astro.props;
+const repositoryUrl = project.github_owner && project.github_repo
+  ? "https://github.com/" + project.github_owner + "/" + project.github_repo
+  : withBase();
+
+const items = [
+  { key: "atlas", label: "Atlas", href: withBase("atlas/") },
+  { key: "loop", label: "Loop Map", href: withBase("loop-map/") },
+  { key: "observatory", label: "Observatory", href: withBase("observatory/") },
+  { key: "radar", label: "Radar", href: withBase("radar/") },
+  { key: "digest", label: "Digest", href: withBase("digest/") },
+  { key: "methods", label: "Methods", href: withBase("methods/") },
+  { key: "github", label: "GitHub", href: repositoryUrl, external: true }
+];
+---
+
+<header class="site-header">
+  <a class="brand" href={withBase()} aria-label="Awesome Autonomous Biology home">
+    <span><strong>AWESOME AUTONOMOUS BIOLOGY</strong></span>
+  </a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+  <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+    {items.map((item) => item.external ? (
+      <a href={item.href} target="_blank" rel="noopener noreferrer" data-external-nav>{item.label}</a>
+    ) : (
+      <a href={item.href} aria-current={current === item.key ? "page" : undefined}>{item.label}</a>
+    ))}
+  </nav>
+  <div class="header-actions">
+    <a class="locale-link" href={locale === "zh" ? withBase() : withBase("zh/")} lang={locale === "zh" ? "en" : "zh-CN"}>
+      {locale === "zh" ? "EN" : "ZH"}
+    </a>
+    <button class="palette-trigger" type="button" data-open-palette aria-label="Open command palette">
+      <span>Search</span><kbd>Ctrl K</kbd>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="20" role="img" aria-label="Code: MIT">
+  <title>Code: MIT</title>
+  <rect width="40" height="20" fill="#555"/>
+  <rect x="40" width="36" height="20" fill="#2563eb"/>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Arial,sans-serif" font-size="11">
+    <text x="20" y="14">code</text>
+    <text x="58" y="14">MIT</text>
+  </g>
+</svg>

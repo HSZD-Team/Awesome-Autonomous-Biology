@@ -21,12 +21,12 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome" /></a>
-  <img src="https://img.shields.io/badge/Gold_Seed-v0.2_research_dataset-06B6D4?style=flat-square" alt="Gold Seed v0.2 research dataset" />
-  <img src="https://img.shields.io/badge/Taxonomy-controlled_vocabulary-8B5CF6?style=flat-square" alt="Controlled taxonomy" />
-  <a href="#持续更新机制"><img src="https://img.shields.io/badge/Update-Daily_Radar_%2B_Weekly_Curation-F97316?style=flat-square" alt="Daily Radar and Weekly Curation" /></a>
-  <a href="#审核与参与贡献"><img src="https://img.shields.io/badge/Curation-Evidence_first-22C55E?style=flat-square" alt="Evidence-first curation" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/code-MIT-2563EB?style=flat-square" alt="MIT License" /></a>
-  <a href="LICENSE-DATA"><img src="https://img.shields.io/badge/metadata-CC_BY_4.0-EC4899?style=flat-square" alt="CC BY 4.0" /></a>
+  <img src="assets/badges/gold-seed.svg" alt="Gold Seed v0.2 research dataset" />
+  <img src="assets/badges/taxonomy.svg" alt="Controlled taxonomy" />
+  <a href="#持续更新机制"><img src="assets/badges/update.svg" alt="Daily Radar and Weekly Curation" /></a>
+  <a href="#审核与参与贡献"><img src="assets/badges/curation.svg" alt="Evidence-first curation" /></a>
+  <a href="LICENSE"><img src="assets/badges/license-code.svg" alt="MIT License" /></a>
+  <a href="LICENSE-DATA"><img src="assets/badges/license-data.svg" alt="CC BY 4.0" /></a>
 </p>
 
 <p align="center">

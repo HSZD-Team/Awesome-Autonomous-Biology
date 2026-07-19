@@ -1,13 +1,15 @@
 ---
-import Header from "../components/Header.astro";
+import Header from "../components/SiteHeader.astro";
 import Footer from "../components/Footer.astro";
 import CommandPalette from "../components/CommandPalette.astro";
 import "../styles/global.css";
+import "../styles/redesign.css";
 const {
   title = "Awesome Autonomous Biology",
   description = "A biology-specific, closed-loop, evidence-graded atlas of autonomous biology.",
   current = "home",
-  locale = "en"
+  locale = "en",
+  pageClass = ""
 } = Astro.props;
 const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
@@ -16,13 +18,13 @@ const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL :
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="theme-color" content="#050b19" />
+    <meta name="theme-color" content="#f8fafc" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
     <title>{title}</title>
   </head>
-  <body>
+  <body class={pageClass}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="ambient-grid" aria-hidden="true"></div>
     <Header current={current} locale={locale} />

@@ -1,0 +1,185 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import data from "../../data/generated/observatory.json";
+import { withBase, loopStageLabels } from "../../lib/paths";
+
+const percent = (value, total) => total ? Math.round((value / total) * 1000) / 10 : 0;
+const maxCategory = Math.max(...data.category_distribution.map((item) => item.count), 1);
+const maxStage = Math.max(...data.loop_stage_distribution.map((item) => item.count), 1);
+const maxYear = Math.max(...data.public_year_distribution.map((item) => item.count), 1);
+const maxAudit = Math.max(...data.curation_audit_distribution.map((item) => item.count), 1);
+const ringStyle = (items, colors) => {
+  const total = items.reduce((sum, item) => sum + item.count, 0);
+  let cursor = 0;
+  const parts = items.map((item, index) => {
+    const start = cursor;
+    cursor += percent(item.count, total);
+    return colors[index % colors.length] + " " + start + "% " + cursor + "%";
+  });
+  return "--ring:conic-gradient(" + parts.join(",") + ")";
+};
+const statusColors = ["#84CC16", "#FB7185", "#94A3B8"];
+const evidenceColors = ["#8B5CF6", "#22D3EE", "#FB7185"];
+---
+
+<BaseLayout title="Observatory - Awesome Autonomous Biology" current="observatory">
+  <div class="observatory-shell">
+    <header class="observatory-hero">
+      <div>
+        <p class="eyebrow">GOLD SEED V{data.dataset_version} / LIVE GENERATED SURFACE</p>
+        <h1>Field structure,<br />in living color.</h1>
+        <p class="lede">A truthful view of the canonical resource data: category coverage, evidence, verification, loop stages, public years, and curation activity.</p>
+      </div>
+      <aside class="observatory-note">
+        <strong>Data boundary</strong>
+        <p>Counts derive from the same v0.2 records used by the README, Atlas, homepage graph, Radar, and dossiers. Missing ingestion dates remain unavailable rather than estimated.</p>
+      </aside>
+    </header>
+
+    <section class="observatory-metrics" aria-label="Core dataset statistics">
+      <article class="observatory-metric"><strong>{data.totals.resources}</strong><span>Resources</span></article>
+      <article class="observatory-metric"><strong>{data.totals.categories}</strong><span>Categories</span></article>
+      <article class="observatory-metric"><strong>{data.totals.verified}</strong><span>Verified</span></article>
+      <article class="observatory-metric"><strong>{data.totals.review_pending}</strong><span>Review pending</span></article>
+      <article class="observatory-metric"><strong>{data.link_presence.papers}</strong><span>Paper links</span></article>
+      <article class="observatory-metric"><strong>{data.link_presence.code}</strong><span>Code links</span></article>
+      <article class="observatory-metric"><strong>{data.link_presence.datasets}</strong><span>Dataset links</span></article>
+      <article class="observatory-metric"><strong>{data.link_presence.platforms}</strong><span>Platform records</span></article>
+    </section>
+
+    <div class="observatory-grid">
+      <section class="observatory-card wide">
+        <p class="chart-kicker">21 PRIMARY CATEGORIES / RECORDS</p>
+        <h2>Category distribution</h2>
+        <div class="bar-list">
+          {data.category_distribution.map((item) => (
+            <div class="bar-row" title={item.label + ": " + item.count + " records"}>
+              <span>{item.label}</span>
+              <span class="bar-track"><i style={"--value:" + percent(item.count, maxCategory) + ";--bar-color:" + item.cluster.color}></i></span>
+              <strong>{item.count}</strong>
+            </div>
+          ))}
+        </div>
+        <p class="chart-source">Unit: research records. Source: generated canonical category counts.</p>
+      </section>
+
+      <section class="observatory-card">
+        <p class="chart-kicker">FIVE VISUAL CLUSTERS / SHARE OF 100</p>
+        <h2>Knowledge-map clusters</h2>
+        <div class="ring-chart">
+          <div class="ring-visual" style={ringStyle(data.cluster_distribution, data.cluster_distribution.map((item) => item.color))} role="img" aria-label="Five cluster distribution"></div>
+          <div class="chart-legend">
+            {data.cluster_distribution.map((item) => (
+              <span title={item.label + ": " + item.count + " records"}>
+                <i style={"--legend-color:" + item.color}></i>{item.label} <strong>{item.count}</strong>
+              </span>
+            ))}
+          </div>
+        </div>
+        <p class="chart-source">Unit: records. Categories map to exactly one visual cluster.</p>
+      </section>
+
+      <section class="observatory-card">
+        <p class="chart-kicker">NINE DECLARED STAGES / MULTI-LABEL COUNTS</p>
+        <h2>Closed-loop coverage</h2>
+        <div class="bar-list">
+          {data.loop_stage_distribution.map((item, index) => (
+            <div class="bar-row" title={loopStageLabels[item.stage].en + ": " + item.count + " records"}>
+              <span>{index + 1}. {loopStageLabels[item.stage].en}</span>
+              <span class="bar-track"><i style={"--value:" + percent(item.count, maxStage)}></i></span>
+              <strong>{item.count}</strong>
+            </div>
+          ))}
+        </div>
+        <p class="chart-source">A record may cover multiple declared stages; totals therefore exceed 100.</p>
+      </section>
+
+      <section class="observatory-card third">
+        <p class="chart-kicker">EVIDENCE GRADE / RECORDS</p>
+        <h2>Evidence</h2>
+        <div class="ring-chart">
+          <div class="ring-visual" style={ringStyle(data.evidence_distribution, evidenceColors)} role="img" aria-label="Evidence grade distribution"></div>
+          <div class="chart-legend">
+            {data.evidence_distribution.map((item, index) => (
+              <span title={"Evidence " + item.grade + ": " + item.count}>
+                <i style={"--legend-color:" + evidenceColors[index]}></i>Grade {item.grade} <strong>{item.count}</strong>
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="observatory-card third">
+        <p class="chart-kicker">CURATION STATUS / RECORDS</p>
+        <h2>Verification</h2>
+        <div class="ring-chart">
+          <div class="ring-visual" style={ringStyle(data.verification_distribution, statusColors)} role="img" aria-label="Verification status distribution"></div>
+          <div class="chart-legend">
+            {data.verification_distribution.map((item, index) => (
+              <span title={item.status + ": " + item.count}>
+                <i style={"--legend-color:" + statusColors[index]}></i>{item.status.replaceAll("_", " ")} <strong>{item.count}</strong>
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="observatory-card third">
+        <p class="chart-kicker">RECENT ADDITIONS / REPOSITORY INGESTION TIME</p>
+        <h2>7-day and 30-day additions</h2>
+        <div class="data-unavailable">
+          <strong>Not currently tracked</strong>
+          <p>{data.recent_additions.note}</p>
+        </div>
+        <p class="chart-source">Empty-state behavior is intentional; curation dates are not treated as ingestion dates.</p>
+      </section>
+
+      <section class="observatory-card">
+        <p class="chart-kicker">FIRST PUBLIC YEAR / UNDATED PRESERVED</p>
+        <h2>Public-year distribution</h2>
+        <div class="audit-timeline" aria-label="Resource public-year distribution">
+          {data.public_year_distribution.map((item) => (
+            <span
+              tabindex="0"
+              style={"--value:" + percent(item.count, maxYear)}
+              data-label={item.year + ": " + item.count}
+              title={item.year + ": " + item.count + " records"}
+            ></span>
+          ))}
+        </div>
+        <p class="chart-source">This is not an addition trend. Unknown years stay in the Undated bucket.</p>
+      </section>
+
+      <section class="observatory-card">
+        <p class="chart-kicker">CURATION LAST_VERIFIED / AUDIT EVENTS</p>
+        <h2>Curation audit pulse</h2>
+        <div class="audit-timeline" aria-label="Curation audit dates">
+          {data.curation_audit_distribution.map((item) => (
+            <span
+              tabindex="0"
+              style={"--value:" + percent(item.count, maxAudit)}
+              data-label={item.date + ": " + item.count}
+              title={item.date + ": " + item.count + " records"}
+            ></span>
+          ))}
+        </div>
+        <p class="chart-source">Unit: records by curation.last_verified. This does not imply first publication or repository ingestion.</p>
+      </section>
+
+      <section class="observatory-card wide">
+        <p class="chart-kicker">MOST RECENT CURATION DATES</p>
+        <h2>Recently verified or reviewed records</h2>
+        <div class="recent-list">
+          {data.recently_verified_or_reviewed.map((item) => (
+            <a href={withBase(item.dossier_path)}>
+              <strong>{item.id}</strong>
+              <span>{item.name}</span>
+              <small>{item.date} / {item.status.replaceAll("_", " ")}</small>
+            </a>
+          ))}
+        </div>
+        <p class="chart-source">Sorted by curation.last_verified, then stable record ID.</p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

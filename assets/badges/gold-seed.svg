@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="194" height="20" role="img" aria-label="Gold Seed: v0.2 research dataset">
+  <title>Gold Seed: v0.2 research dataset</title>
+  <rect width="74" height="20" fill="#555"/>
+  <rect x="74" width="120" height="20" fill="#06b6d4"/>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Arial,sans-serif" font-size="11">
+    <text x="37" y="14">Gold Seed</text>
+    <text x="134" y="14">v0.2 research dataset</text>
+  </g>
+</svg>

@@ -1,21 +1,25 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ResourceCard from "../../components/ResourceCard.astro";
-import resources from "../../data/generated/resources.json";
+import resources from "../../data/generated/all-resources.json";
 import categories from "../../data/generated/categories.json";
+import stats from "../../data/generated/stats.json";
 import vocabularies from "../../data/generated/vocabularies.json";
 import { loopStageLabels } from "../../lib/paths";
 const unique = (items) => [...new Set(items)].sort((a, b) => String(a).localeCompare(String(b)));
 const domains = unique(resources.flatMap((record) => record.biological_domains));
 const years = unique(resources.map((record) => record.year).filter(Boolean)).sort((a, b) => b - a);
-const matrix = Object.fromEntries(categories.map((category) => [category.id, Object.fromEntries(vocabularies.loop_stages.map((stage) => [stage, resources.filter((record) => record.primary_category === category.id && record.loop_stages.includes(stage)).length]))]));
-const displayOption = (value) => String(value).replaceAll("_", " " );
+const defaultResources = resources.filter((record) => record.curation.status === "verified");
+const matrix = Object.fromEntries(categories.map((category) => [category.id, Object.fromEntries(vocabularies.loop_stages.map((stage) => [stage, defaultResources.filter((record) => record.primary_category === category.id && record.loop_stages.includes(stage)).length]))]));
+const displayOption = (value) => String(value).replaceAll("_", " ");
 ---
 <BaseLayout title="Atlas - Awesome Autonomous Biology" current="atlas">
   <div class="shell wide">
-    <header class="page-head"><div><p class="eyebrow">VERIFIED ATLAS - {resources.length} RECORDS</p><h1>Evidence first.<br />Filter everything.</h1><p class="lede">Search the human-reviewed Gold Seed across identity, loop function, biology, openness, and two independent autonomy axes.</p></div><span class="signal">Verified data only</span></header>
+    <header class="page-head"><div><p class="eyebrow">GOLD SEED V{stats.dataset_version} - {stats.record_count} RESEARCH RECORDS</p><h1>Evidence first.<br />Filter everything.</h1><p class="lede">The safe default shows {stats.verified_count} human-verified records. Switch curation status to include {stats.review_pending_count} clearly marked candidates.</p></div><span class="signal">Verified by default</span></header>
+    <aside class="boundary-banner"><strong>Status boundary</strong><p>Review-pending means the identity, links, license, boundary, or autonomy annotation still needs human review. Inclusion is not endorsement.</p></aside>
     <form class="filters panel" data-atlas-filters aria-label="Atlas filters">
       <div class="filter-field search"><label for="filter-q">Search</label><input id="filter-q" name="q" type="search" placeholder="Title or bilingual summary" /></div>
+      <div class="filter-field"><label for="filter-status">Curation status</label><select id="filter-status" name="status"><option value="verified" selected>Verified only</option><option value="all">All research records</option><option value="review_pending">Review pending only</option></select></div>
       <div class="filter-field"><label for="filter-category">Category</label><select id="filter-category" name="category"><option value="">All 21</option>{categories.map((category) => <option value={category.id}>{category.label_en}</option>)}</select></div>
       <div class="filter-field"><label for="filter-class">Resource class</label><select id="filter-class" name="class"><option value="">All</option>{vocabularies.resource_classes.map((value) => <option value={value}>{displayOption(value)}</option>)}</select></div>
       <div class="filter-field"><label for="filter-stage">Loop stage</label><select id="filter-stage" name="stage"><option value="">All nine</option>{vocabularies.loop_stages.map((stage) => <option value={stage}>{loopStageLabels[stage].en}</option>)}</select></div>
@@ -25,14 +29,14 @@ const displayOption = (value) => String(value).replaceAll("_", " " );
       <div class="filter-field"><label for="filter-operational">Operational autonomy</label><select id="filter-operational" name="operational"><option value="">All</option>{vocabularies.autonomy_levels.map((value) => <option value={value}>{displayOption(value)}</option>)}</select></div>
       <div class="filter-field"><label for="filter-open">Open source</label><select id="filter-open" name="open"><option value="">All</option>{["yes", "partial", "no", "not_applicable"].map((value) => <option value={value}>{displayOption(value)}</option>)}</select></div>
       <div class="filter-field"><label for="filter-wet">Wet lab</label><select id="filter-wet" name="wet"><option value="">Either</option><option value="true">Yes</option><option value="false">No</option></select></div>
-      <div class="filter-field"><label for="filter-year">Year</label><select id="filter-year" name="year"><option value="">All</option>{years.map((value) => <option value={value}>{value}</option>)}<option value="ongoing">Ongoing / not asserted</option></select></div>
+      <div class="filter-field"><label for="filter-year">Year</label><select id="filter-year" name="year"><option value="">All</option>{years.map((value) => <option value={value}>{value}</option>)}<option value="ongoing">Date not asserted</option></select></div>
     </form>
-    <div class="atlas-toolbar"><p><strong data-result-count>{resources.length}</strong> verified resources <span class="muted">- filters are mirrored into the URL</span></p><div class="button-row atlas-actions"><button class="button secondary" type="button" data-clear-filters>Clear</button><div class="segmented" aria-label="Atlas view"><button type="button" data-view="cards" aria-pressed="true">Cards</button><button type="button" data-view="list" aria-pressed="false">List</button><button type="button" data-view="matrix" aria-pressed="false">Matrix</button></div></div></div>
+    <div class="atlas-toolbar"><p><strong data-result-count>{defaultResources.length}</strong> <span data-result-scope>verified resources</span> <span class="muted">- filters and status are mirrored into the URL</span></p><div class="button-row atlas-actions"><button class="button secondary" type="button" data-clear-filters>Clear</button><div class="segmented" aria-label="Atlas view"><button type="button" data-view="cards" aria-pressed="true">Cards</button><button type="button" data-view="list" aria-pressed="false">List</button><button type="button" data-view="matrix" aria-pressed="false">Matrix</button></div></div></div>
     <div class="atlas-results" data-atlas-results data-view="cards">
       <div class="resource-grid">{resources.map((record) => <div data-resource-shell data-id={record.id}><ResourceCard record={record} /></div>)}</div>
-      <div class="coverage-view panel panel-pad"><h2>Declared category x loop-stage coverage</h2><p class="section-copy">Counts use only stages explicitly asserted in the verified YAML; zero is shown as zero, never inferred.</p><table><thead><tr><th>Category</th>{vocabularies.loop_stages.map((stage, index) => <th title={loopStageLabels[stage].en}>{index + 1}</th>)}</tr></thead><tbody>{categories.map((category) => <tr><td>{category.label_en}</td>{vocabularies.loop_stages.map((stage) => <td class="heat" data-count={matrix[category.id][stage]}>{matrix[category.id][stage]}</td>)}</tr>)}</tbody></table></div>
-      <p class="empty-state" data-no-results hidden><strong>No verified resource matches.</strong><br />Adjust or clear filters; candidates are intentionally not mixed into this view.</p>
+      <div class="coverage-view panel panel-pad"><h2>Declared category × loop-stage coverage</h2><p class="section-copy">Cells update from the filtered records. Only explicitly asserted stages are counted; zero remains zero.</p><table><thead><tr><th>Category</th>{vocabularies.loop_stages.map((stage, index) => <th title={loopStageLabels[stage].en}>{index + 1}</th>)}</tr></thead><tbody>{categories.map((category) => <tr><td>{category.label_en}</td>{vocabularies.loop_stages.map((stage) => <td class="heat" data-matrix-cell data-category={category.id} data-stage={stage} data-count={matrix[category.id][stage]}>{matrix[category.id][stage]}</td>)}</tr>)}</tbody></table></div>
+      <p class="empty-state" data-no-results hidden><strong>No research record matches.</strong><br />Adjust or clear the filters.</p>
     </div>
-    <script type="application/json" data-atlas-data set:html={JSON.stringify(resources).replace(/</g, "\\u003c")} /><script src="../../scripts/atlas.ts"></script>
+    <script type="application/json" data-atlas-data set:html={JSON.stringify(resources).replace(/</g, "\u003c")} /><script src="../../scripts/atlas.ts"></script>
   </div>
 </BaseLayout>

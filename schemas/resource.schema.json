@@ -7,14 +7,14 @@
   "required": ["schema_version", "dataset_version", "title", "generated_on", "record_count", "scope", "curation_rules", "controlled_vocabularies", "records"],
   "properties": {
     "schema_version": {"const": "0.1"},
-    "dataset_version": {"type": "string", "minLength": 1},
+    "dataset_version": {"const": "0.2"},
     "title": {"type": "string", "minLength": 1},
     "generated_on": {"type": "string", "format": "date"},
-    "record_count": {"const": 50},
+    "record_count": {"const": 100},
     "scope": {"$ref": "#/$defs/bilingualText"},
     "curation_rules": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
     "controlled_vocabularies": {"$ref": "#/$defs/controlledVocabularies"},
-    "records": {"type": "array", "minItems": 50, "maxItems": 50, "items": {"$ref": "#/$defs/resource"}}
+    "records": {"type": "array", "minItems": 100, "maxItems": 100, "items": {"$ref": "#/$defs/resource"}}
   },
   "$defs": {
     "nonEmptyString": {"type": "string", "minLength": 1},

@@ -1,19 +1,297 @@
-version: "0.1"
-observed_on: "2026-07-18"
-policy: "Review flags are an auditable overlay. They never silently rewrite the immutable Gold Seed YAML."
+version: '0.2'
+observed_on: '2026-07-19'
+policy: Review flags are an auditable overlay. They never silently rewrite the immutable Gold Seed YAML.
 flags:
-  - id: "AAB-020"
-    status: "review_pending"
-    field: "urls.code / evidence.primary_sources"
-    url: "https://github.com/khalil-lab/evolver"
-    observation: "HTTP 404 during advisory link audit; replacement must be verified by a human."
-  - id: "AAB-029"
-    status: "review_pending"
-    field: "urls.code"
-    url: "https://github.com/vanvalenlab/deepcell-kiosk"
-    observation: "HTTP 404 during advisory link audit; replacement must be verified by a human."
-  - id: "AAB-033"
-    status: "review_pending"
-    field: "urls.canonical / evidence.primary_sources"
-    url: "https://www.allotrope.org/allotrope-framework"
-    observation: "HTTP 404 during advisory link audit; replacement must be verified by a human."
+  - id: AAB-020
+    status: review_pending
+    field: urls.code / evidence.primary_sources
+    url: https://github.com/khalil-lab/evolver
+    observation: HTTP 404 during advisory link audit; replacement must be verified by a human.
+  - id: AAB-029
+    status: review_pending
+    field: urls.code
+    url: https://github.com/vanvalenlab/deepcell-kiosk
+    observation: HTTP 404 during advisory link audit; replacement must be verified by a human.
+  - id: AAB-033
+    status: review_pending
+    field: urls.canonical / evidence.primary_sources
+    url: https://www.allotrope.org/allotrope-framework
+    observation: HTTP 404 during advisory link audit; replacement must be verified by a human.
+  - id: AAB-051
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7998708/
+    observation: Human review required before promotion. Primary paper identified; maintainer should confirm publication year convention and final taxonomy wording.
+  - id: AAB-052
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.frontiersin.org/journals/synthetic-biology/articles/10.3389/fsybi.2025.1630026/full
+    observation: Human review required before promotion. Peer-reviewed perspective located; final inclusion should check overlap with existing survey records.
+  - id: AAB-053
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41467-019-13189-z
+    observation: Human review required before promotion. Canonical peer-reviewed end-to-end case; confirm whether any implementation or campaign data are publicly reusable.
+  - id: AAB-054
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s44286-023-00002-4
+    observation: Human review required before promotion. Strong end-to-end evidence; verify data availability and any reusable implementation before promotion.
+  - id: AAB-055
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41467-025-56751-8
+    observation: Human review required before promotion. Peer-reviewed system and official repository found; repository scope and license need link audit.
+  - id: AAB-056
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41586-025-09442-9
+    observation: Human review required before promotion. Peer-reviewed agent case with code; operational autonomy must remain none despite experimental validation.
+  - id: AAB-057
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41551-025-01463-z
+    observation: Human review required before promotion. Peer-reviewed and code-backed; verify the exact wet-lab validation scope and repository license.
+  - id: AAB-058
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.biorxiv.org/content/10.1101/2024.05.13.593861v4
+    observation: Human review required before promotion. Relevant biology agent with code and demo; maintain evidence grade B until peer-review status is rechecked.
+  - id: AAB-059
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41467-022-31245-z
+    observation: Human review required before promotion. Peer-reviewed, code-backed experimental-design method; confirm exact biological use cases and data packaging.
+  - id: AAB-060
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41467-025-61113-5
+    observation: Human review required before promotion. Recent peer-reviewed wet-lab optimization case; implementation and data availability require review.
+  - id: AAB-061
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41592-019-0494-8
+    observation: Human review required before promotion. Foundational peer-reviewed perturbation model with open code; check current maintenance and canonical license metadata.
+  - id: AAB-062
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41592-023-01969-x
+    observation: Human review required before promotion. Peer-reviewed model and official code located; verify license and supported datasets.
+  - id: AAB-063
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41586-022-05688-9
+    observation: Human review required before promotion. Strong peer-reviewed virtual-perturbation resource; confirm license and current project ownership.
+  - id: AAB-064
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.science.org/doi/10.1126/science.aea1820
+    observation: Human review required before promotion. Recent Science paper and Apache-2.0 code found; verify canonical repository redirect and any data release.
+  - id: AAB-065
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41467-024-50698-y
+    observation: Human review required before promotion. Peer-reviewed method and code found; check repository license and exact experimental round structure.
+  - id: AAB-066
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41467-024-55399-0
+    observation: Human review required before promotion. Peer-reviewed wet-lab platform; no canonical implementation was identified in the research pass.
+  - id: AAB-067
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.science.org/doi/10.1126/science.adi8577
+    observation: Human review required before promotion. Recent Science paper, code, and model checkpoint source located; verify data/license mapping.
+  - id: AAB-068
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41467-024-55287-7
+    observation: Human review required before promotion. Peer-reviewed prospective screen with official code; license and campaign-data download need review.
+  - id: AAB-069
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://agilebiofoundry.org/
+    observation: Human review required before promotion. Official consortium source located; add independent or publication evidence before promotion where possible.
+  - id: AAB-070
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.damplab.org/
+    observation: Human review required before promotion. Two official facility sources found; publication, access model, and open-resource links need review.
+  - id: AAB-071
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.londonbiofoundry.org/
+    observation: Human review required before promotion. Official facility page located; add durable publications or technical documentation before promotion.
+  - id: AAB-072
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2989930/
+    observation: Human review required before promotion. Foundational protocol-language paper and historical official download found; archival status needs verification.
+  - id: AAB-073
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://aclanthology.org/2023.emnlp-main.162/
+    observation: Human review required before promotion. Peer-reviewed benchmark and repository found; verify license, dataset split, and generated-protocol validation wording.
+  - id: AAB-074
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://marketplace.microsoft.com/en-us/product/saas/synthace-5352101.antha?tab=overview
+    observation: Human review required before promotion. Official/commercial sources located; verify current product name, ownership, availability, and feature claims.
+  - id: AAB-075
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.dex.siemens.com/plm/riffyn-x?cclcl=en_US
+    observation: Human review required before promotion. Current Siemens product sources found; confirm URLs, feature scope, and category against the live repository.
+  - id: AAB-076
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://github.com/dgretton/pyhamilton
+    observation: Human review required before promotion. Official repository found; maintenance, supported hardware, license, and publication evidence need audit.
+  - id: AAB-077
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://micro-manager.org/
+    observation: Human review required before promotion. Peer-reviewed software and maintained repository found; verify current license and supported-device metadata.
+  - id: AAB-078
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41592-021-01308-y
+    observation: Human review required before promotion. Peer-reviewed pipeline, code, and project site located; verify license and current workflow engine.
+  - id: AAB-079
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/nmeth.3890
+    observation: Human review required before promotion. Distinct from AAB-029; audit repository license and decide whether the 2016 paper remains the best canonical citation.
+  - id: AAB-080
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41467-020-18785-y
+    observation: Human review required before promotion. Peer-reviewed method and GEO data found; implementation and exact feedback-round metadata need review.
+  - id: AAB-081
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41467-025-66964-6
+    observation: Human review required before promotion. Published online in 2025 and assigned to a 2026 volume; verify year convention, source-data URL, and implementation availability.
+  - id: AAB-082
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://sbolstandard.org/
+    observation: >-
+      Human review required before promotion. Official standard, peer-reviewed specification, and implementation organization found; select exact maintained libraries during
+      review.
+  - id: AAB-083
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://ngff.openmicroscopy.org/
+    observation: >-
+      Human review required before promotion. Official specification and repository found; pin a reviewed specification version rather than implying all implementations are
+      compatible.
+  - id: AAB-084
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://opencobra.github.io/cobrapy/
+    observation: Human review required before promotion. Established simulator with paper, code, and docs; verify current license and supported model standards.
+  - id: AAB-085
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://cellmodeller.github.io/CellModeller/
+    observation: Human review required before promotion. Paper, code, and documentation found; verify maintenance, license, and modern runtime compatibility.
+  - id: AAB-086
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://openreview.net/forum?id=p2dMLEwL8tF
+    observation: Human review required before promotion. Peer-reviewed benchmark and licensed repository found; verify canonical dataset hosting and task coverage.
+  - id: AAB-087
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://tdcommons.ai/
+    observation: Human review required before promotion. Mature benchmark platform with paper, code, and site; audit dataset-level licenses separately.
+  - id: AAB-088
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://doi.org/10.1038/s41592-025-02980-0
+    observation: Human review required before promotion. Recent peer-reviewed benchmark with code and reproducibility site; verify DOI resolution and dataset access.
+  - id: AAB-089
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10926838/
+    observation: >-
+      Human review required before promotion. Strong system paper, but independent dataset packaging has not been confirmed; do not promote until data availability is audited.
+      Shared DOI with related system AAB-054 is intentional system/dataset modeling; confirm an independently downloadable dataset and its license.
+  - id: AAB-090
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.nature.com/articles/s41467-024-55287-7
+    observation: >-
+      Human review required before promotion. Model separately only as a candidate dataset; verify an actual downloadable campaign dataset before promotion. Shared canonical URL,
+      DOI, and repository with related method AAB-068 are intentional method/dataset modeling; confirm an independently downloadable campaign dataset and its license.
+  - id: AAB-091
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://biochatter.org/
+    observation: Human review required before promotion. Peer-reviewed platform, official site, and repository found; verify current license and supported model providers.
+  - id: AAB-092
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://explorer.biothings.io/
+    observation: Human review required before promotion. Peer-reviewed API-query infrastructure with code and service found; audit current deployment and license.
+  - id: AAB-093
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy / link_audit
+    url: https://gget.bio/
+    observation: >-
+      Human review required before promotion. Peer-reviewed tool now under scverse; verify current license, module inventory, and repository redirect. The canonical URL returned a
+      network fetch error during the 2026-07-19 advisory audit; retest from an unrestricted network.
+  - id: AAB-094
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.gaudi.ch/OpenDrop/
+    observation: Human review required before promotion. Peer-reviewed hardware and official project page found; canonical design repository and versioned license need audit.
+  - id: AAB-095
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://pachterlab.github.io/poseidon/
+    observation: Human review required before promotion. Paper, hardware/software repository, and documentation found; verify current bill of materials and licenses.
+  - id: AAB-096
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.prnewswire.com/news-releases/eli-lilly-and-company-in-collaboration-with-strateos-inc-launch-remote-controlled-robotic-cloud-lab-300984067.html
+    observation: Human review required before promotion. Official/partner evidence found, but live product status and canonical company URL require careful audit.
+  - id: AAB-097
+    status: review_pending
+    field: identity / resource_class / urls / license / boundary_note_zh / autonomy
+    url: https://labgeniustx.com/
+    observation: >-
+      Human review required before promotion. Official platform and peer-reviewed application evidence found; map claims conservatively and verify paper-platform identity. Mapped
+      conservatively to enabling_infrastructure because commercial-platform automation does not establish a core autonomous system; maintainer must confirm platform identity and
+      classification.
+  - id: AAB-098
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.ginkgo.bio/solutions
+    observation: Human review required before promotion. Current official platform sources found; add project-level independent evidence and avoid broad autonomy claims.
+  - id: AAB-099
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.slas.org/
+    observation: Human review required before promotion. Official society source found; select stable community and education links during review.
+  - id: AAB-100
+    status: review_pending
+    field: identity / urls / license / boundary_note_zh / autonomy
+    url: https://www.iwbdaconf.org/
+    observation: Human review required before promotion. Official conference history located; verify current organizer, archival links, and recurring schedule.
+  - id: AAB-021
+    status: review_pending
+    field: link_audit / urls / evidence.primary_sources
+    url: https://autoprotocol.org/
+    observation: Network fetch failed during the 2026-07-19 advisory audit. This is not a confirmed 404; a human should retest from an unrestricted network before restoring verified status.
+  - id: AAB-024
+    status: review_pending
+    field: link_audit / urls / evidence.primary_sources
+    url: https://fuzhanrahmanian.com/project/helao/
+    observation: Network fetch failed during the 2026-07-19 advisory audit. This is not a confirmed 404; a human should retest from an unrestricted network before restoring verified status.
+  - id: AAB-036
+    status: review_pending
+    field: link_audit / urls / evidence.primary_sources
+    url: https://huggingface.co/datasets/EdisonScientific/labbench2
+    observation: Network fetch failed during the 2026-07-19 advisory audit. This is not a confirmed 404; a human should retest from an unrestricted network before restoring verified status.

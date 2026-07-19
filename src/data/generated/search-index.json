@@ -16,6 +16,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-001/"
   },
   {
@@ -35,6 +36,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-002/"
   },
   {
@@ -53,6 +55,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-003/"
   },
   {
@@ -71,6 +74,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-004/"
   },
   {
@@ -90,6 +94,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-005/"
   },
   {
@@ -109,6 +114,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-006/"
   },
   {
@@ -125,6 +131,7 @@
       "analysis-interpretation",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-007/"
   },
   {
@@ -142,6 +149,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-008/"
   },
   {
@@ -157,6 +165,7 @@
       "analysis-interpretation",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-009/"
   },
   {
@@ -172,6 +181,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-010/"
   },
   {
@@ -187,6 +197,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-011/"
   },
   {
@@ -202,6 +213,7 @@
       "analysis-interpretation",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-012/"
   },
   {
@@ -217,6 +229,7 @@
       "analysis-interpretation",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-013/"
   },
   {
@@ -233,6 +246,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-014/"
   },
   {
@@ -248,6 +262,7 @@
       "analysis-interpretation",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-015/"
   },
   {
@@ -263,6 +278,7 @@
       "analysis-interpretation",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-016/"
   },
   {
@@ -281,6 +297,7 @@
       "analysis-interpretation",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-017/"
   },
   {
@@ -298,6 +315,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-018/"
   },
   {
@@ -313,7 +331,23 @@
       "measurement-qc",
       "analysis-interpretation"
     ],
+    "status": "verified",
     "href": "resources/aab-019/"
+  },
+  {
+    "id": "AAB-020",
+    "title": "eVOLVER",
+    "summary_en": "A scalable continuous-culture platform supporting programmable, feedback-controlled microbial experiments.",
+    "summary_zh": "支持可编程反馈控制微生物实验的可扩展连续培养平台。",
+    "category": "Synthetic Biology & Biofoundries",
+    "category_zh": "合成生物学与生物铸造厂",
+    "stages": [
+      "wet-lab-execution",
+      "measurement-qc",
+      "model-update-feedback"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-020/"
   },
   {
     "id": "AAB-021",
@@ -326,6 +360,7 @@
       "protocol-generation",
       "wet-lab-execution"
     ],
+    "status": "review_pending",
     "href": "resources/aab-021/"
   },
   {
@@ -340,6 +375,7 @@
       "wet-lab-execution",
       "measurement-qc"
     ],
+    "status": "verified",
     "href": "resources/aab-022/"
   },
   {
@@ -354,6 +390,7 @@
       "wet-lab-execution",
       "measurement-qc"
     ],
+    "status": "verified",
     "href": "resources/aab-023/"
   },
   {
@@ -368,6 +405,7 @@
       "wet-lab-execution",
       "measurement-qc"
     ],
+    "status": "review_pending",
     "href": "resources/aab-024/"
   },
   {
@@ -382,6 +420,7 @@
       "wet-lab-execution",
       "measurement-qc"
     ],
+    "status": "verified",
     "href": "resources/aab-025/"
   },
   {
@@ -395,6 +434,7 @@
       "protocol-generation",
       "wet-lab-execution"
     ],
+    "status": "verified",
     "href": "resources/aab-026/"
   },
   {
@@ -408,6 +448,7 @@
       "wet-lab-execution",
       "measurement-qc"
     ],
+    "status": "verified",
     "href": "resources/aab-027/"
   },
   {
@@ -421,7 +462,22 @@
       "measurement-qc",
       "analysis-interpretation"
     ],
+    "status": "verified",
     "href": "resources/aab-028/"
+  },
+  {
+    "id": "AAB-029",
+    "title": "DeepCell Kiosk",
+    "summary_en": "A deployable deep-learning system that makes cell-image analysis accessible as an operational measurement service.",
+    "summary_zh": "将细胞图像深度学习分析部署为可操作测量服务的系统。",
+    "category": "Measurement, QC & Data Analysis",
+    "category_zh": "测量、质控与数据分析",
+    "stages": [
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-029/"
   },
   {
     "id": "AAB-030",
@@ -435,6 +491,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-030/"
   },
   {
@@ -452,6 +509,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-031/"
   },
   {
@@ -466,7 +524,23 @@
       "measurement-qc",
       "analysis-interpretation"
     ],
+    "status": "verified",
     "href": "resources/aab-032/"
+  },
+  {
+    "id": "AAB-033",
+    "title": "Allotrope Framework and Allotrope Data Format",
+    "summary_en": "A framework and data format for standardizing analytical laboratory data, metadata, and semantics.",
+    "summary_zh": "标准化分析实验室数据、元数据与语义的框架和数据格式。",
+    "category": "Data Standards & Provenance",
+    "category_zh": "数据标准与溯源",
+    "stages": [
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-033/"
   },
   {
     "id": "AAB-034",
@@ -481,6 +555,7 @@
       "analysis-interpretation",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-034/"
   },
   {
@@ -494,6 +569,7 @@
       "hypothesis-experiment-design",
       "analysis-interpretation"
     ],
+    "status": "verified",
     "href": "resources/aab-035/"
   },
   {
@@ -509,6 +585,7 @@
       "protocol-generation",
       "analysis-interpretation"
     ],
+    "status": "review_pending",
     "href": "resources/aab-036/"
   },
   {
@@ -523,6 +600,7 @@
       "analysis-interpretation",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-037/"
   },
   {
@@ -537,6 +615,7 @@
       "analysis-interpretation",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-038/"
   },
   {
@@ -553,6 +632,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-039/"
   },
   {
@@ -569,6 +649,7 @@
       "model-update-feedback",
       "next-experiment-decision"
     ],
+    "status": "verified",
     "href": "resources/aab-040/"
   },
   {
@@ -584,6 +665,7 @@
       "experiment-selection",
       "analysis-interpretation"
     ],
+    "status": "verified",
     "href": "resources/aab-041/"
   },
   {
@@ -598,6 +680,7 @@
       "hypothesis-experiment-design",
       "analysis-interpretation"
     ],
+    "status": "verified",
     "href": "resources/aab-042/"
   },
   {
@@ -612,6 +695,7 @@
       "measurement-qc",
       "model-update-feedback"
     ],
+    "status": "verified",
     "href": "resources/aab-043/"
   },
   {
@@ -625,6 +709,7 @@
       "wet-lab-execution",
       "measurement-qc"
     ],
+    "status": "verified",
     "href": "resources/aab-044/"
   },
   {
@@ -638,6 +723,7 @@
       "protocol-generation",
       "wet-lab-execution"
     ],
+    "status": "verified",
     "href": "resources/aab-045/"
   },
   {
@@ -653,6 +739,7 @@
       "measurement-qc",
       "analysis-interpretation"
     ],
+    "status": "verified",
     "href": "resources/aab-046/"
   },
   {
@@ -667,6 +754,7 @@
       "measurement-qc",
       "analysis-interpretation"
     ],
+    "status": "verified",
     "href": "resources/aab-047/"
   },
   {
@@ -682,6 +770,7 @@
       "measurement-qc",
       "analysis-interpretation"
     ],
+    "status": "verified",
     "href": "resources/aab-048/"
   },
   {
@@ -697,6 +786,7 @@
       "measurement-qc",
       "analysis-interpretation"
     ],
+    "status": "verified",
     "href": "resources/aab-049/"
   },
   {
@@ -711,6 +801,829 @@
       "wet-lab-execution",
       "measurement-qc"
     ],
+    "status": "verified",
     "href": "resources/aab-050/"
+  },
+  {
+    "id": "AAB-051",
+    "title": "Building a biofoundry",
+    "summary_en": "A practical, biology-specific guide to the capabilities, organization, workflows, and challenges involved in building a biofoundry.",
+    "summary_zh": "从能力、组织、工作流与挑战出发，系统说明如何建设面向合成生物学 DBTL 的生物铸造厂。",
+    "category": "Surveys & Perspectives",
+    "category_zh": "综述、观点与路线图",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-051/"
+  },
+  {
+    "id": "AAB-052",
+    "title": "Frontiers in biofoundry: opportunities and challenges",
+    "summary_en": "A recent perspective on biofoundry capabilities, adoption barriers, standards, and opportunities for automated biological engineering.",
+    "summary_zh": "梳理生物铸造厂的能力、采用障碍、标准化问题及自动化生物工程机会。",
+    "category": "Surveys & Perspectives",
+    "category_zh": "综述、观点与路线图",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-052/"
+  },
+  {
+    "id": "AAB-053",
+    "title": "BioAutomata",
+    "summary_en": "A fully automated design–build–test–learn platform that paired Bayesian experiment selection with iBioFAB execution to optimize lycopene biosynthesis.",
+    "summary_zh": "将贝叶斯实验选择与 iBioFAB 机器人执行连接起来，用完整 DBTL 循环优化番茄红素生物合成。",
+    "category": "End-to-End Autonomous Biology Systems",
+    "category_zh": "端到端自主生物学系统",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-053/"
+  },
+  {
+    "id": "AAB-054",
+    "title": "SAMPLE",
+    "summary_en": "Self-driving Autonomous Machines for Protein Landscape Exploration integrates an intelligent agent with robotic gene synthesis, expression, and activity measurement.",
+    "summary_zh": "SAMPLE 将智能实验选择与基因合成、蛋白表达和酶活测量自动化连接，执行自主的蛋白序列—功能探索。",
+    "category": "End-to-End Autonomous Biology Systems",
+    "category_zh": "端到端自主生物学系统",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-054/"
+  },
+  {
+    "id": "AAB-055",
+    "title": "PLMeAE",
+    "summary_en": "A protein-language-model-enabled automatic evolution platform connecting mutant design with biofoundry build-and-test operations.",
+    "summary_zh": "以蛋白语言模型设计突变体，并连接生物铸造厂 Build/Test 环节的自动蛋白进化平台。",
+    "category": "End-to-End Autonomous Biology Systems",
+    "category_zh": "端到端自主生物学系统",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-055/"
+  },
+  {
+    "id": "AAB-056",
+    "title": "The Virtual Lab",
+    "summary_en": "A multi-agent scientific team that generated and debated nanobody design hypotheses, with selected designs subsequently tested experimentally.",
+    "summary_zh": "由多个专业 Agent 讨论并形成纳米抗体设计方案，随后由研究团队进行实验验证。",
+    "category": "Scientific Agents for Biology",
+    "category_zh": "生物学科学智能体",
+    "stages": [
+      "biological-question",
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-056/"
+  },
+  {
+    "id": "AAB-057",
+    "title": "CRISPR-GPT",
+    "summary_en": "An LLM-based agent that assists researchers with CRISPR design choices, reagent selection, protocol planning, and downstream analysis.",
+    "summary_zh": "辅助研究者完成 CRISPR 设计、试剂选择、协议规划和下游分析的 LLM Agent。",
+    "category": "Scientific Agents for Biology",
+    "category_zh": "生物学科学智能体",
+    "stages": [
+      "biological-question",
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "protocol-generation",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-057/"
+  },
+  {
+    "id": "AAB-058",
+    "title": "CellAgent",
+    "summary_en": "A multi-agent framework that plans and executes computational single-cell and spatial-omics analyses.",
+    "summary_zh": "可规划并执行单细胞与空间组学计算分析的多 Agent 框架。",
+    "category": "Scientific Agents for Biology",
+    "category_zh": "生物学科学智能体",
+    "stages": [
+      "biological-question",
+      "hypothesis-experiment-design",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-058/"
+  },
+  {
+    "id": "AAB-059",
+    "title": "METIS",
+    "summary_en": "An active-learning framework for efficiently selecting informative biological experiments and optimizing complex cell-free systems.",
+    "summary_zh": "面向复杂无细胞体系，以主动学习选择高信息量实验并迭代优化的框架。",
+    "category": "Biological Experiment Design",
+    "category_zh": "生物实验设计",
+    "stages": [
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-059/"
+  },
+  {
+    "id": "AAB-060",
+    "title": "Bayesian optimization for iterative cell-culture media development",
+    "summary_en": "An iterative Bayesian-optimization workflow for accelerating cell-culture media development, including PBMC maintenance and process applications.",
+    "summary_zh": "以贝叶斯优化迭代选择培养基配方，加速 PBMC 维持及其他细胞培养场景的介质开发。",
+    "category": "Biological Experiment Design",
+    "category_zh": "生物实验设计",
+    "stages": [
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-060/"
+  },
+  {
+    "id": "AAB-061",
+    "title": "scGen",
+    "summary_en": "A generative single-cell model for predicting cell-type-specific responses to perturbations across conditions.",
+    "summary_zh": "用于跨条件预测不同细胞类型扰动响应的生成式单细胞模型。",
+    "category": "Perturbation & Virtual Cell",
+    "category_zh": "扰动建模与虚拟细胞",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-061/"
+  },
+  {
+    "id": "AAB-062",
+    "title": "CellOT",
+    "summary_en": "A neural optimal-transport model that predicts how single-cell populations change under perturbation.",
+    "summary_zh": "利用神经最优传输预测单细胞群体在扰动后如何迁移到新状态。",
+    "category": "Perturbation & Virtual Cell",
+    "category_zh": "扰动建模与虚拟细胞",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-062/"
+  },
+  {
+    "id": "AAB-063",
+    "title": "CellOracle",
+    "summary_en": "A single-cell framework for reconstructing gene-regulatory networks and simulating transcription-factor perturbations.",
+    "summary_zh": "从单细胞数据重建基因调控网络，并模拟转录因子扰动影响的框架。",
+    "category": "Perturbation & Virtual Cell",
+    "category_zh": "扰动建模与虚拟细胞",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-063/"
+  },
+  {
+    "id": "AAB-064",
+    "title": "MULTI-evolve",
+    "summary_en": "A machine-learning-guided framework for rapidly identifying high-performing multi-mutant proteins from compact experimental measurements.",
+    "summary_zh": "以少量实验测量和蛋白语言模型指导复杂多突变体设计，加速定向进化搜索。",
+    "category": "Protein & Sequence Engineering",
+    "category_zh": "蛋白与序列工程",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-064/"
+  },
+  {
+    "id": "AAB-065",
+    "title": "MODIFY",
+    "summary_en": "A machine-learning method for designing diverse, evolutionarily plausible protein libraries while co-optimizing predicted fitness.",
+    "summary_zh": "在兼顾进化合理性、多样性与预测适应度的条件下设计组合蛋白库的机器学习方法。",
+    "category": "Protein & Sequence Engineering",
+    "category_zh": "蛋白与序列工程",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-065/"
+  },
+  {
+    "id": "AAB-066",
+    "title": "Machine-learning-guided cell-free enzyme engineering",
+    "summary_en": "A high-throughput platform integrating cell-free DNA assembly, expression, functional assays, and machine-learning-guided enzyme design.",
+    "summary_zh": "整合无细胞 DNA 组装、表达、功能测定与机器学习设计的高通量酶工程平台。",
+    "category": "Protein & Sequence Engineering",
+    "category_zh": "蛋白与序列工程",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-066/"
+  },
+  {
+    "id": "AAB-067",
+    "title": "DrugReflector",
+    "summary_en": "An active-learning framework that uses transcriptomic signatures and wet-lab feedback to prioritize compounds for phenotypic drug discovery.",
+    "summary_zh": "利用转录组特征与湿实验反馈迭代排序化合物的主动学习药物发现框架。",
+    "category": "Drug Discovery & Cell-Based Screening",
+    "category_zh": "药物发现与细胞筛选",
+    "stages": [
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-067/"
+  },
+  {
+    "id": "AAB-068",
+    "title": "BATCHIE",
+    "summary_en": "A Bayesian active-learning platform that dynamically selects batches for large drug-combination screens and updates from observed results.",
+    "summary_zh": "为大规模药物组合筛选动态选择批次，并依据实验结果持续更新的贝叶斯主动学习平台。",
+    "category": "Drug Discovery & Cell-Based Screening",
+    "category_zh": "药物发现与细胞筛选",
+    "stages": [
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-068/"
+  },
+  {
+    "id": "AAB-069",
+    "title": "Agile BioFoundry",
+    "summary_en": "A U.S. national-laboratory consortium providing integrated design–build–test–learn capabilities for biomanufacturing.",
+    "summary_zh": "由美国国家实验室组成，为生物制造提供集成 Design–Build–Test–Learn 能力的生物铸造联盟。",
+    "category": "Synthetic Biology & Biofoundries",
+    "category_zh": "合成生物学与生物铸造厂",
+    "stages": [
+      "hypothesis-experiment-design",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-069/"
+  },
+  {
+    "id": "AAB-070",
+    "title": "DAMP Lab",
+    "summary_en": "Boston University's Design, Automation, Manufacturing, and Processes facility for high-throughput synthetic-biology workflows.",
+    "summary_zh": "波士顿大学面向合成生物学设计、自动化、制造与流程的高通量设施。",
+    "category": "Synthetic Biology & Biofoundries",
+    "category_zh": "合成生物学与生物铸造厂",
+    "stages": [
+      "hypothesis-experiment-design",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-070/"
+  },
+  {
+    "id": "AAB-071",
+    "title": "London Biofoundry",
+    "summary_en": "A biofoundry providing automated biological design, construction, testing, and characterization capabilities.",
+    "summary_zh": "提供自动化生物设计、构建、测试与表征能力的伦敦生物铸造厂。",
+    "category": "Synthetic Biology & Biofoundries",
+    "category_zh": "合成生物学与生物铸造厂",
+    "stages": [
+      "hypothesis-experiment-design",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-071/"
+  },
+  {
+    "id": "AAB-072",
+    "title": "BioCoder",
+    "summary_en": "An early programming language for expressing biology protocols in a standardized, machine-actionable form.",
+    "summary_zh": "较早将生物实验协议表达为标准化、可执行代码的领域专用语言。",
+    "category": "Protocol Generation & Representation",
+    "category_zh": "实验协议生成与表示",
+    "stages": [
+      "protocol-generation",
+      "wet-lab-execution"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-072/"
+  },
+  {
+    "id": "AAB-073",
+    "title": "BioPlanner",
+    "summary_en": "A protocol-planning evaluation framework and BioProt dataset that map biological protocols to pseudocode representations.",
+    "summary_zh": "将生物协议映射为伪代码的评测框架与 BioProt 数据集，用于检验和改进 LLM 实验规划。",
+    "category": "Protocol Generation & Representation",
+    "category_zh": "实验协议生成与表示",
+    "stages": [
+      "hypothesis-experiment-design",
+      "protocol-generation",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-073/"
+  },
+  {
+    "id": "AAB-074",
+    "title": "Antha",
+    "summary_en": "A commercial laboratory software platform for composing, executing, and tracking automated biological workflows.",
+    "summary_zh": "用于编排、执行和追踪自动化生物实验工作流的商业实验室软件平台。",
+    "category": "Laboratory Orchestration & LabOS",
+    "category_zh": "实验室编排与 LabOS",
+    "stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-074/"
+  },
+  {
+    "id": "AAB-075",
+    "title": "Riffyn X",
+    "summary_en": "A commercial platform for structuring experimental processes, connecting data and materials, and preserving R&D provenance.",
+    "summary_zh": "用于结构化实验流程、连接数据与物料并保留研发溯源的商业平台。",
+    "category": "Laboratory Orchestration & LabOS",
+    "category_zh": "实验室编排与 LabOS",
+    "stages": [
+      "hypothesis-experiment-design",
+      "protocol-generation",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-075/"
+  },
+  {
+    "id": "AAB-076",
+    "title": "PyHamilton",
+    "summary_en": "An open Python interface for scripting and coordinating Hamilton liquid-handling robots.",
+    "summary_zh": "用于脚本化控制和协调 Hamilton 液体工作站的开源 Python 接口。",
+    "category": "Robotic & Instrument Control",
+    "category_zh": "机器人与仪器控制",
+    "stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-076/"
+  },
+  {
+    "id": "AAB-077",
+    "title": "Micro-Manager",
+    "summary_en": "A widely used open platform for microscope hardware control, automated acquisition, and imaging workflows.",
+    "summary_zh": "广泛使用的开源显微镜硬件控制、自动采集与成像工作流平台。",
+    "category": "Robotic & Instrument Control",
+    "category_zh": "机器人与仪器控制",
+    "stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-077/"
+  },
+  {
+    "id": "AAB-078",
+    "title": "MCMICRO",
+    "summary_en": "A modular, reproducible computational pipeline for processing highly multiplexed tissue images into analysis-ready spatial data.",
+    "summary_zh": "将高度多重化组织图像处理为可分析空间数据的模块化、可复现计算流程。",
+    "category": "Measurement, QC & Data Analysis",
+    "category_zh": "测量、质控与数据分析",
+    "stages": [
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-078/"
+  },
+  {
+    "id": "AAB-079",
+    "title": "DeepCell",
+    "summary_en": "An open deep-learning library and ecosystem for cellular image segmentation and quantitative analysis.",
+    "summary_zh": "面向细胞图像分割与定量分析的开源深度学习库和工具生态。",
+    "category": "Measurement, QC & Data Analysis",
+    "category_zh": "测量、质控与数据分析",
+    "stages": [
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-079/"
+  },
+  {
+    "id": "AAB-080",
+    "title": "OPEX",
+    "summary_en": "An optimal experimental-design method that uses active learning to select informative omics experiments and improve models with fewer measurements.",
+    "summary_zh": "用主动学习选择高信息量组学实验，以更少测量持续改善预测模型的最优实验设计方法。",
+    "category": "Feedback Learning & Model Updating",
+    "category_zh": "反馈学习与模型更新",
+    "stages": [
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-080/"
+  },
+  {
+    "id": "AAB-081",
+    "title": "Active-learning-guided optimization of cell-free biosensors",
+    "summary_en": "A multi-objective active-learning workflow that iteratively engineered cell-free transcription-factor biosensors for sensitive and selective lead detection.",
+    "summary_zh": "通过多目标主动学习和多轮无细胞实验，迭代优化铅检测转录因子生物传感器的灵敏度与选择性。",
+    "category": "Feedback Learning & Model Updating",
+    "category_zh": "反馈学习与模型更新",
+    "stages": [
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-081/"
+  },
+  {
+    "id": "AAB-082",
+    "title": "Synthetic Biology Open Language Version 3 (SBOL 3)",
+    "summary_en": "An open standard for representing the structure, function, and design intent of engineered biological systems.",
+    "summary_zh": "用于表达工程生物系统结构、功能和设计意图的开放标准。",
+    "category": "Data Standards & Provenance",
+    "category_zh": "数据标准与溯源",
+    "stages": [
+      "hypothesis-experiment-design",
+      "protocol-generation",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-082/"
+  },
+  {
+    "id": "AAB-083",
+    "title": "OME-NGFF",
+    "summary_en": "An open, cloud-native specification for storing and interoperably accessing large multidimensional bioimaging data.",
+    "summary_zh": "用于存储和互操作访问大规模多维生物成像数据的开放云原生规范。",
+    "category": "Data Standards & Provenance",
+    "category_zh": "数据标准与溯源",
+    "stages": [
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-083/"
+  },
+  {
+    "id": "AAB-084",
+    "title": "COBRApy",
+    "summary_en": "A widely used open Python library for constraint-based reconstruction and simulation of metabolic networks.",
+    "summary_zh": "用于代谢网络约束建模、重建与仿真的主流开源 Python 库。",
+    "category": "Simulators & Digital Twins",
+    "category_zh": "模拟器与数字孪生",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-084/"
+  },
+  {
+    "id": "AAB-085",
+    "title": "CellModeller",
+    "summary_en": "An open framework for individual-based modeling of multicellular microbial systems, growth, mechanics, and genetic circuits.",
+    "summary_zh": "用于模拟多细胞微生物系统生长、力学与遗传回路的个体级建模框架。",
+    "category": "Simulators & Digital Twins",
+    "category_zh": "模拟器与数字孪生",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-085/"
+  },
+  {
+    "id": "AAB-086",
+    "title": "FLIP",
+    "summary_en": "A benchmark suite with realistic data splits for evaluating machine-learning models on protein fitness landscapes.",
+    "summary_zh": "通过更贴近真实蛋白工程使用场景的数据切分，评测适应度景观模型的基准套件。",
+    "category": "Benchmarks & Evaluation",
+    "category_zh": "基准与评测",
+    "stages": [
+      "analysis-interpretation",
+      "model-update-feedback"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-086/"
+  },
+  {
+    "id": "AAB-087",
+    "title": "Therapeutics Data Commons",
+    "summary_en": "An open ecosystem of AI-ready therapeutic datasets, tasks, data splits, evaluators, and leaderboards.",
+    "summary_zh": "汇集药物研发数据集、任务、标准切分、评估器和排行榜的开放基准生态。",
+    "category": "Benchmarks & Evaluation",
+    "category_zh": "基准与评测",
+    "stages": [
+      "experiment-selection",
+      "analysis-interpretation",
+      "model-update-feedback"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-087/"
+  },
+  {
+    "id": "AAB-088",
+    "title": "scPerturBench",
+    "summary_en": "A reproducible benchmark of methods for generalizable single-cell perturbation-response prediction across diverse datasets and scenarios.",
+    "summary_zh": "跨多数据集与未见场景评测单细胞扰动响应预测方法泛化能力的可复现基准。",
+    "category": "Benchmarks & Evaluation",
+    "category_zh": "基准与评测",
+    "stages": [
+      "analysis-interpretation",
+      "model-update-feedback"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-088/"
+  },
+  {
+    "id": "AAB-089",
+    "title": "SAMPLE autonomous protein-engineering campaign data",
+    "summary_en": "Publication-linked measurements and design history from SAMPLE's autonomous protein-landscape exploration campaigns.",
+    "summary_zh": "SAMPLE 自主蛋白适应度景观探索中形成的论文关联测量结果与设计历史。",
+    "category": "Datasets from Closed-Loop Experiments",
+    "category_zh": "闭环实验数据集",
+    "stages": [
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-089/"
+  },
+  {
+    "id": "AAB-090",
+    "title": "BATCHIE prospective combination-screen data",
+    "summary_en": "Prospective sequential drug-combination measurements associated with BATCHIE's pediatric-cancer screening campaign.",
+    "summary_zh": "BATCHIE 儿童肿瘤药物组合筛选中形成的序贯实验测量与主动学习轨迹。",
+    "category": "Datasets from Closed-Loop Experiments",
+    "category_zh": "闭环实验数据集",
+    "stages": [
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-090/"
+  },
+  {
+    "id": "AAB-091",
+    "title": "BioChatter",
+    "summary_en": "An open framework for building reproducible conversational-AI applications grounded in biomedical tools and knowledge graphs.",
+    "summary_zh": "用于构建可复现、能连接生物医学工具与知识图谱的对话式 AI 应用的开放框架。",
+    "category": "Agent Skills, MCP & Tool Adapters",
+    "category_zh": "Agent 技能、MCP 与工具适配器",
+    "stages": [
+      "biological-question",
+      "hypothesis-experiment-design",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-091/"
+  },
+  {
+    "id": "AAB-092",
+    "title": "BioThings Explorer",
+    "summary_en": "A query engine that dynamically chains semantically annotated biomedical APIs into a federated knowledge graph.",
+    "summary_zh": "将带语义标注的生物医学 API 动态串联为联邦知识图谱查询的引擎。",
+    "category": "Agent Skills, MCP & Tool Adapters",
+    "category_zh": "Agent 技能、MCP 与工具适配器",
+    "stages": [
+      "biological-question",
+      "hypothesis-experiment-design",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-092/"
+  },
+  {
+    "id": "AAB-093",
+    "title": "gget",
+    "summary_en": "A command-line and Python toolkit that provides programmatic access to genomic reference databases and common analysis services.",
+    "summary_zh": "以命令行和 Python API 统一访问基因组参考数据库及常用分析服务的工具包。",
+    "category": "Agent Skills, MCP & Tool Adapters",
+    "category_zh": "Agent 技能、MCP 与工具适配器",
+    "stages": [
+      "biological-question",
+      "hypothesis-experiment-design",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-093/"
+  },
+  {
+    "id": "AAB-094",
+    "title": "OpenDrop digital microfluidics",
+    "summary_en": "An open digital-microfluidics platform for programming droplet operations and developing personal bioautomation applications.",
+    "summary_zh": "通过可编程液滴操作支持个人化生物自动化应用的开放数字微流控平台。",
+    "category": "Open Hardware",
+    "category_zh": "开放硬件",
+    "stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-094/"
+  },
+  {
+    "id": "AAB-095",
+    "title": "Poseidon syringe-pump and microscope system",
+    "summary_en": "A low-cost open system combining programmable syringe pumps and microscopy for microfluidic laboratory experiments.",
+    "summary_zh": "面向微流控实验、结合可编程注射泵与显微镜的低成本开放系统。",
+    "category": "Open Hardware",
+    "category_zh": "开放硬件",
+    "stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-095/"
+  },
+  {
+    "id": "AAB-096",
+    "title": "Strateos cloud laboratory",
+    "summary_en": "A commercial robotic cloud-laboratory platform for remotely specifying and running life-science experiments.",
+    "summary_zh": "允许用户远程定义并运行生命科学实验的商业机器人云实验室平台。",
+    "category": "Cloud Labs & Commercial Platforms",
+    "category_zh": "云实验室与商业平台",
+    "stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-096/"
+  },
+  {
+    "id": "AAB-097",
+    "title": "LabGenius EVA",
+    "summary_en": "A proprietary machine-learning and automated-experimentation platform for iterative discovery and optimization of multispecific antibodies.",
+    "summary_zh": "面向多特异性抗体迭代发现与优化、连接机器学习和自动实验的专有平台。",
+    "category": "Cloud Labs & Commercial Platforms",
+    "category_zh": "云实验室与商业平台",
+    "stages": [
+      "hypothesis-experiment-design",
+      "experiment-selection",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation",
+      "model-update-feedback",
+      "next-experiment-decision"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-097/"
+  },
+  {
+    "id": "AAB-098",
+    "title": "Ginkgo Bioworks autonomous labs and foundry platform",
+    "summary_en": "A commercial biological-engineering foundry offering automated and increasingly autonomous laboratory capabilities as a service.",
+    "summary_zh": "以服务形式提供自动化并逐步增强自主能力的商业生物工程铸造平台。",
+    "category": "Cloud Labs & Commercial Platforms",
+    "category_zh": "云实验室与商业平台",
+    "stages": [
+      "hypothesis-experiment-design",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-098/"
+  },
+  {
+    "id": "AAB-099",
+    "title": "Society for Laboratory Automation and Screening (SLAS)",
+    "summary_en": "A professional society and conference ecosystem for laboratory automation, screening, instrumentation, and applied life-science technology.",
+    "summary_zh": "连接实验室自动化、筛选、仪器和生命科学技术实践者的专业学会与会议生态。",
+    "category": "Tutorials, Courses & Communities",
+    "category_zh": "教程、课程与社区",
+    "stages": [
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-099/"
+  },
+  {
+    "id": "AAB-100",
+    "title": "International Workshop on Bio-Design Automation (IWBDA)",
+    "summary_en": "A long-running workshop community connecting synthetic biology with design automation, standards, tools, and laboratory execution.",
+    "summary_zh": "连接合成生物学、设计自动化、标准、软件工具与实验执行的长期 workshop 社区。",
+    "category": "Tutorials, Courses & Communities",
+    "category_zh": "教程、课程与社区",
+    "stages": [
+      "hypothesis-experiment-design",
+      "protocol-generation",
+      "wet-lab-execution",
+      "measurement-qc",
+      "analysis-interpretation"
+    ],
+    "status": "review_pending",
+    "href": "resources/aab-100/"
   }
 ]

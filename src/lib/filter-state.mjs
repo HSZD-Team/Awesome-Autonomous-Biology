@@ -1,4 +1,4 @@
-export const FILTER_KEYS = ["q", "category", "class", "stage", "domain", "evidence", "scientific", "operational", "open", "wet", "year", "view"];
+export const FILTER_KEYS = ["q", "status", "category", "class", "stage", "domain", "evidence", "scientific", "operational", "open", "wet", "year", "view"];
 
 export function parseFilterState(search = "") {
   const params = search instanceof URLSearchParams ? search : new URLSearchParams(search.startsWith("?") ? search.slice(1) : search);
@@ -15,6 +15,7 @@ export function serializeFilterState(state = {}) {
 export function matchesFilter(record, state = {}) {
   const haystack = `${record.title} ${record.summary_en} ${record.summary_zh}`.toLocaleLowerCase();
   if (state.q && !haystack.includes(state.q.toLocaleLowerCase())) return false;
+  if (state.status && state.status !== "all" && record.curation.status !== state.status) return false;
   if (state.category && record.primary_category !== state.category) return false;
   if (state.class && record.resource_class !== state.class) return false;
   if (state.stage && !record.loop_stages.includes(state.stage)) return false;

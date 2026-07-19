@@ -1,9 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import resources from "../../data/generated/resources.json";
+import resources from "../../data/generated/all-resources.json";
 import { withBase } from "../../lib/paths";
-const byId = Object.fromEntries(resources.map((record) => [record.id, record]));
-const explicitEdges = resources.flatMap((record) => (record.related_to ?? []).map((target) => ({ source: record.id, target, type: "related_to", explanation: `Explicit related_to assertion: ${record.id} ? ${target}` })));
+const explicitEdges = resources.flatMap((record) => (record.related_to ?? []).map((target) => ({ source: record.id, target, type: "related_to", explanation: `Explicit related_to assertion: ${record.id} → ${target}` })));
 const explicitIds = new Set(explicitEdges.flatMap((edge) => [edge.source, edge.target]));
 const sharedEdges = [];
 for (let i = 0; i < resources.length; i++) {
@@ -16,16 +15,16 @@ const edges = [...explicitEdges, ...sharedEdges];
 ---
 <BaseLayout title="Ecosystem Graph - Awesome Autonomous Biology" current="ecosystem">
   <div class="shell wide">
-    <header class="page-head"><div><p class="eyebrow">ENTITY GRAPH - EXPLAINABLE EDGES</p><h1>See relations.<br />Do not invent collaborations.</h1><p class="lede">The default graph shows only explicit related_to assertions. Optional shared-context edges mean organizational similarity - not collaboration, citation, or dependency.</p></div><label class="button secondary"><input type="checkbox" data-shared-toggle style="width:auto;min-height:0" /> Shared context</label></header>
-    <div class="legend"><span><i style="background:#16d9d4"></i>Explicit related_to</span><span><i style="background:#9c6cff"></i>Shared category + declared stage (optional)</span></div>
+    <header class="page-head"><div><p class="eyebrow">V0.2 ENTITY GRAPH - EXPLAINABLE EDGES</p><h1>See relations.<br />Do not invent collaborations.</h1><p class="lede">All 100 research records are available. The default graph shows only explicit related_to assertions; review-pending nodes use an amber dashed outline.</p></div><label class="button secondary"><input type="checkbox" data-shared-toggle style="width:auto;min-height:0" /> Shared context</label></header>
+    <div class="legend"><span><i style="background:#16d9d4"></i>Explicit related_to</span><span><i style="background:#9c6cff"></i>Shared category + declared stage (optional)</span><span><i style="background:#fbbf24"></i>Review pending</span></div>
     <section class="graph-wrap panel" data-graph>
       <div class="graph-controls"><button type="button" data-zoom-in aria-label="Zoom in">+</button><button type="button" data-zoom-out aria-label="Zoom out">&minus;</button><button type="button" data-reset aria-label="Reset graph">Reset</button></div>
       <svg viewBox="0 0 1000 700" role="img" aria-label="Interactive ecosystem graph"><g data-graph-viewport>
         {edges.map((edge) => <line class:list={["graph-edge", edge.type === "shared_context" && "shared"]} x1={points[edge.source].x} y1={points[edge.source].y} x2={points[edge.target].x} y2={points[edge.target].y} data-edge-type={edge.type} data-source={edge.source} data-target={edge.target} hidden={edge.type === "shared_context"}><title>{edge.explanation}</title></line>)}
-        {resources.map((record) => <a href={withBase(`resources/${record.id.toLowerCase()}/`)} class="graph-link" data-node-link data-explicit={String(explicitIds.has(record.id))} hidden={!explicitIds.has(record.id)}><g class="graph-node" transform={`translate(${points[record.id].x} ${points[record.id].y})`} data-node-id={record.id} data-node-title={record.title} tabindex="0"><circle r="12"/><text y="25">{record.id}</text><title>{record.title}</title></g></a>)}
+        {resources.map((record) => <a href={withBase(`resources/${record.id.toLowerCase()}/`)} class="graph-link" data-node-link data-explicit={String(explicitIds.has(record.id))} hidden={!explicitIds.has(record.id)}><g class:list={["graph-node", record.curation.status === "review_pending" && "is-review-pending"]} transform={`translate(${points[record.id].x} ${points[record.id].y})`} data-node-id={record.id} data-node-title={`${record.title} [${record.curation.status}]`} tabindex="0"><circle r="12"/><text y="25">{record.id}</text><title>{record.title} — {record.curation.status}</title></g></a>)}
       </g></svg>
-      <div class="graph-tooltip" data-graph-tooltip>Hover or focus a node. Wheel/pinch or use controls to zoom; drag the field to pan.</div>
+      <div class="graph-tooltip" data-graph-tooltip>Hover or focus a node. Shared-context edges are organizational similarity only—not collaboration, citation, or dependency.</div>
     </section>
-    <script type="application/json" data-graph-data set:html={JSON.stringify({edges}).replace(/</g, "\\u003c")} /><script src="../../scripts/ecosystem.ts"></script>
+    <script type="application/json" data-graph-data set:html={JSON.stringify({edges}).replace(/</g, "\u003c")} /><script src="../../scripts/ecosystem.ts"></script>
   </div>
 </BaseLayout>

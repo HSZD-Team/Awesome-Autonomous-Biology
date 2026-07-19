@@ -11,9 +11,9 @@ const pages = [
 ];
 const entries = [
   ...pages.map(([title, href, type]) => ({ title, href, type, keywords: title })),
-  ...searchIndex.map((item) => ({ title: item.title, href: item.href, type: "resource", keywords: `${item.summary_en} ${item.summary_zh} ${item.category} ${item.category_zh} ${item.stages.join(" ")}` })),
-  ...categories.map((item) => ({ title: item.label_en, subtitle: item.label_zh, href: `atlas/?category=${item.id}`, type: "category", keywords: `${item.label_en} ${item.label_zh}` })),
-  ...vocabularies.loop_stages.map((stage) => ({ title: loopStageLabels[stage].en, subtitle: loopStageLabels[stage].zh, href: `atlas/?stage=${stage}`, type: "loop stage", keywords: `${loopStageLabels[stage].en} ${loopStageLabels[stage].zh}` }))
+  ...searchIndex.map((item) => ({ title: item.title, subtitle: item.status, href: item.href, type: item.status === "review_pending" ? "resource · review pending" : "resource · verified", keywords: `${item.summary_en} ${item.summary_zh} ${item.category} ${item.category_zh} ${item.stages.join(" ")} ${item.status}` })),
+  ...categories.map((item) => ({ title: item.label_en, subtitle: item.label_zh, href: `atlas/?status=all&category=${item.id}`, type: "category", keywords: `${item.label_en} ${item.label_zh}` })),
+  ...vocabularies.loop_stages.map((stage) => ({ title: loopStageLabels[stage].en, subtitle: loopStageLabels[stage].zh, href: `atlas/?status=all&stage=${stage}`, type: "loop stage", keywords: `${loopStageLabels[stage].en} ${loopStageLabels[stage].zh}` }))
 ];
 ---
 <dialog class="command-palette" data-command-palette aria-labelledby="palette-title">
@@ -22,8 +22,8 @@ const entries = [
     <button type="button" data-close-palette aria-label="Close command palette">Esc</button>
   </div>
   <label class="sr-only" for="palette-search">Search resources, categories, stages, and pages</label>
-  <input id="palette-search" data-palette-search type="search" placeholder="Search resources, categories, stages, pages..." autocomplete="off" />
+  <input id="palette-search" data-palette-search type="search" placeholder="Search all research records, categories, stages, pages..." autocomplete="off" />
   <div class="palette-results" data-palette-results role="listbox" aria-label="Search results"></div>
-  <p class="palette-hint">Up/Down navigate - Enter open - Esc close</p>
+  <p class="palette-hint">Review-pending records remain candidates. Up/Down navigate · Enter open · Esc close</p>
   <script type="application/json" data-palette-index set:html={JSON.stringify(entries).replace(/</g, "\\u003c")} />
 </dialog>

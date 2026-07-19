@@ -48,7 +48,6 @@ test("base-path helpers, public data, and visible candidate queue are used", asy
   assert.match(radar, /reviewFlags/);
 });
 
-
 test("homepage map, Observatory, and Methods expose the new data-driven experience", async () => {
   const [home, graphScript, redesign, observatory, methods] = await Promise.all([
     readFile(new URL("src/components/HomeMapView.astro", root), "utf8"),
@@ -66,6 +65,9 @@ test("homepage map, Observatory, and Methods expose the new data-driven experien
   assert.match(home, /Search systems, agents, datasets or protocols/);
   assert.match(graphScript, /requestFullscreen/);
   assert.match(graphScript, /prefers-reduced-motion/);
+  assert.match(graphScript, /driftX = Math\.min\(0\.008, 6\.5/);
+  assert.match(redesign, /height: 100dvh/);
+  assert.match(redesign, /--map-bottom-safe/);
   assert.match(redesign, /@media \(max-width: 760px\)/);
   assert.match(observatory, /generated\/observatory\.json/);
   assert.match(methods, /shared_context/);

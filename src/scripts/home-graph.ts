@@ -150,10 +150,13 @@ function initialize() {
     const base = currentPositions.get(node.id) ?? node.layouts[mode];
     if (paused || mediaReduced.matches || transitionStart) return base;
     const seed = Number(node.id.slice(-3));
-    const drift = Math.min(0.0035, 1.4 / Math.max(width, height));
+    const phase = seed * 0.71;
+    const speed = 0.82 + (seed % 9) * 0.035;
+    const driftX = Math.min(0.008, 6.5 / Math.max(width, 1));
+    const driftY = Math.min(0.01, 5 / Math.max(height, 1));
     return {
-      x: base.x + Math.sin(time / 2300 + seed * 0.71) * drift,
-      y: base.y + Math.cos(time / 2700 + seed * 0.53) * drift
+      x: base.x + Math.sin(time / (2100 / speed) + phase) * driftX,
+      y: base.y + Math.cos(time / (2600 / speed) + phase * 0.73) * driftY
     };
   }
 

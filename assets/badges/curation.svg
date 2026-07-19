@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="173" height="20" role="img" aria-label="Curation: evidence first">
+  <title>Curation: evidence first</title>
+  <rect width="66" height="20" fill="#555"/>
+  <rect x="66" width="107" height="20" fill="#22c55e"/>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Arial,sans-serif" font-size="11">
+    <text x="33" y="14">curation</text>
+    <text x="119.5" y="14">evidence first</text>
+  </g>
+</svg>

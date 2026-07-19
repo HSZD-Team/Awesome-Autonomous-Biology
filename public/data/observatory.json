@@ -1,0 +1,494 @@
+{
+  "dataset_version": "0.2",
+  "totals": {
+    "resources": 100,
+    "categories": 21,
+    "verified": 44,
+    "review_pending": 56
+  },
+  "link_presence": {
+    "papers": 77,
+    "code": 64,
+    "datasets": 19,
+    "platforms": 29
+  },
+  "recent_additions": {
+    "last_7_days": null,
+    "last_30_days": null,
+    "note": "Canonical records do not currently include repository ingestion timestamps; no addition count is inferred."
+  },
+  "category_distribution": [
+    {
+      "id": "01-surveys-perspectives",
+      "label": "Surveys & Perspectives",
+      "count": 4,
+      "cluster": {
+        "id": "scientific-intelligence",
+        "label": "Scientific Intelligence",
+        "color": "#8B5CF6"
+      }
+    },
+    {
+      "id": "02-end-to-end-systems",
+      "label": "End-to-End Autonomous Biology Systems",
+      "count": 7,
+      "cluster": {
+        "id": "experiment-execution",
+        "label": "Experiment & Execution",
+        "color": "#FB7185"
+      }
+    },
+    {
+      "id": "03-scientific-agents",
+      "label": "Scientific Agents for Biology",
+      "count": 6,
+      "cluster": {
+        "id": "scientific-intelligence",
+        "label": "Scientific Intelligence",
+        "color": "#8B5CF6"
+      }
+    },
+    {
+      "id": "04-experiment-design",
+      "label": "Biological Experiment Design",
+      "count": 4,
+      "cluster": {
+        "id": "scientific-intelligence",
+        "label": "Scientific Intelligence",
+        "color": "#8B5CF6"
+      }
+    },
+    {
+      "id": "05-perturbation-virtual-cell",
+      "label": "Perturbation & Virtual Cell",
+      "count": 5,
+      "cluster": {
+        "id": "models-data-digital-biology",
+        "label": "Models, Data & Digital Biology",
+        "color": "#22D3EE"
+      }
+    },
+    {
+      "id": "06-protein-sequence-engineering",
+      "label": "Protein & Sequence Engineering",
+      "count": 6,
+      "cluster": {
+        "id": "applications-translation",
+        "label": "Applications & Translation",
+        "color": "#84CC16"
+      }
+    },
+    {
+      "id": "07-drug-cell-screening",
+      "label": "Drug Discovery & Cell-Based Screening",
+      "count": 4,
+      "cluster": {
+        "id": "applications-translation",
+        "label": "Applications & Translation",
+        "color": "#84CC16"
+      }
+    },
+    {
+      "id": "08-synthetic-biology-biofoundries",
+      "label": "Synthetic Biology & Biofoundries",
+      "count": 5,
+      "cluster": {
+        "id": "applications-translation",
+        "label": "Applications & Translation",
+        "color": "#84CC16"
+      }
+    },
+    {
+      "id": "09-protocols",
+      "label": "Protocol Generation & Representation",
+      "count": 4,
+      "cluster": {
+        "id": "experiment-execution",
+        "label": "Experiment & Execution",
+        "color": "#FB7185"
+      }
+    },
+    {
+      "id": "10-lab-orchestration",
+      "label": "Laboratory Orchestration & LabOS",
+      "count": 5,
+      "cluster": {
+        "id": "experiment-execution",
+        "label": "Experiment & Execution",
+        "color": "#FB7185"
+      }
+    },
+    {
+      "id": "11-robot-instrument-control",
+      "label": "Robotic & Instrument Control",
+      "count": 4,
+      "cluster": {
+        "id": "experiment-execution",
+        "label": "Experiment & Execution",
+        "color": "#FB7185"
+      }
+    },
+    {
+      "id": "12-measurement-qc-analysis",
+      "label": "Measurement, QC & Data Analysis",
+      "count": 4,
+      "cluster": {
+        "id": "experiment-execution",
+        "label": "Experiment & Execution",
+        "color": "#FB7185"
+      }
+    },
+    {
+      "id": "13-feedback-learning",
+      "label": "Feedback Learning & Model Updating",
+      "count": 4,
+      "cluster": {
+        "id": "scientific-intelligence",
+        "label": "Scientific Intelligence",
+        "color": "#8B5CF6"
+      }
+    },
+    {
+      "id": "14-standards-provenance",
+      "label": "Data Standards & Provenance",
+      "count": 4,
+      "cluster": {
+        "id": "infrastructure-tools-standards",
+        "label": "Infrastructure, Tools & Standards",
+        "color": "#3B82F6"
+      }
+    },
+    {
+      "id": "15-simulators-digital-twins",
+      "label": "Simulators & Digital Twins",
+      "count": 4,
+      "cluster": {
+        "id": "models-data-digital-biology",
+        "label": "Models, Data & Digital Biology",
+        "color": "#22D3EE"
+      }
+    },
+    {
+      "id": "16-benchmarks-evaluation",
+      "label": "Benchmarks & Evaluation",
+      "count": 6,
+      "cluster": {
+        "id": "models-data-digital-biology",
+        "label": "Models, Data & Digital Biology",
+        "color": "#22D3EE"
+      }
+    },
+    {
+      "id": "17-closed-loop-datasets",
+      "label": "Datasets from Closed-Loop Experiments",
+      "count": 4,
+      "cluster": {
+        "id": "models-data-digital-biology",
+        "label": "Models, Data & Digital Biology",
+        "color": "#22D3EE"
+      }
+    },
+    {
+      "id": "18-agent-tools",
+      "label": "Agent Skills, MCP & Tool Adapters",
+      "count": 5,
+      "cluster": {
+        "id": "infrastructure-tools-standards",
+        "label": "Infrastructure, Tools & Standards",
+        "color": "#3B82F6"
+      }
+    },
+    {
+      "id": "19-open-hardware",
+      "label": "Open Hardware",
+      "count": 5,
+      "cluster": {
+        "id": "infrastructure-tools-standards",
+        "label": "Infrastructure, Tools & Standards",
+        "color": "#3B82F6"
+      }
+    },
+    {
+      "id": "20-cloud-commercial",
+      "label": "Cloud Labs & Commercial Platforms",
+      "count": 6,
+      "cluster": {
+        "id": "infrastructure-tools-standards",
+        "label": "Infrastructure, Tools & Standards",
+        "color": "#3B82F6"
+      }
+    },
+    {
+      "id": "21-education-community",
+      "label": "Tutorials, Courses & Communities",
+      "count": 4,
+      "cluster": {
+        "id": "scientific-intelligence",
+        "label": "Scientific Intelligence",
+        "color": "#8B5CF6"
+      }
+    }
+  ],
+  "cluster_distribution": [
+    {
+      "id": "scientific-intelligence",
+      "label": "Scientific Intelligence",
+      "color": "#8B5CF6",
+      "count": 22
+    },
+    {
+      "id": "experiment-execution",
+      "label": "Experiment & Execution",
+      "color": "#FB7185",
+      "count": 24
+    },
+    {
+      "id": "models-data-digital-biology",
+      "label": "Models, Data & Digital Biology",
+      "color": "#22D3EE",
+      "count": 19
+    },
+    {
+      "id": "infrastructure-tools-standards",
+      "label": "Infrastructure, Tools & Standards",
+      "color": "#3B82F6",
+      "count": 20
+    },
+    {
+      "id": "applications-translation",
+      "label": "Applications & Translation",
+      "color": "#84CC16",
+      "count": 15
+    }
+  ],
+  "loop_stage_distribution": [
+    {
+      "stage": "biological-question",
+      "count": 13
+    },
+    {
+      "stage": "hypothesis-experiment-design",
+      "count": 49
+    },
+    {
+      "stage": "experiment-selection",
+      "count": 49
+    },
+    {
+      "stage": "protocol-generation",
+      "count": 41
+    },
+    {
+      "stage": "wet-lab-execution",
+      "count": 59
+    },
+    {
+      "stage": "measurement-qc",
+      "count": 62
+    },
+    {
+      "stage": "analysis-interpretation",
+      "count": 76
+    },
+    {
+      "stage": "model-update-feedback",
+      "count": 36
+    },
+    {
+      "stage": "next-experiment-decision",
+      "count": 42
+    }
+  ],
+  "evidence_distribution": [
+    {
+      "grade": "A",
+      "count": 58
+    },
+    {
+      "grade": "B",
+      "count": 28
+    },
+    {
+      "grade": "C",
+      "count": 14
+    }
+  ],
+  "verification_distribution": [
+    {
+      "status": "verified",
+      "count": 44
+    },
+    {
+      "status": "review_pending",
+      "count": 56
+    },
+    {
+      "status": "archived",
+      "count": 0
+    }
+  ],
+  "resource_class_distribution": [
+    {
+      "resource_class": "core_autonomous_system",
+      "count": 8
+    },
+    {
+      "resource_class": "data_evaluation_resource",
+      "count": 12
+    },
+    {
+      "resource_class": "ecosystem_education",
+      "count": 8
+    },
+    {
+      "resource_class": "enabling_infrastructure",
+      "count": 44
+    },
+    {
+      "resource_class": "scientific_decision_module",
+      "count": 28
+    }
+  ],
+  "public_year_distribution": [
+    {
+      "year": "2009",
+      "count": 1
+    },
+    {
+      "year": "2010",
+      "count": 1
+    },
+    {
+      "year": "2013",
+      "count": 1
+    },
+    {
+      "year": "2014",
+      "count": 1
+    },
+    {
+      "year": "2015",
+      "count": 1
+    },
+    {
+      "year": "2016",
+      "count": 1
+    },
+    {
+      "year": "2017",
+      "count": 2
+    },
+    {
+      "year": "2018",
+      "count": 3
+    },
+    {
+      "year": "2019",
+      "count": 5
+    },
+    {
+      "year": "2020",
+      "count": 6
+    },
+    {
+      "year": "2021",
+      "count": 5
+    },
+    {
+      "year": "2022",
+      "count": 5
+    },
+    {
+      "year": "2023",
+      "count": 13
+    },
+    {
+      "year": "2024",
+      "count": 5
+    },
+    {
+      "year": "2025",
+      "count": 18
+    },
+    {
+      "year": "2026",
+      "count": 7
+    },
+    {
+      "year": "Undated",
+      "count": 25
+    }
+  ],
+  "curation_audit_distribution": [
+    {
+      "date": "2026-07-18",
+      "count": 50
+    }
+  ],
+  "recently_verified_or_reviewed": [
+    {
+      "id": "AAB-050",
+      "name": "Lab Automation Forums",
+      "status": "verified",
+      "date": "2026-07-18",
+      "category": "Tutorials, Courses & Communities",
+      "dossier_path": "resources/aab-050/"
+    },
+    {
+      "id": "AAB-049",
+      "name": "Global Biofoundries Alliance",
+      "status": "verified",
+      "date": "2026-07-18",
+      "category": "Tutorials, Courses & Communities",
+      "dossier_path": "resources/aab-049/"
+    },
+    {
+      "id": "AAB-048",
+      "name": "Arctoris Ulysses",
+      "status": "verified",
+      "date": "2026-07-18",
+      "category": "Cloud Labs & Commercial Platforms",
+      "dossier_path": "resources/aab-048/"
+    },
+    {
+      "id": "AAB-047",
+      "name": "Culture Biosciences",
+      "status": "verified",
+      "date": "2026-07-18",
+      "category": "Cloud Labs & Commercial Platforms",
+      "dossier_path": "resources/aab-047/"
+    },
+    {
+      "id": "AAB-046",
+      "name": "Emerald Cloud Lab",
+      "status": "verified",
+      "date": "2026-07-18",
+      "category": "Cloud Labs & Commercial Platforms",
+      "dossier_path": "resources/aab-046/"
+    },
+    {
+      "id": "AAB-045",
+      "name": "Opentrons OT-2",
+      "status": "verified",
+      "date": "2026-07-18",
+      "category": "Open Hardware",
+      "dossier_path": "resources/aab-045/"
+    },
+    {
+      "id": "AAB-044",
+      "name": "OpenFlexure Microscope",
+      "status": "verified",
+      "date": "2026-07-18",
+      "category": "Open Hardware",
+      "dossier_path": "resources/aab-044/"
+    },
+    {
+      "id": "AAB-043",
+      "name": "Chi.Bio",
+      "status": "verified",
+      "date": "2026-07-18",
+      "category": "Open Hardware",
+      "dossier_path": "resources/aab-043/"
+    }
+  ]
+}

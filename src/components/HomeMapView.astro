@@ -1,0 +1,127 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import graph from "../data/generated/graph.json";
+import stats from "../data/generated/stats.json";
+import { withBase } from "../lib/paths";
+
+const { locale = "en" } = Astro.props;
+const copy = {
+  eyebrow: "AUTONOMOUS BIOLOGY KNOWLEDGE MAP",
+  lineOne: "Mapping the",
+  lineTwo: "Autonomous Biology Frontier",
+  lede: "Explore the systems, agents, experiments and infrastructure closing the loop in biological discovery.",
+  search: "Search systems, agents, datasets or protocols...",
+  explore: "Explore",
+  observatory: "Open Observatory"
+};
+const payload = { graph, base: withBase() };
+---
+
+<BaseLayout
+  locale={locale}
+  current="home"
+  pageClass="map-home"
+  title="Mapping the Autonomous Biology Frontier"
+  description="A data-driven map of systems, agents, experiments, datasets, and infrastructure across autonomous biology."
+>
+  <section class="knowledge-map" data-home-graph data-mode="ecosystem" aria-label="Autonomous biology resource map">
+    <div class="map-backdrop" aria-hidden="true"></div>
+    <div class="map-loading" data-map-loading aria-live="polite">
+      <span></span><span></span><span></span>
+      <p>Mapping {stats.record_count} research records...</p>
+    </div>
+
+    <canvas
+      class="map-canvas"
+      data-map-canvas
+      tabindex="0"
+      role="application"
+      aria-label={"Interactive graph of " + stats.record_count + " autonomous biology research records. Use search or arrow keys to select a resource."}
+    >
+      Your browser cannot render the interactive graph. Use the Atlas link below to browse every resource.
+    </canvas>
+
+    <div class="cluster-labels" aria-hidden="true">
+      {graph.clusters.map((cluster) => (
+        <span data-cluster-label={cluster.id} style={"--cluster-color:" + cluster.color}>{cluster.label}</span>
+      ))}
+    </div>
+
+    <div class="map-intro">
+      <p class="map-eyebrow">{copy.eyebrow}</p>
+      <h1><span>{copy.lineOne}</span><span>{copy.lineTwo}</span></h1>
+      <p>{copy.lede}</p>
+      <form class="map-search" data-map-search role="search">
+        <label class="sr-only" for="map-search-input">Search the resource map</label>
+        <span class="search-icon" aria-hidden="true"></span>
+        <input
+          id="map-search-input"
+          data-map-search-input
+          type="search"
+          autocomplete="off"
+          placeholder={copy.search}
+          aria-controls="map-search-results"
+          aria-expanded="false"
+        />
+        <button type="submit">{copy.explore}</button>
+        <div id="map-search-results" class="map-search-results" data-map-search-results role="listbox" hidden></div>
+      </form>
+    </div>
+
+    <div class="map-tooltip" data-map-tooltip role="tooltip" hidden></div>
+    <div class="sr-only" data-map-live aria-live="polite"></div>
+
+    <aside class="map-detail" data-map-detail aria-hidden="true" hidden>
+      <button class="map-detail-close" type="button" data-map-detail-close aria-label="Close resource details">&times;</button>
+      <span class="map-detail-cluster" data-detail-cluster></span>
+      <h2 data-detail-title>Resource</h2>
+      <p class="map-detail-type" data-detail-type></p>
+      <p class="map-detail-description" data-detail-description></p>
+      <dl class="map-detail-meta">
+        <div><dt>Evidence</dt><dd data-detail-evidence></dd></div>
+        <div><dt>Status</dt><dd data-detail-status></dd></div>
+        <div><dt>Updated</dt><dd data-detail-updated></dd></div>
+      </dl>
+      <div class="map-detail-tags" data-detail-tags></div>
+      <div class="map-detail-primary-actions">
+        <a data-detail-dossier>View dossier <span aria-hidden="true">&rarr;</span></a>
+        <a data-detail-atlas>Open in Atlas <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="map-detail-links" aria-label="External resource links">
+        <a data-detail-github target="_blank" rel="noopener noreferrer" hidden>GitHub</a>
+        <a data-detail-paper target="_blank" rel="noopener noreferrer" hidden>Paper</a>
+        <a data-detail-website target="_blank" rel="noopener noreferrer" hidden>Website</a>
+      </div>
+    </aside>
+
+    <div class="map-statline" aria-label="Dataset summary">
+      <strong>{stats.record_count}</strong> resources
+      <span aria-hidden="true">&middot;</span>
+      <strong>{stats.category_count}</strong> categories
+      <span aria-hidden="true">&middot;</span>
+      <strong>{stats.verified_count}</strong> verified
+    </div>
+
+    <div class="map-modes" role="group" aria-label="Graph layout mode">
+      <button type="button" data-map-mode="ecosystem" aria-pressed="true"><i aria-hidden="true"></i>Ecosystem</button>
+      <button type="button" data-map-mode="closedLoop" aria-pressed="false"><i aria-hidden="true"></i>Closed Loop</button>
+      <button type="button" data-map-mode="timeline" aria-pressed="false"><i aria-hidden="true"></i>Timeline</button>
+    </div>
+
+    <div class="map-corner-actions">
+      <a class="observatory-button" href={withBase("observatory/")}>
+        <span aria-hidden="true"></span>{copy.observatory}
+      </a>
+      <button type="button" data-map-pause aria-pressed="false" aria-label="Pause graph animation">Pause</button>
+      <button type="button" data-map-reset aria-label="Reset graph view">Reset</button>
+      <button type="button" data-map-fullscreen aria-label="Enter fullscreen">Fullscreen</button>
+    </div>
+
+    <noscript>
+      <p class="map-fallback">The interactive map needs JavaScript. <a href={withBase("atlas/?status=all")}>Browse all resources in the Atlas.</a></p>
+    </noscript>
+
+    <script type="application/json" data-home-graph-data set:html={JSON.stringify(payload).replace(/</g, "\u003c")} />
+    <script src="../scripts/home-graph.ts"></script>
+  </section>
+</BaseLayout>

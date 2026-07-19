@@ -73,3 +73,7 @@ toggle?.addEventListener("click", () => {
 document.querySelectorAll<HTMLAnchorElement>("[data-repository-link]").forEach((link) => {
   link.title = "Set the repository owner in config/project.yml before publishing";
 });
+const siteHeader = document.querySelector<HTMLElement>(".site-header");
+const syncHeaderSurface = () => siteHeader?.classList.toggle("is-scrolled", window.scrollY > 12);
+syncHeaderSurface();
+window.addEventListener("scroll", syncHeaderSurface, { passive: true });

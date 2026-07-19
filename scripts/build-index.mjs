@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { validateData } from "./validate-data.mjs";
 import { loadProject, prettyJson, datasetStats } from "./lib/data.mjs";
+import { buildGraphData, buildObservatoryData } from "./lib/graph-data.mjs";
 
 const DEFAULT_CHECK = process.argv.includes("--check");
 const ROOT = new URL("../", import.meta.url);
@@ -112,6 +113,8 @@ export async function buildIndex({ check = DEFAULT_CHECK } = {}) {
     verified_count: stats.verified_category_counts[category.id] ?? 0,
     review_pending_count: allResources.filter((record) => record.primary_category === category.id && record.curation.status === "review_pending").length
   }));
+  const graph = buildGraphData(allResources, categories, stats.dataset_version);
+  const observatory = buildObservatoryData(allResources, categories, stats, graph);
   const search = allResources.map((record) => ({
     id: record.id,
     title: record.title,
@@ -133,10 +136,14 @@ export async function buildIndex({ check = DEFAULT_CHECK } = {}) {
     "src/data/generated/project.json": prettyJson(project),
     "src/data/generated/search-index.json": prettyJson(search),
     "public/data/resources.json": prettyJson(resources),
+    "src/data/generated/graph.json": prettyJson(graph),
+    "src/data/generated/observatory.json": prettyJson(observatory),
     "public/data/all-resources.json": prettyJson(allResources),
     "public/data/search-index.json": prettyJson(search),
     "public/data/stats.json": prettyJson(stats),
     "README.md": renderReadmeRegions(readmeEn, seed, false),
+    "public/data/graph.json": prettyJson(graph),
+    "public/data/observatory.json": prettyJson(observatory),
     "README_zh.md": renderReadmeRegions(readmeZh, seed, true)
   };
   for (const [path, content] of Object.entries(generated)) await emit(path, content, check);

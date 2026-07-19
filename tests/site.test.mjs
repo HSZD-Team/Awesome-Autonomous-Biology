@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFile, access } from "node:fs/promises";
 
 const root = new URL("../", import.meta.url);
-const routes = ["src/pages/index.astro", "src/pages/zh/index.astro", "src/pages/atlas/index.astro", "src/pages/loop-map/index.astro", "src/pages/radar/index.astro", "src/pages/timeline/index.astro", "src/pages/resources/[id].astro", "src/pages/ecosystem/index.astro", "src/pages/digest/index.astro", "src/pages/about/index.astro", "src/pages/contribute/index.astro"];
+const routes = ["src/pages/index.astro", "src/pages/zh/index.astro", "src/pages/atlas/index.astro", "src/pages/loop-map/index.astro", "src/pages/radar/index.astro", "src/pages/timeline/index.astro", "src/pages/resources/[id].astro", "src/pages/ecosystem/index.astro", "src/pages/digest/index.astro", "src/pages/observatory/index.astro", "src/pages/methods/index.astro", "src/pages/about/index.astro", "src/pages/contribute/index.astro"];
 
 test("all required routes exist and all research-record views use v0.2 all-resources data", async () => {
   await Promise.all(routes.map((route) => access(new URL(route, root))));
@@ -31,7 +31,7 @@ test("Atlas defaults to verified and exposes shareable all/review-pending status
 });
 
 test("global shell retains accessibility and reduced-motion affordances", async () => {
-  const [css, layout, header] = await Promise.all([readFile(new URL("src/styles/global.css", root), "utf8"), readFile(new URL("src/layouts/BaseLayout.astro", root), "utf8"), readFile(new URL("src/components/Header.astro", root), "utf8")]);
+  const [css, layout, header] = await Promise.all([readFile(new URL("src/styles/global.css", root), "utf8"), readFile(new URL("src/layouts/BaseLayout.astro", root), "utf8"), readFile(new URL("src/components/SiteHeader.astro", root), "utf8")]);
   assert.match(css, /prefers-reduced-motion/);
   assert.match(css, /:focus-visible/);
   assert.match(layout, /skip-link/);
@@ -46,4 +46,28 @@ test("base-path helpers, public data, and visible candidate queue are used", asy
   assert.match(paths, /BASE_URL/);
   assert.match(radar, /REVIEW_PENDING/);
   assert.match(radar, /reviewFlags/);
+});
+
+
+test("homepage map, Observatory, and Methods expose the new data-driven experience", async () => {
+  const [home, graphScript, redesign, observatory, methods] = await Promise.all([
+    readFile(new URL("src/components/HomeMapView.astro", root), "utf8"),
+    readFile(new URL("src/scripts/home-graph.ts", root), "utf8"),
+    readFile(new URL("src/styles/redesign.css", root), "utf8"),
+    readFile(new URL("src/pages/observatory/index.astro", root), "utf8"),
+    readFile(new URL("src/pages/methods/index.astro", root), "utf8")
+  ]);
+
+  assert.match(home, /generated\/graph\.json/);
+  assert.match(home, /data-map-canvas/);
+  assert.match(home, /data-mode="ecosystem"/);
+  assert.match(home, /data-map-mode="closedLoop"/);
+  assert.match(home, /data-map-mode="timeline"/);
+  assert.match(home, /Search systems, agents, datasets or protocols/);
+  assert.match(graphScript, /requestFullscreen/);
+  assert.match(graphScript, /prefers-reduced-motion/);
+  assert.match(redesign, /@media \(max-width: 760px\)/);
+  assert.match(observatory, /generated\/observatory\.json/);
+  assert.match(methods, /shared_context/);
+  assert.match(methods, /related_to/);
 });
